@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title><%block name="title">猎头网_专注于医药、医疗、生物领域的专业猎头公司_瑶臣万代</%block></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<meta name="keywords" content="猎头网,猎头,北京猎头,医药猎头,医疗猎头,猎头公司" />
+<meta name="description" content="瑶臣猎头是一家专注于医药、医疗、生物领域的猎头公司，秉承“专注、协作、高效、诚信、专业”的企业文化理念，为客户寻找最具有竞争力的精英人才.精益求精，追求完美，是瑶臣猎头长远的目标和方向" />
+<meta property="wb:webmaster" content="d1222a1637a71b37" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+<!--link href="${static_url}/css/reset.css" rel="stylesheet" type="text/css" /-->
+<!--link href="${static_url}/css/bluev1.css" rel="stylesheet" type="text/css" /-->
+
+<link type="text/css" rel="stylesheet" href="${static_url}/css/lietou.css">
+<link type="text/css" rel="stylesheet" href="${static_url}/css/style.css">
+<link type="text/css" rel="stylesheet" href="${static_url}/css/pub.css">
+<script type="text/javascript" src="${static_url}/js/jquery-1.4.js"></script>
+<script type="text/javascript" src="${static_url}/js/jquery.sgallery.js"></script>
+<script type="text/javascript" src="${static_url}/js/search_common.js"></script>
+<script type="text/javascript" src="${static_url}/js/fhtj.js"></script>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var bt = $('#toolBackTop');
+        var sw = $(document.body)[0].clientWidth;
+
+        var limitsw = (sw - 1060) / 2 - 150;
+        if (limitsw > 0){
+            limitsw = parseInt(limitsw);
+            bt.css("right",limitsw);
+        }
+
+        $(window).scroll(function() {
+            var st = $(window).scrollTop();
+            if(st > 30){
+                bt.show();
+            }else{
+                bt.hide();
+            }
+        });
+    })
+</script>
+<script type="text/javascript"><!--搜索-->
+function drop_mouseover(pos){
+    try{window.clearTimeout(timer);}catch(e){}
+}
+
+function drop_mouseout(pos){
+    var posSel=document.getElementById(pos+"Sel").style.display;
+    if(posSel=="block"){
+        timer = setTimeout("drop_hide('"+pos+"')", 1000);
+    }
+}
+
+function drop_hide(pos){
+    document.getElementById(pos+"Sel").style.display="none";
+}
+
+function search_show(pos,searchType,href){
+    document.getElementById(pos+"SearchType").value=searchType;
+    document.getElementById(pos+"Sel").style.display="none";
+    document.getElementById(pos+"Slected").innerHTML=href.innerHTML;
+    document.getElementById(pos+'q').focus();
+    var sE = document.getElementById("searchytitle");
+    if(sE != undefined  &&  searchType == "yylt"){
+        sE.style.display="block";
+    }else if(sE != undefined){
+        sE.style.display="none";
+    }
+    var sE = document.getElementById("searchltitle");
+    if(sE != undefined  &&  searchType == "yllt"){
+        sE.style.display="block";
+    }else if(sE != undefined){
+        sE.style.display="none";
+    }
+    var sE = document.getElementById("searchbelite");
+    if(sE != undefined  &&  searchType == "bqrc"){
+        sE.style.display="block";
+    }else if(sE != undefined){
+        sE.style.display="none";
+    }
+    var sE = document.getElementById("searchnelite");
+    if(sE != undefined  &&  searchType == "nqrc"){
+        sE.style.display="block";
+    }else if(sE != undefined){
+        sE.style.display="none";
+    }
+    try{window.clearTimeout(timer);}catch(e){}
+    return false;
+}
+function dosearch(form)
+{
+    form.submit();
+    return true;
+}
+</script>
+<!--微博-->
+<meta property="wb:webmaster" content="65ea35be2aadf0e3" />
+
+
+</head>
+
+<body>
+<div id="header" class="area">
+    <div id="header-left">
+      <span>&nbsp;Tel:010-57389079、64735736</span>
+    </div>
+  <div id="header-right">
+    <a href="#">设为首页</a>&nbsp;<span>|</span>&nbsp;<a href="#">添加收藏</a>&nbsp;<span>|</span>&nbsp;<a href="#">网站导航</a>&nbsp;
+</div>
+</div>
+<div class="blank10"></div>
+<div id="minnav" class="area">
+    <ul>
+        <li><a href="www.yaochenlietou.com" target="_blank"> 新闻</a> 丨 </li>
+        <li><a href="www.yaochenlietou.com" target="_blank"> 猎头</a> 丨 </li>
+        <li><a href="www.yaochenlietou.com" target="_blank"> 人力</a> 丨 </li>
+        <li><a href="www.yaochenlietou.com" target="_blank"> 管理</a> 丨 </li>
+        <li><a href="www.yaochenlietou.com" target="_blank"> 培训</a> 丨 </li>
+        <li><a href="www.yaochenlietou.com" target="_blank"> 营销</a> 丨 </li>
+        <li><a href="www.yaochenlietou.com" target="_blank"> 社保</a> 丨 </li>
+        <li><a href="www.yaochenlietou.com" target="_blank"> 医患</a> 丨 </li>
+        <li><a href="www.yaochenlietou.com" target="_blank"> 文化</a> 丨 </li>
+        <li><a href="www.yaochenlietou.com" target="_blank"> 中医药</a> 丨 </li>
+        <li><a href="www.yaochenlietou.com" target="_blank"> 医药猎头</a> 丨 </li>
+        <li><a href="www.yaochenlietou.com" target="_blank"> 医疗猎头</a> 丨 </li>
+        <li><a href="www.yaochenlietou.com" target="_blank"> 医药人才</a> 丨 </li>
+        <li><a href="www.yaochenlietou.com" target="_blank"> 医疗人才</a> </li>
+    </ul>
+</div>
+ <div class="banner">
+<embed src='${static_url}/images/qiyewenhua.swf' id='qixi' quality=high pluginspage='http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash' type='application/x-shockwave-flash' width='980' height='113' wmode='opaque'></embed>
+ </div>
+ <div class=" blank20"></div>
+<div id="logososuo" class="area">
+<!--搜索-->
+<div class="lefto">
+ <a href="www.yaochenlietou.com" target="_blank"><img src="${static_url}/images/ycltlogo.jpg"></a>
+ </div>
+<div class="left_t">
+<p>分享：</p>
+<li>
+ <script type="text/javascript" charset="utf-8">
+(function(){
+  var _w = 106 , _h = 24;
+  var param = {
+    url:location.href,
+    type:'5',
+    count:'', /**是否显示分享数，1显示(可选)*/
+    appkey:'2569541701', /**您申请的应用appkey,显示分享来源(可选)*/
+    title:'', /**分享的文字内容(可选，默认为所在页面的title)*/
+    pic:'', /**分享图片的路径(可选)*/
+    ralateUid:'1596583994', /**关联用户的UID，分享微博会@该用户(可选)*/
+	language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
+    rnd:new Date().valueOf()
+  }
+  var temp = [];
+  for( var p in param ){
+    temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+  }
+  document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
+})()
+</script>
+</li>
+<li>
+<iframe width="63" height="24" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0" scrolling="no" border="0" src="http://widget.weibo.com/relationship/followbutton.php?language=zh_cn&width=63&height=24&uid=1596583994&style=1&btn=light&dpc=1"></iframe>
+</li>
+
+</div>
+    <div class="searchTool">
+     <form method="get" action="app/search" name="headSearchForm" id="headSearchForm" onSubmit="return dosearch(this);">
+       <input id="headSearchType" name="type" type="hidden" value="news">
+       <input class="txtSearch" id="headq" name="q" type="text" value="请输入你要搜索的关键词"  onfocus="if (value =='请输入你要搜索的关键词'){value =''}" onBlur="if (value ==''){value='请输入你要搜索的关键词'}">
+      <div class="selSearch">
+    <div class="nowSearch" id="headSlected" onClick="if(document.getElementById('headSel').style.display=='none'){document.getElementById('headSel').style.display='block';}else {document.getElementById('headSel').style.display='none';};return false;" onMouseOut="drop_mouseout('head');">新闻搜索</div>
+    <div class="btnSel"><a href="#" onClick="if(document.getElementById('headSel').style.display=='none'){document.getElementById('headSel').style.display='block';}else {document.getElementById('headSel').style.display='none';};return false;" onMouseOut="drop_mouseout('head');"></a></div>
+    <div class="clear"></div>
+    <ul class="selOption" id="headSel" style="display:none;">
+                    <li><a href="#" onClick="return search_show('head','news',this)" onMouseOver="drop_mouseover('head');" onMouseOut="drop_mouseout('head');">新闻搜索</a></li>
+                    <li><a href="#" onClick="return search_show('head','yylt',this)" onMouseOver="drop_mouseover('head');" onMouseOut="drop_mouseout('head');">医药职位</a></li>
+                    <li><a href="#" onClick="return search_show('head','yllt',this)" onMouseOver="drop_mouseover('head');" onMouseOut="drop_mouseout('head');">医疗职位</a></li>
+                    <li><a href="#" onClick="return search_show('head','bqrc',this)" onMouseOver="drop_mouseover('head');" onMouseOut="drop_mouseout('head');">北区人才</a></li>
+                    <li><a href="#" onClick="return search_show('head','nqrc',this)" onMouseOver="drop_mouseover('head');" onMouseOut="drop_mouseout('head');">南区人才</a></li>
+             </ul>
+    </div>
+     <div class="btnSearch">
+     
+    <a href="#" onClick="javascript:return dosearch(document.getElementById('headSearchForm'));"><span class="lbl">搜索</span></a>
+     </div>
+     
+          <div class="searchytitle" id="searchytitle" name="searchytitle" style="display:none">
+           <input type="radio" class="radio" name="sbt" value="post" onClick="csbt(this,this.form.sbts);">按地区搜<input type="radio" name="sbt" value="user" onClick="csbt(this,this.form.sbts);" class="radio">按职位搜<input type="radio" class="radio" name="sbt" value="post" onClick="csbt(this,this.form.sbts);">按年薪搜<input type="radio" name="sbt" value="user" onClick="csbt(this,this.form.sbts);" class="radio">按时间搜<input type="hidden" name="sbts" value="ytitle">
+     </div>
+     
+       <div class="searchltitle" id="searchltitle" name="searchltitle" style="display:none">
+           <input type="radio" class="radio" name="sbt" value="post" onClick="csbt(this,this.form.sbts);">按地区搜<input type="radio" name="sbt" value="user" onClick="csbt(this,this.form.sbts);" class="radio">按职位搜<input type="radio" class="radio" name="sbt" value="post" onClick="csbt(this,this.form.sbts);">按年薪搜<input type="radio" name="sbt" value="user" onClick="csbt(this,this.form.sbts);" class="radio">按时间搜<input type="hidden" name="sbts" value="ltitle">
+     </div>
+     
+            <div class="searchbelite" id="searchbelite" name="searchbelite" style="display:none">
+          <input type="radio" class="radio" name="sbt" value="post" onClick="csbt(this,this.form.sbts);">按地区搜<input type="radio" name="sbt" value="user" onClick="csbt(this,this.form.sbts);" class="radio">按职位搜<input type="radio" class="radio" name="sbt" value="post" onClick="csbt(this,this.form.sbts);">按年薪搜<input type="radio" name="sbt" value="user" onClick="csbt(this,this.form.sbts);" class="radio">按时间搜<input type="hidden" name="sbts" value="belite">
+     </div>
+     <div class="searchnelite" id="searchnelite" name="searchnelite" style="display:none">
+
+          <input type="radio" class="radio" name="sbt" value="post" onClick="csbt(this,this.form.sbts);">按地区搜<input type="radio" name="sbt" value="user" onClick="csbt(this,this.form.sbts);" class="radio">按职位搜<input type="radio" class="radio" name="sbt" value="post" onClick="csbt(this,this.form.sbts);">按年薪搜<input type="radio" name="sbt" value="user" onClick="csbt(this,this.form.sbts);" class="radio">按时间搜<input type="hidden" name="sbts" value="nelite">
+     </div>
+     
+          <div class="clear"></div>
+     </form>
+     
+       </div>
+
+       </div>
+
+${next.body()}
+
+<div class="bk3"></div>
+<div id="toolBackTop" class="back-to" style="display: none;"><a class="back-top" title="返回顶部" onclick="window.scrollTo(0,0);return false;" href="#top"> 返回顶部</a></div>
+
+<div id="footer" class="area">
+<div class="blank10"></div>
+ <ul>
+ <li><a href="/about/aboutyc.html" target="_blank">瑶臣猎头简介</a> &nbsp; |   &nbsp;
+ <a href="http://www.yaochenlietou.com" target="_blank">合作客户</a> &nbsp;  |   &nbsp;
+<a href="http://www.yaochenlietou.com" target="_blank">加入瑶臣</a> &nbsp;  |   &nbsp;
+<a href="http://www.yaochenlietou.com" target="_blank">联系方式</a>&nbsp;   |   &nbsp;
+<a href="http://www.yaochenlietou.com" target="_blank">候选人平台</a>&nbsp;   |    &nbsp;
+
+<a href="http://www.yaochenlietou.com" target="_blank">意见反馈</a>&nbsp;   |    &nbsp;
+<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=271769336&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:271769336:50" alt="点击这里给我发消息" title="点击这里给我发消息"></a>  
+</li>
+<div class="blank10"></div>
+
+<p class="end">Copyright &copy; 2008 - 2012 YaoChenWanDai. All Rights Reserved</p><p>京ICP备09019100号</p>
+ </ul>
+ </div>
+
+<script type="text/javascript">
+  $(function(){
+      new slide("#main-slide","cur",301,240,1);//焦点图
+      new SwapTab(".SwapTab","span",".tab-content","ul","fb");//排行TAB
+  })
+</script>
+<script type="text/javascript">
+  $(function(){
+      $(".picbig").each(function(i){
+        var cur = $(this).find('.img-wrap').eq(0);
+        var w = cur.width();
+        var h = cur.height();
+        $(this).find('.img-wrap img').LoadImage(true, w, h,'${static_url}/images/msg_img/loading.gif');
+      });
+  })
+</script>
+<div style="display:none">
+<script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fa85d41901e562b440a97882ac5e453c1' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script src="http://s6.cnzz.com/stat.php?id=4360425&web_id=4360425" language="JavaScript"></script>
+</div>
+</body>
+</html>
+

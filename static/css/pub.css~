@@ -1,0 +1,96 @@
+/*È«¾Ö*/
+body{font-family:"ËÎÌå","Arial", ;background:#FFF;margin:0;padding:0; border:0;font-size:12px;color:#333;}
+h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,pre,form,fieldset,legend,button,input,textarea,th,td,nav,span,p,div,ul,li{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{font-size:12px;font-weight:normal;}
+ul,ol,li{list-style:none;}
+a img{border:0;}
+
+/*¿ò¼Ü*/
+.area{width:980px;margin:0px auto;}
+/*ÊôÐÔ*/
+a:link {text-decoration:none;color:#000;}
+a:visited{text-decoration:none;color:#000;}
+a:hover {text-decoration:underline;color:#BA2636;}
+/*CSS¿Õ°×*/
+.blank1{margin:0 auto;height:1px;font-size:1px;clear:both;}
+.blank2{margin:0 auto;height:2px;font-size:1px;clear:both;}
+.blank3{margin:0 auto;height:3px;font-size:1px;clear:both;}
+.blank5{margin:0 auto;height:5px;font-size:1px;clear:both;}
+.blank8{margin:0 auto;height:8px;font-size:1px;clear:both;}
+.blank10{margin:0 auto;height:10px;font-size:1px;clear:both;}
+.blank15{margin:0 auto;height:15px;font-size:1px;clear:both;}
+.blank20{margin:0 auto;height:15px;font-size:1px;clear:both;}
+.blank25{margin:0 auto;height:20px;font-size:1px;clear:both;}
+
+.banner{margin:0px auto; border:1px #E6E6E6 solid; width:980px;}
+
+.right{width:200px;display: inline;float:right;background: url(../images/listright.gif);}
+.rightbj{width:190px;background: #FFF; margin:5px 5px 5px 5px;; float:right;}
+
+/*¶¥²¿*/
+#header{margin:0px auto;height:26px;background-color:#EEE;}
+#header-left {float: left; font-size:14px;margin: 5px auto;}
+#header-right{float: right; font-size:12px;margin: 5px auto;}
+
+#logososuo{height:70px; margin:0px auto;}
+#logososuo .lefto{padding:0px 10px; float:left;}
+#logososuo span{margin: 7px 0 0 5px;display: inline;line-height: 20px;}
+#logososuo span a{color:#2B2B2B}
+#logososuo span a:hoevr{color:#2B2B2B}
+
+
+#minnav{margin:0px auto; height:30px; }
+#minnav ul{float:left;padding:0px 0px 0px 10px;}
+#minnav li{float:left; text-align:left; margin-right:6px;}
+#minnav li a{ color:#000}
+#minnav li a:hover{color:#BA2636}
+
+#nav {margin:0px auto; height:40px;}
+#nav .navlist {float:left; background:url(../images/nav.png) }
+#nav .navlist ul{height:40px;width:980px;}
+#nav .navlist li{float:left;background:url(../images/navbj.png) no-repeat right 10px;padding:10px 18px 0; font-size:14px; }
+#nav .navlist li a{color: #FFF;}
+/*ËÑË÷*/
+.searchTool{ float:right;width:400px; padding:40px 0px 0px 100px;}
+.searchytitle{float:left;margin:-45px 10px 10px;}
+.searchTool .searchltitle{float:left;margin:-45px 10px 10px;}
+.searchTool .searchbelite{float:left;margin:-45px 10px 10px;}
+.searchTool .searchnelite{float:left;margin:-45px 10px 10px;}
+.searchTool .radio{vertical-align:middle; margin:0px 4px 5px;margin-right:2px;}
+.searchTool .txtSearch{float:left;width:232px;padding:2px 2px 0 2px;height:20px;line-height:20px;vertical-align:bottom; margin-left: 10px; border:1px solid #3e99d4;}
+.searchTool .selSearch{margin:0px 2px;float:left;width:70px;background:#fff;height:22px;line-height:22px;border:1px solid #3e99d4;}
+.searchTool .nowSearch{float:left;width:50px;height:20px;line-height:22px;overflow:hidden;padding-left:4px;}
+.searchTool .btnSel{float:right;border-left:1px solid #3e99d4;width:14px;height:22px;}
+.searchTool .btnSel a{background:url(../images/sousuo_three.gif) no-repeat center center;display:block;width:14px;height:22px;}
+.searchTool .btnSel a:hover{background:url(../images/sousuo_one.gif) no-repeat center center;border:1px solid #fff;width:12px;height:20px;}
+.searchTool .selOption{z-index:9999;position:absolute;margin-left:-1px;width:60px;background:#fff;border:1px solid #3e99d4;}
+.searchTool .selOption a{display:block;height:21px;padding-left:5px;line-height:21px;color:#000;text-decoration:none;}
+.searchTool .selOption a:hover{color:#fff;background:#95d5f1;}
+.searchTool .btnSearch{float:left;margin-left:10px;width:58px;height:22px;line-height:22px;border:1px solid #3e99d4;overflow:hidden;}
+.searchTool .btnSearch a{background:url(../images/sousuo_five.gif) repeat-x center -6px;display:block;text-decoration:none;height:22px;line-height:22px;overflow:hidden;}
+.searchTool .btnSearch a:hover{background:url(../images/sousuo_two.gif) repeat-x center center;border:1px solid #fff;height:20px;line-height:20px;}
+.searchTool .btnSearch .lbl{cursor:pointer;display:block;width:40px;padding-left:5px;letter-spacing:5px;text-align:center;height:18px;padding-top:1px;margin:0 auto;filter:progid:DXImageTransform.Microsoft.DropShadow(color=#daeefa,offX=1,offY=1,positives=true);}
+.searchTool .btnSearch a:hover .lbl{padding-top:0px;}
+/*¿ò¼Ü*/
+.content{ margin:10px auto;clear: both;overflow: hidden;}
+.ltclmn{width:760px; margin:0px auto;display:inline; float:left;overflow: hidden;}
+.ltclmnxt{width:760px;margin:0px auto; display:inline; float:left;overflow:hidden;background:url(../images/xuxian5.gif) repeat-y 380px 0;}
+.ltclmnr{width:370px;padding:0px 0px 0px 20px;float:left;display:inline;}
+.ltclmnc{width:370px;margin:0px auto;display:inline;float:left;}
+.ltclmnf{width:210px;margin:0px auto;display:inline;float:right;}
+
+#footer{
+border-style:solid;
+border-width: 1px 0px 0px 0px;
+border-color: #EEE; 
+margin:20px auto;
+line-height:30px;
+color:#CCC;
+}
+#footer li{text-align:center;}
+#footer p{ text-align:center;}
+#footer .end{ font-family: Arial, Helvetica, sans-serif;}
+img{vertical-align:middle;}
+
+
+    	.cp, .cp a {color:#888;font-size:11px;}

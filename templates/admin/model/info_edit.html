@@ -1,0 +1,166 @@
+<%inherit file="na_base.html"/>
+<%namespace file="lib/util.html" import="*"/>
+
+<script language="javascript" type="text/javascript" src="${static_url}/js/content_addtop.js"></script>
+<script language="javascript" type="text/javascript" src="${static_url}/js/colorpicker.js"></script>
+<script language="javascript" type="text/javascript" src="${static_url}/js/hotkeys.js"></script>
+<script language="javascript" type="text/javascript" src="${static_url}/js/cookie.js"></script>
+<script language="javascript" type="text/javascript" src="${static_url}/js/ckeditor/ckeditor.js"></script>
+<script language="javascript" type="text/javascript" src="${static_url}/js/inlines.js"></script>
+<script>
+$(document).ready(function(){
+  $("#add_cate_btn").click(function(){
+    template = $("#cidblk_0");
+    newcidblk = template.clone();
+    newcidblk.append("<a href=\"javascript:void(0)\" title=\"删除栏目\"><img src=\"${static_url}/images/admin_img/icon_deletelink.gif\"></a>&nbsp;&nbsp;&nbsp;");
+    rmbtn = newcidblk.find("a")
+    rmbtn.click(function(obj){
+      return function() {
+        obj.remove();
+      }
+    }(newcidblk));
+    newcidblk.insertBefore($(this));
+  });
+});
+</script>
+
+<div class="crumbs">
+  <a href="${admin_url}/info/index">信息管理</a> <span>&gt;</span>
+  <a href="${admin_url}/${mname}/list">${mtitle}</a> <span>&gt;</span> 编辑
+</div>
+
+<div class="content-box">
+
+  <form name="myform" id="myform" action="" method="post" enctype="multipart/form-data">
+    <table width="100%" cellspacing="0" class="table_form">
+      <thead>
+        <tr><th colspan="2">编辑${mtitle}信息</th></tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <td colspan="2">
+            <div style="margin:0 20px;text-align:center">
+              <input type="submit" style="width:50px;" class="button" name="dosubmit" value="保存">
+              <input type="submit" style="width:130px;" class="button" name="dosubmit_continue" value="保存并继续发表">
+            </div>
+          </td>
+        </tr>
+      </tfoot>
+
+      <tbody>
+        % for i,input in enumerate(eform.inputs):
+          % if i % 3 == 0:
+          <tr>
+          % endif
+          <th width="80">${'<font color="red">*</font>' if input.required else ''}${input.description}</th>
+          <td${' colspan="5"' if input.name == 'cids' else ''}>
+            % if input.name == 'cids':
+              % if input.get_value():
+                % for i, cid in enumerate(input.get_value()):
+                <span id="cidblk_${i}">
+                  <select id="cid${i}" name="cids">
+                    <option value="">≡ 选择栏目≡</option>
+                    % for cate in categories:
+                    <option value="${cate.id}" ${'selected="selected"' if str(cid) == str(cate.id) else ''}>${cate.prefix+cate.name}</option>
+                    % endfor
+                  </select>
+                  % if i != 0:
+                  <a href="javascript:void(0)" title="删除栏目" onclick="javascript:$(this).parent().remove()" ><img src="${static_url}/images/admin_img/icon_deletelink.gif"></a>&nbsp;
+                  % endif
+                </span>
+                % endfor
+                &nbsp;&nbsp;<a id="add_cate_btn" href="javascript:void(0)" title="添加另一个栏目"><img src="${static_url}/images/admin_img/icon_addlink.gif"></a>
+              % else:
+                <span id="cidblk_0">
+                  <select id="cid0" name="cids">
+                    <option value="">≡ 选择栏目 ≡</option>
+                    % for cate in categories:
+                    <option value="${cate.id}" >${cate.prefix+cate.name}</option>
+                    % endfor
+                  </select>
+                </span>
+                &nbsp;&nbsp;<a id="add_cate_btn" href="javascript:void(0)" title="添加另一个栏目"><img src="${static_url}/images/admin_img/icon_addlink.gif"></a>
+              % endif
+              % if input.note:
+              <div class="input-notification error png_bg">${input.note}</div>
+              % endif
+
+            % else:
+              ${input.render()}
+            % endif
+          </td>
+          % if i % 3 == 0:
+          </tr>
+          % endif
+        % endfor
+
+        <tr>
+        % for i,input in enumerate(form.inputs,1):
+          % if input.get_type() == 'richtext':
+          </tr>
+          <tr>
+          % endif
+          <th width="80">${'<font color="red">*</font>' if input.required else ''}${input.description}</th>
+          <td${' colspan="5"' if input.get_type() == 'richtext' else ''}>
+            ${input.render()}
+          </td>
+          % if i % 3 == 0 or input.get_type() == 'richtext':
+          </tr>
+          <tr>
+          % endif
+        % endfor
+        </tr>
+
+        % for formname,subform in formset.items():
+        <tr>
+          <td id="${formname}-group" colspan="6">
+            <h5>${subform['title']}</h5>
+            <input type="hidden" name="${formname}-TOTAL_FORMS" value="${len(subform['forms'])-1}" id="id_${formname}-TOTAL_FORMS" />
+            <input type="hidden" name="${formname}-INITIAL_FORMS" value="0" id="id_${formname}-INITIAL_FORMS" />
+            <input type="hidden" name="${formname}-MAX_NUM_FORMS" id="id_${formname}-MAX_NUM_FORMS" />
+            <% formnum = len(subform['forms']) %>
+            % for i,sform in enumerate(subform['forms']):
+            <table id="${formname+'-empty' if i==formnum-1 else formname+'-'+str(i)}" class="inline-related${' hid' if i==formnum-1 else ''}">
+              <tr>
+                <td colspan="6">
+                  <h6 style="float:left;width:300px">${subform['title']} <span class="inline_label">#${i+1}</span></h6>
+                  % if hasattr(sform, 'id'):
+                  <input type="hidden" name="${formname}-${i}-id" value="${sform.id}" />
+                  <span style="float:right" class="delete">
+                    <input type="checkbox" id="id_${formname}-${i}-DELETE" name="${formname}-${i}-DELETE">
+                    <label class="vCheckboxLabel inline" for="id_${formname}-${i}-DELETE">删除</label>
+                  </span>
+                  % endif
+                </td>
+              </tr>
+
+              <tr>
+              % for j,input in enumerate(sform.inputs,1):
+              % if input.get_type() == 'richtext':
+              </tr>
+              <tr>
+              % endif
+                <th width="80">${'<font color="red">*</font>' if input.required else ''}${input.description}</th>
+                <td${' colspan="5"' if input.get_type() == 'richtext' else ''}>
+                  % if input.get_type() == 'richtext' and i == formnum-1:
+                    ${input.render_html()}
+                  % else:
+                    ${input.render()}
+                  % endif
+                </td>
+              % if j % 3 == 0 or input.get_type() == 'richtext':
+              </tr>
+              <tr>
+              % endif
+              % endfor
+            </tr>
+            </table>
+            % endfor
+          </td>
+        </tr>
+        ${edit_inline_js(subform)}
+        % endfor
+      </tbody>
+    </table>
+  </form>
+</div>

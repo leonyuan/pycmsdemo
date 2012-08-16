@@ -1,0 +1,39 @@
+<%inherit file="base.html"/>
+<%namespace file="lib/entity.html" import="*"/>
+<%namespace file="lib/util.html" import="*"/>
+
+<%block name="title">${thecat.name}-${parent.title()}</%block>
+    <div class="col-left">
+      <div class="crumbs">
+          <a href="/">首页</a> <span>&gt;</span>
+          % for i,cat in enumerate(category_ancestors):
+          <a href="/${cat[2]}">${cat[1]}</a>${i==len(category_ancestors)-1 and ' ' or ' &gt;'}
+          % endfor
+      </div>
+
+      <div id="Article">
+        <ul class="list lh24 f12">
+          % for entity in entities:
+          <li>
+          <span>(${entity.created_time})</span>
+          ・<a title="${entity.job.location} ${entity.title} ${entity.job.payment} ${entity.job.endate}" target="_blank" href="${homedomain}/${entity.model.name}/${entity.created_time.year}/${entity.created_time.month}/${entity.created_time.day}/${entity.id}.html">${entity.job.location} ${entity.title} ${entity.job.payment} ${entity.job.endate}</a>
+          </li>
+          % endfor
+        </ul>
+
+        <div class="text-c" id="pages">
+          ${paging(pagination)}
+        </div>
+      </div>
+    </div>
+
+    <div class="col-auto">
+      <div class="bk10"></div>
+      <div class="box">
+        <h5 class="title-2">新闻排行</h5>
+        <ul class="content rank">
+        ${latest_entities(33, 8)}
+        </ul>
+      </div>
+    </div>
+

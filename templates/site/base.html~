@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title><%block name="title">瑶臣万代</%block></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<meta name="keywords" content="瑶臣万代" />
+<meta name="description" content="瑶臣万代" />
+<meta name="description" content="瑶臣万代" />
+<meta property="wb:webmaster" content="d1222a1637a71b37" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+<!--link href="${static_url}/css/reset.css" rel="stylesheet" type="text/css" /-->
+<!--link href="${static_url}/css/bluev1.css" rel="stylesheet" type="text/css" /-->
+
+<link type="text/css" rel="stylesheet" href="${static_url}/css/lietou.css">
+<link type="text/css" rel="stylesheet" href="${static_url}/css/style.css">
+<link type="text/css" rel="stylesheet" href="${static_url}/css/pub.css">
+
+<script type="text/javascript" src="${static_url}/js/jquery.min.js"></script>
+<script type="text/javascript" src="${static_url}/js/jquery.sgallery.js"></script>
+<script type="text/javascript" src="${static_url}/js/search_common.js"></script>
+<script type="text/javascript" src="${static_url}/js/fhtj.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+        var bt = $('#toolBackTop');
+        var sw = $(document.body)[0].clientWidth;
+
+        var limitsw = (sw - 1060) / 2 - 40;
+        if (limitsw > 0){
+                limitsw = parseInt(limitsw);
+                bt.css("right",limitsw);
+        }
+
+        $(window).scroll(function() {
+                var st = $(window).scrollTop();
+                if(st > 30){
+                        bt.show();
+                }else{
+                        bt.hide();
+                }
+        });
+})
+</script>
+
+</head>
+
+<body>
+<div id="header" class="area">
+    <div id="header-left">
+      <span>&nbsp;Tel:010-57389079、64735936</span>
+    </div>
+  <div id="header-right">
+    <a href="#">设为首页</a>&nbsp;<span>|</span>&nbsp;<a href="#">添加收藏</a>&nbsp;<span>|</span>&nbsp;<a href="#">网站导航</a>&nbsp;
+</div>
+</div>
+<div class="blank10"></div>
+<div id="minnav" class="area">
+ <ul>
+  <li>
+  <a href="www.yaochenlietou.com" target="_blank"> 新闻</a> 丨 </li>
+
+  <li>
+  <a href="www.yaochenlietou.com" target="_blank"> 猎头</a> 丨 </li>
+
+        <li>
+  <a href="www.yaochenlietou.com" target="_blank"> 人力</a> 丨 </li>
+  
+    <li>
+  <a href="www.yaochenlietou.com" target="_blank"> 管理</a> 丨 </li>
+  
+    <li>
+  <a href="www.yaochenlietou.com" target="_blank"> 培训</a> 丨 </li>
+  
+    <li>
+  <a href="www.yaochenlietou.com" target="_blank"> 营销</a> 丨 </li>
+  
+    <li>
+  <a href="www.yaochenlietou.com" target="_blank"> 社保</a> 丨 </li>
+
+
+    <li>
+  <a href="www.yaochenlietou.com" target="_blank"> 医患</a> 丨 </li>
+  
+    <li>
+  <a href="www.yaochenlietou.com" target="_blank"> 文化</a> 丨 </li>
+      <li>
+  <a href="www.yaochenlietou.com" target="_blank"> 中医药</a> 丨 </li>
+  
+     <li>
+  <a href="www.yaochenlietou.com" target="_blank"> 医药猎头</a> 丨 </li>
+
+  <li>
+  <a href="www.yaochenlietou.com" target="_blank"> 医疗猎头</a> 丨 </li>
+  
+    <li>
+  <a href="www.yaochenlietou.com" target="_blank"> 医药人才</a> 丨 </li>
+  
+      <li>
+  <a href="www.yaochenlietou.com" target="_blank"> 医疗人才</a> </li>
+
+ </ul>
+ </div>
+ <div class="banner">
+<embed src='${static_url}/images/qiyewenhua.swf' id='qixi' quality=high pluginspage='http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash' type='application/x-shockwave-flash' width='980' height='113' wmode='opaque'></embed>
+ </div>
+ <div class=" blank20"></div>
+<div id="logososuo" class="area">
+<!--搜索-->
+<div class="lefto">
+ <a href="www.yaochenlietou.com" target="_blank"><img src="${static_url}/images/ycwdlogo.jpg"></a>
+ </div>
+          <div class="searchTool">
+ 
+    
+     <form method="get" action="http://www.yaochenlietou.com" name="headSearchForm" id="headSearchForm" onSubmit="return dosearch(this);">
+       <input name="searchdomain" type="hidden" value="http://www.yaochenlietou.com">
+     <input id="headSearchType" name="searchType" type="hidden" value="xinwen"> <input class="txtSearch" id="headq" name="q" type="text" value="请输入你要搜索的关键词"  onfocus="if (value =='请输入你要搜索的关键词'){value =''}" onBlur="if (value ==''){value='请输入你要搜索的关键词'}">
+      <div class="selSearch">
+    <div class="nowSearch" id="headSlected" onClick="if(document.getElementById('headSel').style.display=='none'){document.getElementById('headSel').style.display='block';}else {document.getElementById('headSel').style.display='none';};return false;" onMouseOut="drop_mouseout('head');">新闻搜索</div>
+    <div class="btnSel"><a href="#" onClick="if(document.getElementById('headSel').style.display=='none'){document.getElementById('headSel').style.display='block';}else {document.getElementById('headSel').style.display='none';};return false;" onMouseOut="drop_mouseout('head');"></a></div>
+    <div class="clear"></div>
+    <ul class="selOption" id="headSel" style="display:none;">
+                    <li><a href="#" onClick="return search_show('head','xinwen',this)" onMouseOver="drop_mouseover('head');" onMouseOut="drop_mouseout('head');">新闻搜索</a></li>
+                    <li><a href="#" onClick="return search_show('head','ytitle',this)" onMouseOver="drop_mouseover('head');" onMouseOut="drop_mouseout('head');">医药职位</a></li>
+                    <li><a href="#" onClick="return search_show('head','ltitle',this)" onMouseOver="drop_mouseover('head');" onMouseOut="drop_mouseout('head');">医疗职位</a></li>
+                    <li><a href="#" onClick="return search_show('head','belite',this)" onMouseOver="drop_mouseover('head');" onMouseOut="drop_mouseout('head');">北区人才</a></li>
+                    <li><a href="#" onClick="return search_show('head','nelite',this)" onMouseOver="drop_mouseover('head');" onMouseOut="drop_mouseout('head');">南区人才</a></li>
+             </ul>
+    </div>
+     <div class="btnSearch">
+     
+    <a href="#" onClick="javascript:return dosearch(document.getElementById('headSearchForm'));"><span class="lbl">搜索</span></a>
+     </div>
+     
+          <div class="searchytitle" id="searchytitle" name="searchytitle" style="display:none">
+           <input type="radio" class="radio" name="sbt" value="post" onClick="csbt(this,this.form.sbts);">按地区搜<input type="radio" name="sbt" value="user" onClick="csbt(this,this.form.sbts);" class="radio">按职位搜<input type="radio" class="radio" name="sbt" value="post" onClick="csbt(this,this.form.sbts);">按年薪搜<input type="radio" name="sbt" value="user" onClick="csbt(this,this.form.sbts);" class="radio">按时间搜<input type="hidden" name="sbts" value="ytitle">
+     </div>
+     
+       <div class="searchltitle" id="searchltitle" name="searchltitle" style="display:none">
+           <input type="radio" class="radio" name="sbt" value="post" onClick="csbt(this,this.form.sbts);">按地区搜<input type="radio" name="sbt" value="user" onClick="csbt(this,this.form.sbts);" class="radio">按职位搜<input type="radio" class="radio" name="sbt" value="post" onClick="csbt(this,this.form.sbts);">按年薪搜<input type="radio" name="sbt" value="user" onClick="csbt(this,this.form.sbts);" class="radio">按时间搜<input type="hidden" name="sbts" value="ltitle">
+     </div>
+     
+            <div class="searchbelite" id="searchbelite" name="searchbelite" style="display:none">
+          <input type="radio" class="radio" name="sbt" value="post" onClick="csbt(this,this.form.sbts);">按地区搜<input type="radio" name="sbt" value="user" onClick="csbt(this,this.form.sbts);" class="radio">按职位搜<input type="radio" class="radio" name="sbt" value="post" onClick="csbt(this,this.form.sbts);">按年薪搜<input type="radio" name="sbt" value="user" onClick="csbt(this,this.form.sbts);" class="radio">按时间搜<input type="hidden" name="sbts" value="belite">
+     </div>
+     <div class="searchnelite" id="searchnelite" name="searchnelite" style="display:none">
+
+          <input type="radio" class="radio" name="sbt" value="post" onClick="csbt(this,this.form.sbts);">按地区搜<input type="radio" name="sbt" value="user" onClick="csbt(this,this.form.sbts);" class="radio">按职位搜<input type="radio" class="radio" name="sbt" value="post" onClick="csbt(this,this.form.sbts);">按年薪搜<input type="radio" name="sbt" value="user" onClick="csbt(this,this.form.sbts);" class="radio">按时间搜<input type="hidden" name="sbts" value="nelite">
+     </div>
+     
+          <div class="clear"></div>
+     </form>
+     
+       </div>
+
+       </div>
+   <!--导航-->
+       <div id="nav" class="area">
+<div class="navlist">
+ <ul>
+  <li>
+   <a href="www.yaochenlietou.com" target="_blank">首页</a>
+ </li>
+ <li>
+   <a href="www.yaochenlietou.com" target="_blank">医药猎头</a>
+ </li>
+  <li>
+   <a href="www.yaochenlietou.com" target="_blank">医疗猎头</a>
+ </li>
+  <li>
+   <a href="www.yaochenlietou.com" target="_blank">北区人才</a>
+ </li>
+   <li>
+   <a href="www.yaochenlietou.com" target="_blank">南区人才</a>
+ </li>
+  <li>
+   <a href="www.yaochenlietou.com" target="_blank">服务资费</a>
+ </li>
+   <li>
+   <a href="www.yaochenlietou.com" target="_blank">服务流程</a>
+ </li>
+    <li>
+   <a href="www.yaochenlietou.com" target="_blank">团队优势</a>
+ </li>
+
+    <li>
+   <a href="www.yaochenlietou.com" target="_blank">服务价格</a>
+ </li>
+     <li>
+   <a href="www.yaochenlietou.com" target="_blank">服务企业</a>
+ </li>
+ </ul>
+
+   </div> 
+   </div>
+
+<div class="bk3"></div>
+
+${next.body()}
+
+<div class="bk3"></div>
+
+          <div id="footer" class="area">
+<div class="blank10"></div>
+ <ul>
+ <li><a href="http://www.yaochenlietou.com" target="_blank">瑶臣猎头简介</a> &nbsp; |   &nbsp;
+ <a href="http://www.yaochenlietou.com" target="_blank">合作客户</a> &nbsp;  |   &nbsp;
+<a href="http://www.yaochenlietou.com" target="_blank">加入瑶臣</a> &nbsp;  |   &nbsp;
+<a href="http://www.yaochenlietou.com" target="_blank">联系方式</a>&nbsp;   |   &nbsp;
+<a href="http://www.yaochenlietou.com" target="_blank">候选人平台</a>&nbsp;   |    &nbsp;
+
+<a href="http://www.yaochenlietou.com" target="_blank">意见反馈</a>&nbsp;   |    &nbsp;
+<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=271769336&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:271769336:50" alt="点击这里给我发消息" title="点击这里给我发消息"></a>  
+</li>
+<div class="blank10"></div>
+<p class="end">Copyright &copy; 1998 - 2012 YaoChenWanDai. All Rights Reserved</p>
+ </ul>
+ </div>
+
+<script type="text/javascript">
+  $(function(){
+      new slide("#main-slide","cur",301,240,1);//焦点图
+      new SwapTab(".SwapTab","span",".tab-content","ul","fb");//排行TAB
+  })
+</script>
+<script type="text/javascript">
+  $(function(){
+      $(".picbig").each(function(i){
+        var cur = $(this).find('.img-wrap').eq(0);
+        var w = cur.width();
+        var h = cur.height();
+        $(this).find('.img-wrap img').LoadImage(true, w, h,'${static_url}/images/msg_img/loading.gif');
+      });
+  })
+</script>
+</body>
+</html>
+

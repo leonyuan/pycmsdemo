@@ -1,0 +1,27 @@
+<%inherit file="base.html"/>
+
+<%block name="title">${base_entity.title}-${parent.title()}</%block>
+
+<div class="area contenttop">
+<div class="aleft">
+<div id="navcontainer">
+<ul id="navlist">
+<li><a href="/">关于我们</a> </li>
+<li><a href="/">了解猎头</a></li>
+<li><a href="/">加入瑶臣</a></li>
+<li><a href="/">候选人平台</a></li>
+<li><a href="/">意见反馈</a></li>
+<li><a href="/">联系方式</a></li>
+</ul>
+</div>
+</div>
+<div id="aboutmain">
+ <div id="abbj">
+ </div>
+ <div class="abtext">
+  <h2>${base_entity.title}</h2>
+   ${entity.content}
+  </div>
+</div>
+
+</div>

@@ -1,0 +1,595 @@
+<%inherit file="base.html"/>
+<%namespace file="lib/entity.html" import="*"/>
+
+<%block name="title">医药猎头-${parent.title()}</%block>
+
+<%include file="nav.html"/>
+<div class="bk3"></div>
+
+<div class="area content"> 
+<div class="ltclmn">
+<!--华北-->
+<div class="ltclmnc">
+<div class=" hrtitle">
+<h2>
+<a href="www.yaochenlietou.com" target="_blank">华北区猎头职位</a>
+</h2>
+</div>
+<div class="yyjob">
+<div class="yyjoblist">
+<dl>
+<dt>
+<ul>
+  <li class="yregionnav">地    区</li>
+  <li class="ytitle1nav">职    位</li>
+  <li class="ysalarynav">年    薪</li>
+  <li class="ytimenav">  截止日期</li>
+</ul>
+</dt>
+${latest_job2(8, 6)} 
+  </dl>
+   <div class="more">
+   <li>
+       <a href="www.yaochenlietou.com" target="_blank">更多>></a></li>
+       </div>
+       </div>
+</div>
+</div>
+<div class="ltclmnr">
+<div class=" hrtitle">
+<h2>
+<a href="www.yaochenlietou.com" target="_blank">华北区精英人才</a>
+</h2>
+</div>
+<div class="ytalents">
+   <div class="ytalentslist">
+<dl>
+<dt>
+    <ul>
+          <li class="ytregionnav">行    业</li>
+          <li class="yttitle1nav">职    位</li>
+          <li class="ytsalarynav">年    薪</li>
+          <li class="yttimenav">  有效期</li>
+</ul>
+
+</dt>
+${latest_elite2(51, 6)}
+  </dl>
+  <div class="more">
+  <li>
+  <a href="www.yaochenlietou.com" target="_blank">更多>></a>
+  </li>
+  </div>
+       </div>
+       </div>
+</div>
+<div class="blank20"></div>
+<!--华东-->
+<div class="ltclmnc">
+<div class=" hrtitle">
+<h2>
+<a href="www.yaochenlietou.com" target="_blank">华东区猎头职位</a>
+</h2>
+</div>
+<div class="yyjob">
+<div class="yyjoblist">
+<dl>
+<dt>
+    <ul>
+          <li class="yregionnav">地    区</li>
+          <li class="ytitle1nav">职    位</li>
+          <li class="ysalarynav">年    薪</li>
+          <li class="ytimenav">  截止日期</li>
+</ul>
+</dt>
+${latest_job2(10, 6)} 
+  </dl>
+   <div class="more">
+   <li>
+       <a href="www.yaochenlietou.com" target="_blank">更多>></a></li>
+       </div>
+       </div>
+</div>
+</div>
+<div class="ltclmnr">
+<div class=" hrtitle">
+<h2>
+<a href="www.yaochenlietou.com" target="_blank">华东区精英人才</a>
+</h2>
+</div>
+<div class="ytalents">
+   <div class="ytalentslist">
+<dl>
+<dt>
+    <ul>
+          <li class="ytregionnav">行    业</li>
+          <li class="yttitle1nav">职    位</li>
+          <li class="ytsalarynav">年    薪</li>
+          <li class="yttimenav">  有效期</li>
+</ul>
+
+</dt>
+${latest_elite2(52, 6)}
+  </dl>
+  <div class="more">
+  <li>
+  <a href="www.yaochenlietou.com" target="_blank">更多>></a>
+  </li>
+  </div>
+       </div>
+       </div>
+</div>
+<div class="blank20"></div>
+<div class="banner">
+<a href="www.yaochenlietou.com" target="_blank"><img src="${static_url}/images/guanggao.jpg" width="760" height="108"></a></div>
+<div class="blank20"></div>
+<!--华南-->
+<div class="ltclmnc">
+<div class=" hrtitle">
+<h2>
+<a href="www.yaochenlietou.com" target="_blank">华南区猎头职位</a>
+</h2>
+</div>
+<div class="yyjob">
+<div class="yyjoblist">
+<dl>
+<dt>
+    <ul>
+          <li class="yregionnav">地    区</li>
+          <li class="ytitle1nav">职    位</li>
+          <li class="ysalarynav">年    薪</li>
+          <li class="ytimenav">  截止日期</li>
+</ul>
+
+</dt>
+${latest_job2(6, 6)}
+  </dl>
+   <div class="more">
+   <li>
+       <a href="www.yaochenlietou.com" target="_blank">更多>></a></li>
+       </div>
+       </div>
+</div>
+</div>
+<div class="ltclmnr">
+<div class=" hrtitle">
+<h2>
+<a href="www.yaochenlietou.com" target="_blank">华南区精英人才</a>
+</h2>
+</div>
+<div class="ytalents">
+   <div class="ytalentslist">
+<dl>
+<dt>
+    <ul>
+          <li class="ytregionnav">行    业</li>
+          <li class="yttitle1nav">职    位</li>
+          <li class="ytsalarynav">年    薪</li>
+          <li class="yttimenav">  有效期</li>
+</ul>
+
+</dt>
+${latest_elite2(53, 6)}
+ </dl>
+  <div class="more">
+  <li>
+  <a href="www.yaochenlietou.com" target="_blank">更多>></a>
+  </li>
+  </div>
+       </div>
+       </div>
+</div>
+<div class="blank20"></div>
+<!--华中-->
+<div class="ltclmnc">
+<div class=" hrtitle">
+<h2>
+<a href="www.yaochenlietou.com" target="_blank">华中区猎头职位</a>
+</h2>
+</div>
+<div class="yyjob">
+<div class="yyjoblist">
+<dl>
+<dt>
+    <ul>
+          <li class="yregionnav">地    区</li>
+          <li class="ytitle1nav">职    位</li>
+          <li class="ysalarynav">年    薪</li>
+          <li class="ytimenav">  截止日期</li>
+</ul>
+
+</dt>
+${latest_job2(7, 6)}
+  </dl>
+   <div class="more">
+   <li>
+       <a href="www.yaochenlietou.com" target="_blank">更多>></a></li>
+       </div>
+       </div>
+</div>
+</div>
+<div class="ltclmnr">
+<div class=" hrtitle">
+<h2>
+<a href="www.yaochenlietou.com" target="_blank">华中区精英人才</a>
+</h2>
+</div>
+<div class="ytalents">
+   <div class="ytalentslist">
+<dl>
+<dt>
+    <ul>
+          <li class="ytregionnav">行    业</li>
+          <li class="yttitle1nav">职    位</li>
+          <li class="ytsalarynav">年    薪</li>
+          <li class="yttimenav">  有效期</li>
+</ul>
+</dt>
+${latest_elite2(54, 6)}
+  </dl>
+  <div class="more">
+  <li>
+  <a href="www.yaochenlietou.com" target="_blank">更多>></a>
+  </li>
+  </div>
+       </div>
+       </div>
+</div>
+<div class="blank20"></div>
+<div class="banner">
+<a href="www.yaochenlietou.com" target="_blank"><img src="${static_url}/images/guanggao.jpg" width="760" height="108"></a></div>
+
+<div class="blank20"></div>
+<!--东南-->
+<div class="ltclmnc">
+<div class=" hrtitle">
+<h2>
+<a href="www.yaochenlietou.com" target="_blank">东南区猎头职位</a>
+</h2>
+</div>
+<div class="yyjob">
+<div class="yyjoblist">
+<dl>
+<dt>
+    <ul>
+          <li class="yregionnav">地    区</li>
+          <li class="ytitle1nav">职    位</li>
+          <li class="ysalarynav">年    薪</li>
+          <li class="ytimenav">  截止日期</li>
+</ul>
+
+</dt>
+${latest_job2(39, 6)}
+  </dl>
+   <div class="more">
+   <li>
+       <a href="www.yaochenlietou.com" target="_blank">更多>></a></li>
+       </div>
+       </div>
+</div>
+</div>
+<div class="ltclmnr">
+<div class=" hrtitle">
+<h2>
+<a href="www.yaochenlietou.com" target="_blank">东南区精英人才</a>
+</h2>
+</div>
+<div class="ytalents">
+   <div class="ytalentslist">
+<dl>
+<dt>
+    <ul>
+          <li class="ytregionnav">行    业</li>
+          <li class="yttitle1nav">职    位</li>
+          <li class="ytsalarynav">年    薪</li>
+          <li class="yttimenav">  有效期</li>
+</ul>
+
+</dt>
+${latest_elite2(55, 6)}
+  </dl>
+  <div class="more">
+  <li>
+  <a href="www.yaochenlietou.com" target="_blank">更多>></a>
+  </li>
+  </div>
+       </div>
+       </div>
+</div>
+
+<div class="blank20"></div>
+<!--东北-->
+<div class="ltclmnc">
+<div class=" hrtitle">
+<h2>
+<a href="www.yaochenlietou.com" target="_blank">东北区猎头职位</a>
+</h2>
+</div>
+<div class="yyjob">
+<div class="yyjoblist">
+<dl>
+<dt>
+    <ul>
+          <li class="yregionnav">地    区</li>
+          <li class="ytitle1nav">职    位</li>
+          <li class="ysalarynav">年    薪</li>
+          <li class="ytimenav">  截止日期</li>
+</ul>
+
+</dt>
+${latest_job2(9, 6)}
+  </dl>
+   <div class="more">
+   <li>
+       <a href="www.yaochenlietou.com" target="_blank">更多>></a></li>
+       </div>
+       </div>
+</div>
+</div>
+<div class="ltclmnr">
+<div class=" hrtitle">
+<h2>
+<a href="www.yaochenlietou.com" target="_blank">东北区精英人才</a>
+</h2>
+</div>
+<div class="ytalents">
+   <div class="ytalentslist">
+<dl>
+<dt>
+    <ul>
+          <li class="ytregionnav">行    业</li>
+          <li class="yttitle1nav">职    位</li>
+          <li class="ytsalarynav">年    薪</li>
+          <li class="yttimenav">  有效期</li>
+</ul>
+
+</dt>
+${latest_elite2(56, 6)}
+  </dl>
+  <div class="more">
+  <li>
+  <a href="www.yaochenlietou.com" target="_blank">更多>></a>
+  </li>
+  </div>
+       </div>
+       </div>
+</div>
+<div class="blank20"></div>
+<div class="banner">
+<a href="www.yaochenlietou.com" target="_blank"><img src="${static_url}/images/guanggao.jpg" width="760" height="108"></a></div>
+
+<div class="blank20"></div>
+<!--西南-->
+<div class="ltclmnc">
+<div class=" hrtitle">
+<h2>
+<a href="www.yaochenlietou.com" target="_blank">西南区猎头职位</a>
+</h2>
+</div>
+<div class="yyjob">
+<div class="yyjoblist">
+<dl>
+<dt>
+    <ul>
+          <li class="yregionnav">地    区</li>
+          <li class="ytitle1nav">职    位</li>
+          <li class="ysalarynav">年    薪</li>
+          <li class="ytimenav">  截止日期</li>
+</ul>
+
+</dt>
+${latest_job2(57, 6)}
+  </dl>
+   <div class="more">
+   <li>
+       <a href="www.yaochenlietou.com" target="_blank">更多>></a></li>
+       </div>
+       </div>
+</div>
+</div>
+<div class="ltclmnr">
+<div class=" hrtitle">
+<h2>
+<a href="www.yaochenlietou.com" target="_blank">西南区精英人才</a>
+</h2>
+</div>
+<div class="ytalents">
+   <div class="ytalentslist">
+<dl>
+<dt>
+    <ul>
+          <li class="ytregionnav">行    业</li>
+          <li class="yttitle1nav">职    位</li>
+          <li class="ytsalarynav">年    薪</li>
+          <li class="yttimenav">  有效期</li>
+</ul>
+
+</dt>
+${latest_elite2(58, 6)}
+  </dl>
+  <div class="more">
+  <li>
+  <a href="www.yaochenlietou.com" target="_blank">更多>></a>
+  </li>
+  </div>
+       </div>
+       </div>
+</div>
+
+<div class="blank20"></div>
+<!--西北-->
+<div class="ltclmnc">
+<div class=" hrtitle">
+<h2>
+<a href="www.yaochenlietou.com" target="_blank">西北区猎头职位</a>
+</h2>
+</div>
+<div class="yyjob">
+<div class="yyjoblist">
+<dl>
+<dt>
+    <ul>
+          <li class="yregionnav">地    区</li>
+          <li class="ytitle1nav">职    位</li>
+          <li class="ysalarynav">年    薪</li>
+          <li class="ytimenav">  截止日期</li>
+</ul>
+
+</dt>
+${latest_job2(59, 6)}
+  </dl>
+   <div class="more">
+   <li>
+       <a href="www.yaochenlietou.com" target="_blank">更多>></a></li>
+       </div>
+       </div>
+</div>
+</div>
+<div class="ltclmnr">
+<div class=" hrtitle">
+<h2>
+<a href="www.yaochenlietou.com" target="_blank">西北区精英人才</a>
+</h2>
+</div>
+<div class="ytalents">
+   <div class="ytalentslist">
+<dl>
+<dt>
+    <ul>
+          <li class="ytregionnav">行    业</li>
+          <li class="yttitle1nav">职    位</li>
+          <li class="ytsalarynav">年    薪</li>
+          <li class="yttimenav">  有效期</li>
+</ul>
+
+</dt>
+${latest_elite2(60, 6)}
+  </dl>
+  <div class="more">
+  <li>
+  <a href="www.yaochenlietou.com" target="_blank">更多>></a>
+  </li>
+  </div>
+       </div>
+       </div>
+</div>
+</div>
+
+
+<div class="right">
+        <div class="rightbj">
+        <div class="banner">
+        <a href="www.yaochenlietou.com" target="_blank"><img src="${static_url}/images/326363.jpg" width="189" height="317"></a>
+        </div>
+        </div>
+        <!--社保-->
+        <div class="rightbj">
+        <div class=" tit1">
+         <h2>
+         <span><a href="www.yaochenlietou.com" target="_blank">社会保险</a> </span>
+         <a href="www.yaochenlietou.com" target="_blank">更多>></a>
+         </h2>
+         </div>
+         <ul class="list6">
+         <li class="list6f">
+        <a href="www.yaochenlietou.com" target="_blank">世卫组织发布新标准帮助维护精神疾病患者权利</a>
+         </li>
+         <li>
+        <a href="www.yaochenlietou.com" target="_blank">世卫组织发布新标准帮助维护精神疾病患者权利</a>
+         </li>
+         <li>
+        <a href="www.yaochenlietou.com" target="_blank">世卫组织发布新标准帮助维护精神疾病患者权利</a>
+         </li>
+         <li>
+        <a href="www.yaochenlietou.com" target="_blank">世卫组织发布新标准帮助维护精神疾病患者权利</a>
+         </li>
+         <li>
+        <a href="www.yaochenlietou.com" target="_blank">世卫组织发布新标准帮助维护精神疾病患者权利</a>
+         </li>
+         <li>
+        <a href="www.yaochenlietou.com" target="_blank">世卫组织发布新标准帮助维护精神疾病患者权利</a>
+         </li>
+         </ul>
+         </div>
+         <div class="rightbj">
+          <a href="www.yaochenlietou.com" target="_blank"><img src="${static_url}/images/326363.jpg" width="189" height="317"></a>
+        </div>
+        <!--劳动纠纷-->
+        <div class="rightbj">
+        <div class="tit1">
+        <h2>
+         <span><a href="www.yaochenlietou.com" target="_blank">劳动纠纷</a>
+         </span>
+         <a href="www.yaochenlietou.com" target="_blank">更多</a>
+         </h2>
+         </div>
+         <ul class="list6">
+          <li class="list6f">
+          <a href="www.yaochenlietou.com" target="_blank">工伤保险有多少侥幸就有多少遗憾</a>
+          </li>
+          <li>
+          <a href="www.yaochenlietou.com" target="_blank">工伤保险有多少侥幸就有多少遗憾</a>
+          </li>
+           <li>
+          <a href="www.yaochenlietou.com" target="_blank">工伤保险有多少侥幸就有多少遗憾</a>
+          </li>
+           <li>
+          <a href="www.yaochenlietou.com" target="_blank">工伤保险有多少侥幸就有多少遗憾</a>
+          </li>
+           <li>
+          <a href="www.yaochenlietou.com" target="_blank">工伤保险有多少侥幸就有多少遗憾</a>
+          </li>
+           <li>
+          <a href="www.yaochenlietou.com" target="_blank">工伤保险有多少侥幸就有多少遗憾</a>
+          </li>
+          </ul>
+         </div>
+          <div class="rightbj">
+          <a href="www.yaochenlietou.com" target="_blank"><img src="${static_url}/images/326363.jpg" width="189" height="417"></a>
+        </div>
+        <div class="rightbj">
+        <div class="tit1">
+        <h2>
+         <span><a href="www.yaochenlietou.com" target="_blank">薪酬福利</a>
+         </span>
+         <a href="www.yaochenlietou.com" target="_blank">更多</a>
+         </h2>
+         </div>
+          <ul class="list6">
+          <li class="list6f">
+          <a href="www.yaochenlietou.com" target="_blank">企业用工9个月不签劳动合同 职工求助工会获赔偿</a>
+          </li>
+          <li>
+          <a href="www.yaochenlietou.com" target="_blank">企业用工9个月不签劳动合同 职工求助工会获赔偿</a>
+          </li>
+           <li>
+          <a href="www.yaochenlietou.com" target="_blank">企业用工9个月不签劳动合同 职工求助工会获赔偿</a>
+          </li>
+           <li>
+          <a href="www.yaochenlietou.com" target="_blank">企业用工9个月不签劳动合同 职工求助工会获赔偿</a>
+          </li>
+           <li>
+          <a href="www.yaochenlietou.com" target="_blank">企业用工9个月不签劳动合同 职工求助工会获赔偿</a>
+          </li>
+           <li>
+          <a href="www.yaochenlietou.com" target="_blank">企业用工9个月不签劳动合同 职工求助工会获赔偿</a>
+          </li>
+          </ul>
+         
+         </div>
+         <div class="rightbj">
+         <div class="banner">
+          <a href="www.yaochenlietou.com" target="_blank"><img src="${static_url}/images/326363.jpg" width="189" height="205"></a>
+          </div>
+          </div>
+          <div class="rightbj">
+          <div class="banner">
+          <a href="www.yaochenlietou.com" target="_blank"><img src="${static_url}/images/326363.jpg" width="189" height="335"></a>
+          </div>
+          </div>
+         
+         
+     </div>
+
+    <%include file="customer.html"/>
+      </div>

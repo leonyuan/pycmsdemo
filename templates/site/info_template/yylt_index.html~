@@ -1,0 +1,9 @@
+<%inherit file="base.html"/>
+<%namespace file="lib/entity.html" import="*"/>
+
+<%block name="title">医药猎头-${parent.title()}</%block>
+
+<%include file="nav.html"/>
+<div class="bk3"></div>
+
+

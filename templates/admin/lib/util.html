@@ -1,0 +1,124 @@
+
+<%def name="paging(pgobj)">
+    <div class="pagination">
+        <span>${pgobj.recnum} 记录 </span>
+    % if pgobj.pno != 1:
+        <a href="?t=${t}&c=${c}&p=1" title="首页">&laquo;首页</a>
+        <a href="?t=${t}&c=${c}&p=${pgobj.pno-1}" title="上一页">&laquo;上一页</a>
+    % endif
+
+    % for p in pgobj.paginations:
+        % if p == 0:
+        <span class="number">...</span>
+        % else:
+        <a href="?t=${t}&c=${c}&p=${p}" class="number${p == pgobj.pno and ' current' or ''}" title="${p}">${p}</a>
+        % endif
+    % endfor
+
+    % if pgobj.pno != pgobj.pnum:
+        <a href="?t=${t}&c=${c}&p=${pgobj.pno+1}" title="下一页">下一页&raquo;</a>
+        <a href="?t=${t}&c=${c}&p=${pgobj.pnum}" title="末页">末页&raquo;</a>
+    % endif
+    </div> <!-- End .pagination -->
+</%def>
+
+<%def name="edit_inline_js(subform)">
+  <script type="text/javascript">
+  (function($) {
+      $(document).ready(function() {
+        //alert("start!");
+        var rows = "#${subform['prefix']}-group .inline-related";
+          var updateInlineLabel = function(row) {
+              $(rows).find(".inline_label").each(function(i) {
+                  var count = i + 1;
+                  $(this).html($(this).html().replace(/(#\d+)/g, "#" + count));
+              });
+          }
+          var reinitDateTimeShortCuts = function() {
+              // Reinitialize the calendar and clock widgets by force, yuck.
+              if (typeof DateTimeShortcuts != "undefined") {
+                  $(".datetimeshortcuts").remove();
+                  DateTimeShortcuts.init();
+              }
+          }
+          var updateSelectFilter = function() {
+              // If any SelectFilter widgets were added, instantiate a new instance.
+              if (typeof SelectFilter != "undefined"){
+                  $(".selectfilter").each(function(index, value){
+                    var namearr = value.name.split('-');
+                    SelectFilter.init(value.id, namearr[namearr.length-1], false, "${static_url}/admin");
+                  });
+                  $(".selectfilterstacked").each(function(index, value){
+                    var namearr = value.name.split('-');
+                    SelectFilter.init(value.id, namearr[namearr.length-1], true, "${static_url}/admin");
+                  });
+              }
+          }
+          var initPrepopulatedFields = function(row) {
+              row.find('.prepopulated_field').each(function() {
+                  var field = $(this);
+                  var input = field.find('input, select, textarea');
+                  var dependency_list = input.data('dependency_list') || [];
+                  var dependencies = [];
+                  $.each(dependency_list, function(i, field_name) {
+                    dependencies.push('#' + row.find(field_name).find('input, select, textarea').attr('id'));
+                  });
+                  if (dependencies.length) {
+                      input.prepopulate(dependencies, input.attr('maxlength'));
+                  }
+              });
+          }
+
+          // initialize for kindeditor control.
+          var initCKEditorCtrl = function(row) {
+            //prefix = row.attr('id').substr(0,row.attr('id').indexOf('-'));
+            //var totalForms = $("#id_" + prefix + "-TOTAL_FORMS");
+            //var theIndex = parseInt(totalForms.val()) - 1;
+
+            row.find('.richtext-field').each(function() {
+              var field = $(this);
+              CKEDITOR.replace(field.attr('id'), {language:'zh-cn',height:250,pages:true,subtitle:true,textareaid:'content'
+                ,module:'content',cid:'13', flashupload:true,alowuploadexts:'',allowbrowser:'1',allowuploadnum:'10'
+                ,authkey:'1b8426a752d07b7232968152c952ccb8', filebrowserUploadUrl : 'http://localhost/pycms'
+                ,toolbar :
+                  [
+                    ['Source','-','Templates'],
+                    ['Cut','Copy','Paste','PasteText','PasteFromWord','-','Print'],
+                    ['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],
+                    ['ShowBlocks'],['Image','Capture','Flash'],['Maximize'],
+                    '/',
+                    ['Bold','Italic','Underline','Strike','-'],
+                    ['Subscript','Superscript','-'],
+                    ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
+                    ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
+                    ['Link','Unlink','Anchor'],
+                    ['Table','HorizontalRule','Smiley','SpecialChar','PageBreak'],
+                    '/',
+                    ['Styles','Format','Font','FontSize'],
+                    ['TextColor','BGColor'],
+                    ['attachment'],
+                  ]
+                  });
+            });
+          }
+
+          $(rows).formset({
+              prefix: "${subform['prefix']}",
+              addText: "添加另一个${subform['title']}",
+              formCssClass: "dynamic-${subform['prefix']}",
+              deleteCssClass: "inline-deletelink",
+              deleteText: "删除",
+              emptyCssClass: "hid",
+              removed: updateInlineLabel,
+              added: (function(row) {
+                  initPrepopulatedFields(row);
+                  reinitDateTimeShortCuts();
+                  updateSelectFilter();
+                  updateInlineLabel(row);
+                  initCKEditorCtrl(row);
+              })
+          });
+      });
+  })(jQuery);
+  </script>
+</%def>

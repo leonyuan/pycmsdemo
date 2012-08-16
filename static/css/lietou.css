@@ -1,0 +1,245 @@
+/*焦点图*/
+#gallery {
+    width:750px;
+    height:500px;
+    margin:0 auto;
+    position:relative;
+    font-family:verdana, arial, sans-serif;
+    background:#f8f8f8;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+}
+#gallery #fullsize {
+    position:absolute;
+    left:0;
+    top:0;
+    height:500px;
+    width:750px;
+    overflow:hidden;
+    text-align:center;
+}
+#gallery #fullsize div {width:750px; height:700px; padding-top:20px; position:relative;}
+#gallery #fullsize div img {clear:both; display:block; margin:0 auto; border:10px solid #fff; width:480px; height:360px; position:relative; z-index:500;}
+#gallery #fullsize div h3 {padding:10px 0 0 0; margin:0; font-size:18px;font-weight:bold;}
+#gallery #fullsize div p {padding:5px 0; margin:0; font-size:12px; line-height:18px;}
+#gallery #fullsize div p a {color:#36C}
+ 
+#gallery #fullsize a.previous {display:block; height:120px; width:180px; position:absolute; left:10px; top:200px; z-index:10; border:10px solid #fff;}
+#gallery #fullsize a.next {display:block; height:120px; width:180px; position:absolute; right:10px; top:200px; z-index:10; border:10px solid #fff;}
+ 
+#gallery #fullsize a.previous img,
+#gallery #fullsize a.next img {width:180px; height:120px; border:0; display:block; filter: alpha(opacity=40); opacity:0.4;}
+ 
+#gallery #fullsize a:hover {direction:ltr; z-index:600;}
+#gallery #fullsize a:hover img {filter: alpha(opacity=80); opacity:0.8;}
+
+/*JS*/
+.client {margin: 10px auto;clear: both;overflow: hidden;}
+.clienttit{border-top:7px solid #646786}
+.clienttit h2 {text-align:left; font-size:14px;}
+.clienttit h2 span{font-size:14px; font-weight:bold; text-align:left}	
+	/* ?2008 MagicToolbox.com. To use this code on your own site, visit http://www.magictoolbox.com */
+
+/* CSS class for thumbnail link <A> */
+.MagicThumb {
+    cursor: url(cursor/zoomin.cur), pointer;
+    outline: none;
+}
+
+/* CSS class for the thumbnail link <A> when the big image is zoomed */
+.MagicThumb-zoomed { cursor: default; }
+
+/* CSS class for span inside the thumbnail <A> */
+.MagicThumb span { display: none; }
+
+/* CSS class for the thumbnail image */
+.MagicThumb img { border: 0; outline: none; }
+
+/* CSS class for the big image while zooming */
+.MagicThumb-image { border: 1px solid #cccccc; outline: none; }
+
+/* CSS class for the zoomed big image */
+.MagicThumb-image-zoomed { cursor: url(cursor/zoomout.cur), pointer; }
+
+/* CSS class for the caption under the big zoomed image */
+.MagicThumb-caption {
+    color: #333333;
+    background-color: #F0F0F0;
+    border: 1px solid #CCCCCC;
+    border-top: none;
+    font-family: Verdana, Helvetica;
+    font-size: 11px;
+    padding: 8px 16px;
+}
+
+/* CSS class for the control bar */
+.MagicThumb-controlbar {
+	display: block;
+	height: 18px;
+}
+
+.MagicThumb-controlbar a {
+	display: block;
+	width: 18px;
+	height: 18px;
+	margin: 0px 1px;
+	outline: none;
+	float: left;
+	overflow: hidden;
+}
+
+.MagicThumb-controlbar a span {
+	display: block;
+	width: 1000px;
+	height: 1000px;
+	background: transparent url(graphics/controlbar.png) no-repeat 0 0;
+	outline: none;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+.job,.job1{ width:370px; float:right;display:inline;overflow: hidden;  }
+.job .job_title{background:url(../images/zhaopin.png) no-repeat;height:30px; width:370px;}
+.job .job_title h1{width:370px;text-align:right; color:#000;font-size:12px; padding:5px 10px 0px 0px ;}
+.job .job_title h1 span{ float:left;text-align:left;font-weight:bold;margin:0px 5px; font-size:14px;display:inline;}
+.job .job_title h1 span a{color:#1E50A2}
+.job .job_title h1 span a honve{color:#1E50A2}
+.job .joblist{width:360px; line-height:30px;float:right;display:inline;}
+.job .joblist ul {list-style-type:none;white-space: nowrap;overflow: hidden;text-align:left;clear:both;}
+.job .joblist li.regionnav{width:67px;float:left; text-align:left;font-weight:bold;display:inline;}
+.job .joblist li.title1nav{width:128px;float:left; text-align:left;font-weight:bold;display:inline;}
+.job .joblist li.salarynav{width:60px;float:left; text-align: left;font-weight:bold;display:inline;}
+.job .joblist li.timenav{width:78px;float: right; text-align:left; font-weight:bold;display:inline;}
+.job .joblist li.region{width:67px;float:left; text-align:left;font-size:14px;}
+.job .joblist li.title1{width:128px;float:left; text-align:left;font-size:14px; color:#06c;}
+.job .joblist li.title1 a{color:#06c;}
+.job .joblist li.title1 a honve{color:#06c;}
+.job .joblist li.salary{width:60px;float:left; text-align:left;font-size:14px;}
+.job .joblist li.time{width:78px;float: right; text-align: left;font-size:14px;}
+
+.yyjob{ width:370px; float:right;display:inline;overflow: hidden;  }
+.yyjob .yyjoblist{width:360px; line-height:30px;float:right;display:inline;}
+.yyjob .yyjoblist ul {list-style-type:none;white-space: nowrap;overflow: hidden;text-align:left;clear:both;}
+.yyjob .yyjoblist li{background:url(../images/xuxian2.gif)repeat-x top;}
+.yyjob .yyjoblist li.yregionnav{width:67px;float:left; text-align:left;font-weight:bold;display:inline;}
+.yyjob .yyjoblist li.ytitle1nav{width:128px;float:left; text-align:left;font-weight:bold;display:inline;}
+.yyjob .yyjoblist li.ysalarynav{width:60px;float:left; text-align: left;font-weight:bold;display:inline;}
+.yyjob .yyjoblist li.ytimenav{width:78px;float: left; padding-left: 25px; font-weight:bold;display:inline;}
+.yyjob .yyjoblist li.yregion{width:67px;float:left; text-align:left;font-size:14px;}
+.yyjob .yyjoblist li.ytitle1{width:128px;float:left; text-align:left;font-size:14px; color:#06c;}
+.yyjob .yyjoblist li.ytitle1 a{color:#06c;}
+.yyjob .yyjoblist li.ytitle1 a honve{color:#06c;}
+.yyjob .yyjoblist li.ysalary{width:60px;float:left; text-align:left;font-size:14px;}
+.yyjob .yyjoblist li.ytime{width:78px;float: left; padding-left: 25px;font-size:14px;}
+
+.talents{ width:370px; float:right;display:inline;overflow: hidden;  }
+.talents .talents_title{background:url(../images/zhaopin.png) no-repeat;height:30px; width:370px;}
+.talents .talents_title h1{width:370px;text-align:right; color:#000;font-size:12px; padding:5px 10px 0px 0px ;}
+.talents .talents_title h1 span{ float:left;text-align:left;font-weight:bold;margin:0px 5px; font-size:14px;display:inline;}
+.talents .talents_title h1 span a{color:#1E50A2}
+.talents .talents_title h1 span a honve{color:#1E50A2}
+.talents .talentslist{width:360px; line-height:30px;float:right;display:inline;}
+.talents .talentslist ul {list-style-type:none;white-space: nowrap;overflow: hidden;text-align:left;clear:both;}
+.talents .talentslist li.tregionnav{width:67px;float:left; text-align:left;font-weight:bold;display:inline;}
+.talents .talentslist li.ttitle1nav{width:128px;float:left; text-align:left;font-weight:bold;display:inline;}
+.talents .talentslist li.tsalarynav{width:60px;float:left; text-align:left;font-weight:bold;display:inline;}
+.talents .talentslist li.ttimenav{width:78px;float:left; text-align:center; font-weight:bold;display:inline;}
+.talents .talentslist li.tregion{width:67px;float:left; text-align:left;font-size:14px;}
+.talents .talentslist li.ttitle1{width:128px;float:left; text-align:left;font-size:14px; color:#06c;}
+.talents .talentslist li.ttitle1 a{color:#06c;}
+.talents .talentslist li.ttitle1 a honve{color:#06c;}
+.talents .talentslist li.tsalary{width:60px;float:left; text-align:left;font-size:14px;}
+.talents .talentslist li.ttime{width:78px; float:right; text-align:left;font-size:14px;}
+
+
+.ytalents{ width:370px; float:right;display:inline;overflow: hidden;  }
+.ytalents .ytalentslist{width:360px; line-height:30px;float:right;display:inline;}
+.ytalents .ytalentslist ul {list-style-type:none;white-space: nowrap;overflow: hidden;text-align:left;clear:both;}
+.ytalents .ytalentslist li{background:url(../images/xuxian2.gif)repeat-x top;}
+.ytalents .ytalentslist li.ytregionnav{width:67px;float:left; text-align:left;font-weight:bold;display:inline;}
+.ytalents .ytalentslist li.yttitle1nav{width:128px;float:left; text-align:left;font-weight:bold;display:inline;}
+.ytalents .ytalentslist li.ytsalarynav{width:60px;float:left; text-align:left;font-weight:bold;display:inline;}
+.ytalents .ytalentslist li.yttimenav{width:80px;float:left; padding-left: 25px; font-weight:bold;display:inline;}
+.ytalents .ytalentslist li.ytregion{width:67px;float:left; text-align:left;font-size:14px;}
+.ytalents .ytalentslist li.yttitle1{width:128px;float:left; text-align:left;font-size:14px; color:#06c;}
+.ytalents .ytalentslist li.yttitle1 a{color:#06c;}
+.ytalents .ytalentslist li.yttitle1 a honve{color:#06c;}
+.ytalents .ytalentslist li.ytsalary{width:60px;float:left; text-align:left;font-size:14px;}
+.ytalents .ytalentslist li.yttime{width:80px; float:left; padding-left: 25px;font-size:14px;}
+
+.tit3{ background:url(../images/hdbj.gif); height:59px;border-style:solid;border-width: 0px 0px 1px 0px;border-color: #EEE;}
+.imgbj{display: block;float: left;}
+.tit_font{ float:right;padding:25px 0px 0px 37px; color:#CCc; font-size:14px;}
+
+.hrtitle { border-top:7px solid #1B5FAB; }
+.hrtitle h2{font:14px "黑体";text-align:left;line-height:30px;}
+.text_c{text-align:left;margin:10px 0px 0px 5px;}
+.text_c h4{font:16px/22px "黑体"}
+.text_c h4 a{color:#004276}
+.fPic{float:left;width:123px;height:86px;position:relative;overflow:hidden;margin:0px 10px 1px 0px;}
+.list4 UL{width:100%; border-width: 1px 1px 1px 1px;}
+.list4 li{background:url(../images/dian_hei.gif) no-repeat;}
+.list4 li{line-height:20px;text-align:left; font-size:14px;height:20px;padding: 2px 2px 10px 20px; background-position:15px 8px;border-style: none;}
+.list4 li a{color:#004276;}
+.list4 li a:hover{color:#BA2636;}
+.list4 li img {margin-left:1px;}
+.list10 UL{width:100%; border-width: 1px 1px 1px 1px; margin:10px -35px;}
+.list10 li{background:url(../images/dian_hei.gif) no-repeat;}
+.list10 li{line-height:20px;text-align:left;height:20px;color:#004276;font-size:14px;padding: 0px 2px 11px 20px; background-position:1px 8px;border-style: none;}
+.list10 li a{color:#004276;}
+.list10 li a:hover{color:#BA2636;}
+.list10 li img {margin-left:1px;}
+
+/*瑶臣猎头*/
+.ychd{float:left;width: 150px;height: 120px;position: relative;overflow: hidden;margin: 0px 10px 1px 0px;}
+.ychdlist .ychdlistf{background: none;}
+.ychdlist ul{ float:left;width:210px; border-width: 1px 1px 1px 1px;}
+.ychdlist li{line-height:20px;text-align:left; font-size:14px;border-style: none;/*background:url(../images/dian_hei.gif) no-repeat;*/
+padding:5px 6px 0px 15px;background-position:1px 13px;}
+.ychdlist li a{ color:#06F}
+.ychdlist li{ background:url(../images/xuxian2.gif)repeat-x top;}
+.ychdlist li img {margin-left:1px;}
+.ychdlist p{line-height:20px;text-align:left; font-size:14px;text-indent:15px;padding:20px 2px 10px 20px; border-style: none;}
+.ychdlistxx{width:210px; background:url(../images/xuxian2.gif); margin:0px auto; height:1px;overflow: hidden;font-size: 1px;}
+.ychdlist p img{margin-left:1px;}
+.ychdlist p a{ color:#06F}
+
+/*排行*/
+.tit7{ width:190px; text-align:left;border-style:solid;border-width: 0px 0px 1px 0px;border-color: #EEE;padding:10px 0px 10px 2px;;}
+.tit7 span{font-size:12px; background:url(../images/topbj.jpg) no-repeat;padding-left: 20px;font-weight:bold;text-align:left;color:#1E50A2;}
+.topr ul{border-width: 1px 1px 1px 1px;}
+.topr .front {font-weight:bold; color:#000;font-size: 14px;float: left;margin-left: -18px;width: 10px;text-align: left;}
+.topr .frontf {font-weight:bold; color:#999;font-size: 14px;float: left;margin-left: -18px;width: 10px;text-align: left;}
+.topr .toprf{background: none;}
+.topr li{line-height:18px;text-align:left;border-style: none;padding-bottom: 3px;padding-left:20px;margin-bottom:12px;padding-top:12px;}
+.topr li a{color:#999;}
+.topr li{ background:url(../images/xuxian2.gif)repeat-x top;}
+.topr li img {margin-left:1px;}
+
+
+.tit1{border-style:solid;border-width: 0px 0px 1px 0px;border-color: #EEE;}
+.tit1 h2{font-size:12px;text-align:right;line-height:30px;padding-right:10px;}
+.tit1 h2 span{font-size:12px;font-weight:bold; float:left;text-align:right; padding:0px 10px 10px 10px}
+.tit1 h2 span a{color:#1E50A2;}
+.tit1 h2 span a:hover{color:#1E50A2;}
+
+.list6 .list6f{background: none;}
+.list6 li{line-height:18px;text-align:left;border-style: none;padding-bottom:3px; padding:10px 0px;width:190px;}
+.list6 li a{color:#999}
+.list6 li{ background:url(../images/xuxian2.gif)repeat-x top;}
+.list6 li img {margin-left:1px;}
+
+.righttxt p{padding-bottom:3px}
+.righttxt p a{color:#ba2636}
+.righttxt img{float:left;margin:2px 10px 10px 3px;display:inline;}
+.righttxt h4{line-height:20px; font-size:12px;font-weight: bold;color:#666;margin-top:-1px;text-align:left;padding:0px 0px 0px 3px;}
+.list8{float:left;}
+.list8 ul{border-width: 1px 1px 1px 1px; }
+.list8 li{background:url(../images/dian_hei.gif) no-repeat;}
+.list8 li{line-height:18px;padding:5px 15px;text-align:left;background-position:5px 13px;border-style: none;overflow:hidden;}
+.list8 li img {margin-left:1px;}
+
+.yyjob .yyjoblist .more li{line-height:30px;}
+.ytalents .ytalentslist .more li{line-height:30px;}
+.more{text-align: right;}

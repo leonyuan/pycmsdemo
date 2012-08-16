@@ -1,0 +1,14 @@
+<%inherit file="na_base.html"/>
+<p/>
+<div class="content-box">
+    <div class="content-box-content">
+        <div class="tab-content default-tab">
+            <form method="get" action="" id="myform" name="myform">
+                “${model.title}”模型表中已有${infonum}条数据，删除模型表将会删除表中的所有数据，确定要删除模型表吗？
+                <input class="button" type="submit" name="yes" value="是" />
+                <input class="button" type="button" onclick="javascript:window.location.href='../index'" name="no" value="否" />
+            </form>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,83 @@
+
+.listnav {width: 600px; float:right;}  
+ul.listnav {padding: 0; margin: 0; font-size: 1em;list-style: none;}  
+ul.listnav li {line-height:20px;}  
+ul.listnav li a {line-height: 10px; font-size: 14px; padding: 16px 5px; color: #000; display: block; 
+text-decoration: none;} 
+ul.listnav li a:hover {background-color: #69C;color:white;} 
+ul.listnav ul { margin: 0; padding: 0;display: none;}  
+ul.listnav ul li { margin: 0; padding: 0; }  
+ul.listnav ul li a { padding-left: 20px; font-size: 12px; font-weight: normal;} 
+ul.listnav ul li a:hover {background-color:#F5F8FD; color:#675C7C;outline：none；}  
+ul.listnav span{float:right;} 
+
+ul.listnav li.title2{width:280px;float:left; text-align:left;font-size:14px; color:#06c;}
+ul.listnav li.title2 a{color:#06c;}
+ul.listnav li.title2 a honve{color:#06c;}
+
+ul.listnav li.tdmail {width:130px;float:right;text-align:right;font-size:14px;padding:0px 0px 0px 5px;}
+
+ul.listnav li.time{width:160px;float:left;font-size:14px;}
+ul.listnav li.time p{float: right; text-align: right;font-size:14px; line-height:40px;}
+
+.listleft{float: left;width: 600px;border-top: 4px solid #709FBD;}
+.listjob{}
+.listjob h2{font-weight: bold;height: 43px;line-height: 43px;padding-left: 5px; font-size:14px;}
+
+
+.listtitle{float: left;width: 600px;background: url(http://img.ifeng.com/list/dotline.gif) repeat-x top;padding: 1px 0;}
+.listtxt{float:left;width:600px; background-color:#F5F8FD;}
+.listtxt li.region{width:45px;float:left; text-align:left;font-size:12px; padding:0px 0px 0px 5px; color:#999}
+.listtxt li.regiontxt{width:100px;float:left; text-align:left;font-size:12px;color:#999}
+.listtxt li.salary{width:45px;float:left; text-align:left;font-size:12px;color:#999}
+.listtxt li.salarytxt{width:100px;float:left; text-align:left;font-size:12px;color:#999}
+.listtxt li.company{width:60px;float:left; text-align:left;font-size:12px;color:#999}
+.listtxt li.companytxt{width:100px;float:left; text-align:left;font-size:12px;color:#999}
+.listtxt li.listtext{font-size:12px;float:left;clear: both;color:#999;line-height:30px;padding:0px 0px 0px 5px; }
+.listtxt li.listtext span{font-weight:bold;float:left; text-align:left; width:620px}
+.listtxt li.listtext p{float:left;text-align:left;font-size:12px;width:625px;padding-left:5px}
+
+.back-to {bottom: 35px;overflow:hidden;position:fixed;margin-right:0px;width:60px;z-index:999;}
+.back-to .back-top {background: url(../images/19628_o.png) no-repeat scroll 0 0 transparent;display: block;float: right;height:50px;margin-left:10px;outline: 0 none;text-indent: -9999em;width:50px;}
+.back-to .back-top:hover {background-position: -50px 0;}
+
+.right{width:330px;display: inline;float:right;background: url(../images/listright.gif);}
+.rightbj{width:320px;background: #FFF; margin:10px 5px; float:right;}
+.tit7{ width:300px; text-align:left;border-style:solid;border-width: 0px 0px 1px 0px;border-color: #EEE;padding:10px 10px 10px 10px;}
+.tit7 span{font-size:12px; background:url(../images/topbj.jpg) no-repeat;padding-left: 20px;font-weight:bold;text-align:left;color:#1E50A2;}
+.topr ul{border-width: 1px 1px 1px 1px; }
+.topr .front {background: url(../images/top1.jpg); width:30px; height:20px; margin:3px 6px 0 0; line-height:20px; text-align: center; float:left; font-family:Arial; font-size:11px; font-weight:bold; color:#fff;}
+.topr .frontf {background: url(../images/top2.jpg); width:30px; height:20px; margin:3px 6px 0 0; line-height:20px; text-align: center; float:left; font-family:Arial; font-size:11px; font-weight:bold; color:#fff;}
+.topr .toprf{background: none;}
+.topr li{line-height:30px; height:36px;padding:5px 15px;text-align:left;border-style: none;overflow:hidden;padding-bottom: 3px;padding-left:2px;}
+.topr li{ background:url(../images/xuxian2.gif)repeat-x top;}
+.topr li a{color:#004276;}
+.topr li a:hove{color:#BA2636}
+.topr li img {margin-left:1px;}
+
+.job{ width:320px; float:right;display:inline;overflow: hidden;  }
+.job .job_title{background:url(../images/zhaopin.png) no-repeat;height:30px;}
+.job .job_title h2 { float:left;text-align:left;font-weight:bold;padding-top:5px;font-size:14px;display:inline;}
+.job .job_title h2 a{color:#1E50A2}
+.job .job_title h2 a honve{color:#1E50A2}
+.job .joblist{width:320px; line-height:30px;float:right;display:inline;}
+.job .joblist ul {list-style-type:none;white-space: nowrap;overflow: hidden;text-align:left;clear:both;}
+.job .joblist li.regionnav{width:60px;float:left; text-align:left;font-weight:bold;display:inline;}
+.job .joblist li.title1nav{width:105px;float:left; text-align:left;font-weight:bold;display:inline;}
+.job .joblist li.salarynav{width:70px;float:left; text-align: left;font-weight:bold;display:inline;}
+.job .joblist li.timenav{width:80px;float: right; text-align:left; font-weight:bold;display:inline;}
+.job .joblist li.region{width:60px;float:left; text-align:left;font-size:14px;}
+.job .joblist li.title1{width:105px;float:left; text-align:left;font-size:14px; color:#06c;}
+.job .joblist li.title1 a{color:#06c;}
+.job .joblist li.title1 a honve{color:#06c;}
+.job .joblist li.salary{width:70px;float:left; text-align:left;font-size:14px;}
+.job .joblist li.time{width:80px;float: right; text-align: left;font-size:14px;}
+
+.pageNav{clear:both; height:22px;padding:30px 0;padding-left:150px;text-align:center;font-family:Arial, Helvetica, sans-serif; font-size:14px}
+.pageNav a,.pageNav strong,.pageNav span{ display:block; float:left; padding:0 8px; overflow:hidden; margin-right:5px; background:#fff}
+.pageNav a,.pageNav span{ height:20px; line-height:22px; border:1px solid #CCDBE4}
+.pageNav a.f12,.pageNav strong.f12,.pageNav span{ font-size:12px}
+.pageNav a:hover{ text-decoration:none}
+.pageNav strong{ height:22px; line-height:24px}
+.pageNav .mor{border:0;padding:0;height:21px;line-height:21px}
+.pageNav .na{color:#DBE1E6}}

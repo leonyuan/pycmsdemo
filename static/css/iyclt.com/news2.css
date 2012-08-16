@@ -1,0 +1,231 @@
+
+/*全局*/
+body{font-family:"宋体","Arial", ;text-align:center;background:#FFF;margin:0;padding:0; border:0;font-size:12px;color:#333;}
+h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,pre,form,fieldset,legend,button,input,textarea,th,td,nav,span,p,div,ul,li{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{font-size:12px;font-weight:normal;}
+ul,ol,li{list-style:none;}
+a img{border:0;}
+
+
+/*顶部*/
+#header{width:980px;margin:0px auto;height:26px;background-color:#EEE;}
+#header-left {float: left; font-size:14px;margin: 5px auto;}
+#header-right{float: right; font-size:12px;margin: 5px auto;}
+
+/*全局导航*/
+#minnav{margin:0px auto; height:30px; }
+#minnav ul{float:left;padding:0px 0px 0px 10px;}
+#minnav li{float:left; font-size:14px;text-align:left; margin-right:6px;}
+#minnav li a{ color:#000}
+#minnav li a:hover{color:#BA2636}
+/*广告*/
+.banner{width:980px; margin:0px auto;height:100px;}
+.bannerc{float:left;width:745px; margin:0px auto;height:100px;}
+.bannerf{margin:0px auto;border-style:solid;border-width: 0px 0px 1px 0px;border-color: #EEE;}
+
+/*LOGO*/
+#logososuo{width:980px;height:70px; margin:0px auto;}
+#logososuo .lefto{width:83px; padding:0px 10px; float:left;padding: 30px 0 0 10px;}
+
+/*频道导航*/
+#nav {width:980px;margin:0px auto; height:40px;}
+#nav .navlist {float:left; background:url(../../images/iyclt.com/nav.png) }
+#nav .navlist ul{height:40px;width:980px;}
+#nav .navlist li{float:left;background:url(../../images/iyclt.com/navbj.png) no-repeat right 10px;padding:10px 18px 0; font-size:14px; }
+#nav .navlist li a{color: #FFF;}
+/*框架*/
+.area{width: 980px;}
+.content{ margin:10px auto;clear: both;overflow: hidden;}
+.clmn{width:760px; margin:0px auto;display:inline; float:right;overflow: hidden;}
+.clmnr{width:370px;margin:0px auto;float:right;display:inline;}
+.clmnc{width:370px;margin:0px auto;display:inline;float:left;}
+.clmnf{width:210px;margin:0px auto;display:inline;float:left;}
+.leftf{width:190px; background:#FFF; margin:5px 10px;}
+
+
+.title{ background-image:url(../../images/iyclt.com/title.png);}
+.title h2{font-size:12px;text-align:left;line-height:30px; padding:0px 10px}
+.title h2 span{font-size:14px;font-weight:bold;text-align:right;padding:1px 10px;float:left;}
+.title h2 span a{color:#1E50A2;}
+.title h2 span a:hover{color:#1E50A2;}
+
+.tit1{border-style:solid;border-width: 0px 0px 1px 0px;border-color: #EEE;}
+.tit1 h2{font-size:12px;text-align:right;line-height:30px;padding-right:10px;}
+.tit1 h2 span{font-size:12px;font-weight:bold; float:left;text-align:right; padding:0px 10px 10px 10px}
+.tit1 h2 span a{color:#1E50A2;}
+.tit1 h2 span a:hover{color:#1E50A2;}
+
+/*做图片新闻*/
+.fPic{float:left;width:123px;height:86px;position:relative;overflow:hidden;margin:0px 10px 1px 0px;}
+
+
+.title2 {background: url(../../images/iyclt.com/shilibj.gif)no-repeat; }
+.title2 h2{font:16px "宋体";text-align:left;line-height:30px;font-weight: bold;}
+
+.hrtitle { border-top:7px solid #646786; }
+.hrtitle h2{font:16px "黑体";text-align:left;line-height:30px;}
+.yytitle { border-top:7px solid #709FBD; }
+.yytitle h2{font:16px "黑体";text-align:left;line-height:30px;}
+
+
+.tit3{ background:url(../../images/iyclt.com/hdbj.gif); height:59px;border-style:solid;border-width: 0px 0px 1px 0px;border-color: #EEE;}
+.tit5{ background:url(../../images/iyclt.com/hrbj.gif); height:59px;border-style:solid;border-width: 0px 0px 1px 0px;border-color: #EEE;}
+.tit6{ background:url(../../images/iyclt.com/hmbj.gif); height:59px;border-style:solid;border-width: 0px 0px 1px 0px;border-color: #EEE;}
+.tit7{border-style:solid;border-width: 0px 0px 1px 0px;border-color: #EEE;padding:10px 10px 10px 10px;}
+.tit7 h2{font-size:12px; background:url(../../images/iyclt.com/topbj.jpg) no-repeat;padding-left: 20px;font-weight:bold;text-align:left;color:#1E50A2;}
+
+.imgbj{display: block;float: left;}
+.tit_font{ float:right;padding:25px 0px 0px 37px; color:#CCc; font-size:14px;}
+
+.newso{text-align:left;margin:1px auto 5px;}
+.newso h2{font:18px/26px "黑体"; padding-top:10px;}
+.newso h2 a{color:#C60}
+.newso h2 a:hover {text-decoration:underline;color: #C60;}
+.newso p{padding: 10px 0px 10px;}
+.newso p a{color:#000;}
+.newso p a:hover{color:#BA2636;}
+
+.text_c{text-align:left;margin:10px 0px 0px 5px;}
+.text_c h4{font:16px/22px "黑体"}
+.text_c h4 a{color:#004276}
+
+
+p{line-height:18px;color: #666; text-align:left;}
+
+.lefttxt p{padding-bottom:3px}
+.lefttxt p a{color:#ba2636}
+.lefttxt img{float:left;margin:2px 10px 0 0;display:inline;}
+.lefttxt h4{line-height:20px; font-size:12px;font-weight: bold;color:#666;margin-top:-1px;text-align:left;}
+/*图片*/
+.fPic{float:left;width:123px;height:86px;position:relative;overflow:hidden;margin:0px 10px 1px 0px;}
+
+/*list*/
+
+.list4 UL{width:100%; border-width: 1px 1px 1px 1px;}
+.list4 li{background:url(../../images/iyclt.com/dian_hei.gif) no-repeat;}
+.list4 li{line-height:20px;text-align:left; font-size:14px;height:20px;padding: 2px 2px 10px 20px; background-position:15px 8px;border-style: none;}
+.list4 li a{color:#004276;}
+.list4 li a:hover{color:#BA2636;}
+.list4 li img {margin-left:1px;}
+
+.list6{float:left;}
+.list6 ul{border-width: 1px 1px 1px 1px; }
+.list6 li{background:url(../../images/iyclt.com/dian_hei.gif) no-repeat;}
+.list6 li{line-height:20px;padding:10px 10px; font-size:14px;text-align:left;background-position:0px 18px;border-style: none;}
+.list6 li strong{font-weight: bold;}
+.list6 li strong a{color:#000;}
+.list6 li strong a:hover{color:#000;}
+.list6 li a{color:#004276;}
+.list6 li a:hover{color:#BA2636;}
+.list6 li img {margin-left:1px;}
+
+.list8{float:left;}
+.list8 ul{border-width: 1px 1px 1px 1px; }
+.list8 li{background:url(../../images/iyclt.com/dian_hei.gif) no-repeat;}
+.list8 li{line-height:18px;padding:5px 15px;text-align:left;background-position:5px 13px;border-style: none;overflow:hidden;}
+
+.list8 li img {margin-left:1px;}
+
+
+
+.list10 UL{width:100%; border-width: 1px 1px 1px 1px; margin:10px -35px;}
+.list10 li{background:url(../../images/iyclt.com/dian_hei.gif) no-repeat;}
+.list10 li{line-height:20px;text-align:left;height:20px;color:#004276;font-size:14px;padding: 0px 2px 11px 20px; background-position:1px 8px;border-style: none;}
+.list10 li a{color:#004276;}
+.list10 li a:hover{color:#BA2636;}
+.list10 li img {margin-left:1px;}
+
+.list12 ul{width:100px;border-width: 1px 1px 1px 1px;}
+.list12 li{background:url(../../images/iyclt.com/xuxian2.gif) repeat-x top;}
+.list12 li{line-height:18px;text-align:left;background-position:5px 0px;padding-bottom: 3px;clear:both;border-style: none;overflow:hidden; padding-top:10px;}
+.list12 li a{#004276;}
+.list12 li a:hover{#004276;}
+.list12 li img {margin-left:1px;}
+.list12 p{text-align:right;color:#999;}
+.list12 .listf12{background:none;}
+
+.topr ul{border-width: 1px 1px 1px 1px; }
+.topr .front {background: url(../../images/iyclt.com/top1.jpg); width:30px; height:20px; margin:3px 6px 0 0; line-height:20px; text-align: center; float:left; font-family:Arial; font-size:11px; font-weight:bold; color:#fff;}
+.topr .frontf {background: url(../../images/iyclt.com/top2.jpg); width:30px; height:20px; margin:3px 6px 0 0; line-height:20px; text-align: center; float:left; font-family:Arial; font-size:11px; font-weight:bold; color:#fff;}
+.topr .toprf{background: none;}
+.topr li{line-height:18px; height:36px;padding:5px 15px;text-align:left;border-style: none;overflow:hidden;padding-bottom: 3px;padding-left:2px;}
+.topr li{ background:url(../../images/iyclt.com/xuxian2.gif)repeat-x top;}
+.topr li a{color:#004276;}
+.topr li a:hove{color:#BA2636}
+.topr li img {margin-left:1px;}
+
+
+/*虚线*/
+.listline{width:379px; background:url(../../images/iyclt.com/xuxian.gif); margin:0px auto; height:1px;overflow: hidden;font-size: 1px;}
+
+/*js*/
+#linkPush A {PADDING-RIGHT: 15px; DISPLAY: block; PADDING-LEFT: 7px; FLOAT: left; PADDING-BOTTOM: 0px; COLOR: #333; PADDING-TOP: 6px; HEIGHT: 28px; TEXT-ALIGN: left; TEXT-DECORATION: none}
+#linkPush A:hover {BACKGROUND: url(img/pushHere1.gif) no-repeat; WIDTH: 152px; PADDING-TOP: 8px; FONT-FAMILY: "宋体"; TEXT-ALIGN:left;}
+#linkPush A.linkPushHere {BACKGROUND: url(img/pushHere1.gif) no-repeat; WIDTH: 152px; PADDING-TOP: 8px; FONT-FAMILY: "宋体"; TEXT-ALIGN:left;}
+.overflow{overflow:hidden;white-space:nowrap}
+
+
+/*招聘*/
+.job{ width:370px; float:right;display:inline;overflow: hidden;  }
+.job .job_title{background:url(../../images/iyclt.com/zhaopin.png) no-repeat;height:30px; width:370px;}
+.job .job_title h1{width:370px;text-align:right; color:#000;font-size:12px; padding:5px 10px 0px 0px ;}
+.job .job_title h1 span{ float:left;text-align:left;font-weight:bold;margin:0px 5px; font-size:14px;display:inline;}
+.job .job_title h1 span a{color:#1E50A2}
+.job .job_title h1 span a honve{color:#1E50A2}
+.job .joblist{width:360px; line-height:30px;float:right;display:inline;}
+.job .joblist ul {list-style-type:none;white-space: nowrap;overflow: hidden;text-align:left;clear:both;}
+.job .joblist li.regionnav{width:67px;float:left; text-align:left;font-weight:bold;display:inline;}
+.job .joblist li.title1nav{width:128px;float:left; text-align:left;font-weight:bold;display:inline;}
+.job .joblist li.salarynav{width:60px;float:left; text-align: left;font-weight:bold;display:inline;}
+.job .joblist li.timenav{width:78px;float: right; text-align:left; font-weight:bold;display:inline;}
+.job .joblist li.region{width:67px;float:left; text-align:left;font-size:14px;}
+.job .joblist li.title1{width:128px;float:left; text-align:left;font-size:14px; color:#06c;}
+.job .joblist li.title1 a{color:#06c;}
+.job .joblist li.title1 a honve{color:#06c;}
+.job .joblist li.salary{width:60px;float:left; text-align:left;font-size:14px;}
+.job .joblist li.time{width:78px;float: right; text-align: left;font-size:14px;}
+
+.talents{ width:370px; float:right;display:inline;overflow: hidden;  }
+.talents .talents_title{background:url(../../images/iyclt.com/zhaopin.png) no-repeat;height:30px; width:370px;}
+.talents .talents_title h1{width:370px;text-align:right; color:#000;font-size:12px; padding:5px 10px 0px 0px ;}
+.talents .talents_title h1 span{ float:left;text-align:left;font-weight:bold;margin:0px 5px; font-size:14px;display:inline;}
+.talents .talents_title h1 span a{color:#1E50A2}
+.talents .talents_title h1 span a honve{color:#1E50A2}
+.talents .talentslist{width:360px; line-height:30px;float:right;display:inline;}
+.talents .talentslist ul {list-style-type:none;white-space: nowrap;overflow: hidden;text-align:left;clear:both;}
+.talents .talentslist li.tregionnav{width:67px;float:left; text-align:left;font-weight:bold;display:inline;}
+.talents .talentslist li.ttitle1nav{width:128px;float:left; text-align:left;font-weight:bold;display:inline;}
+.talents .talentslist li.tsalarynav{width:60px;float:left; text-align:left;font-weight:bold;display:inline;}
+.talents .talentslist li.ttimenav{width:85px;float:left; text-align:center; font-weight:bold;display:inline;}
+.talents .talentslist li.tregion{width:67px;float:left; text-align:left;font-size:14px;}
+.talents .talentslist li.ttitle1{width:128px;float:left; text-align:left;font-size:14px; color:#06c;}
+.talents .talentslist li.ttitle1 a{color:#06c;}
+.talents .talentslist li.ttitle1 a honve{color:#06c;}
+.talents .talentslist li.tsalary{width:60px;float:left; text-align:left;font-size:14px;}
+.talents .talentslist li.ttime{width:80px; float:right; text-align:left;font-size:14px;}
+
+.new_friendLink{background: url(../../images/iyclt.com/yqlj.gif) no-repeat;margin: 10px auto;clear: both;overflow: hidden;}
+.new_friendLink .new_title{font-weight:bold;text-align: left;line-height: 30px;font-weight: bold;}
+.new_friendLink ul{ float:left;width:650px;padding:0px 0px 0px 0px}
+.new_friendLink li {padding:3px 7px;text-align:left;border-style: none; line-height:30px;}
+.new_friendLink li a{ color:#666;}
+.new_rtit{float:right;width:325px;}
+.new_rtit span{font-weight:bold; font-size:14px;}
+.new_r{float: right;width: 325px;border: #CCC solid 1px;}
+.new_r p{ line-height:30px; text-align:center;}
+.new_r p a{ color:#333}
+.new_right{float:left;}
+
+
+/*页脚*/
+#footer{
+border-style:solid;
+border-width: 1px 0px 0px 0px;
+border-color: #EEE; 
+margin:20px auto;
+line-height:30px;
+color:#CCC;
+float: left;
+}
+#footer p{ text-align:center;}
+#footer .end{ font-family: Arial, Helvetica, sans-serif;}

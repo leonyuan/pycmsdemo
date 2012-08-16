@@ -1,0 +1,143 @@
+.yy_clmn{width:750px; margin:0px auto;display:inline; float:left;overflow: hidden;}
+.yy_clmnf{width:330px;margin:0px auto;display:inline;float:right;}
+.yy_clmnc{width:380px;display:inline;float:left;padding-left:20px;}
+.yy_clmnr{width:215px;margin:0px auto;display:inline;float:left;background:url(../../images/iyclt.com/leftbj.gif)}
+.yy_rightbj{width:200px;background: #FFF; margin:5px 7px 1px 1px; float:right;}
+
+#yy_nav {margin:0px auto; height:40px;}
+#yy_nav .yy_navlist {float:left; background:url(../../images/iyclt.com/nav.png) }
+#yy_nav .yy_navlist ul{height:40px;width:980px;}
+#yy_nav .yy_navlist li{float:left;background:url(../../images/iyclt.com/navbj.png) no-repeat right 10px;padding:10px 18px 0; font-size:14px; }
+#yy_nav .yy_navlist li a{color: #FFF;}
+/*js*/
+#linkPush A {PADDING-RIGHT: 15px; DISPLAY: block; PADDING-LEFT: 7px; FLOAT: left; PADDING-BOTTOM: 0px; COLOR: #333; PADDING-TOP: 6px; HEIGHT: 28px; TEXT-ALIGN: left; TEXT-DECORATION: none}
+#linkPush A:hover {BACKGROUND: url(img/pushHere1.gif) no-repeat; WIDTH: 152px; PADDING-TOP: 8px; FONT-FAMILY: "ËÎÌå"; TEXT-ALIGN:left;}
+#linkPush A.linkPushHere {BACKGROUND: url(img/pushHere2.gif) no-repeat; WIDTH: 132px; PADDING-TOP: 8px; FONT-FAMILY: "ËÎÌå"; TEXT-ALIGN:left;}
+.overflow{overflow:hidden;white-space:nowrap}
+
+.yy_news{text-align: center;margin:1px auto 5px;}
+.yy_news h2{font:18px/26px "ºÚÌå"; padding-top:10px;}
+.yy_news h2 a{color:#2555A5}
+.yy_news h2 a:hover {text-decoration:underline;color: #BA2636;}
+.yy_news p{ padding:10px 0px 10px;}
+.yy_news p a{color:#000;}
+.yy_news p a:hover{color:#BA2636;}
+.yy_line{ width:380px; background:url(../../images/iyclt.com/xuxian.gif); float:left;height: 1px;overflow: hidden;font-size: 1px;} 
+
+
+.yy_leftimg{width:330px;float:left;}
+.yy_leftimages{width:120px; height:80px; float:left;padding:0px 10px 0px 0px;}
+.yy_leftimgtext{width:200px; float:right; height:80px; }
+.yy_leftimgtext dt{width: 100%;line-height: 26px;font-size: 14px;font-weight: bold;}
+.yy_leftimgtext dt a{ color:#004276}
+.yy_leftimgtext dd{width: 100%;line-height: 22px;color: #8C8C8C;}
+.yy_leftimgtext dd a{color:#004276}
+
+
+.yy_centerimg{width:380px;float:left;}
+.yy_centerimages{width:130px; height:80px; float:left;padding:0px 10px 0px 0px;}
+.yy_centerimgtext{width:220px; float:right; height:80px; }
+.yy_centerimgtext dt{width: 100%;line-height: 26px;font-size: 14px;font-weight: bold;}
+.yy_centerimgtext dt a{ color:#004276}
+.yy_centerimgtext dd{width: 100%;line-height: 22px;color: #8C8C8C;}
+.yy_centerimgtext dd a{color:#004276}
+
+.yy_tit1{border-style:solid;border-width: 0px 0px 1px 0px;border-color: #EEE;}
+.yy_tit1 h2{font-size:12px;text-align:right;line-height:30px;padding-right:10px;}
+.yy_tit1 h2 span{font-size:12px;font-weight:bold; float:left;text-align:right; padding:0px 10px 10px 10px}
+.yy_tit1 h2 span a{color:#1E50A2;}
+.yy_tit1 h2 span a:hover{color:#1E50A2;}
+
+
+
+.yy_righttxt p{padding-bottom:3px; line-height:20px; color:#999;}
+.yy_righttxt p a{color:#004276;}
+.yy_righttxt img{float:left;margin:2px 10px 10px 3px;display:inline;}
+.yy_righttxt h4{line-height:20px; font-size:12px;font-weight: bold;color:#666;margin-top:-1px;text-align:left;padding:0px 0px 0px 3px;}
+
+
+.yy_list5{float:left;}
+.yy_list5 ul{border-width: 1px 1px 1px 1px; }
+.yy_list5 li{background:url(../../images/iyclt.com/dian_hei1.gif) no-repeat;}
+.yy_list5 li{line-height:18px;padding:5px 15px;text-align:left;background-position:5px 12px;border-style: none;overflow:hidden;}
+.yy_list5 li img {margin-left:1px;}
+
+.yy_list6{float:left;}
+.yy_list6 ul{border-width: 1px 1px 1px 1px; }
+.yy_list6 li{background:url(../../images/iyclt.com/dian_hei.gif) no-repeat;}
+.yy_list6 li{padding:3px 7px; font-size:14px;text-align:left;background-position:0px 16px;border-style: none; line-height:30px;}
+.yy_list6 li a{color:#004276;}
+.yy_list6 li a:hover{color:#BA2636;}
+.yy_list6 li strong{font-weight: bold;}
+.yy_list6 li strong a{color:#004276;}
+.yy_list6 li img {margin-left:1px;}
+
+.list7 .flist7{border-top: 0;}
+.list7 li{line-height:18px;text-align:left;border-style: none;padding-bottom:3px; padding:10px 0px;width:190px;}
+.list7 li a{color:#999}
+.list7 li{ border-top: 1px dotted #AFAFB0;}
+.list7 li img {margin-left:1px;}
+
+.yy_list8{float:left;}
+.yy_list8 ul{border-width: 1px 1px 1px 1px; }
+.yy_list8 li{background:url(../../images/iyclt.com/dian_hei.gif) no-repeat;}
+.yy_list8 li{padding:10px 10px; font-size:14px;text-align:left;background-position:0px 18px;border-style: none;}
+.yy_list8 li a{color:#004276;}
+.yy_list8 li a:hover{color:#BA2636;}
+.yy_list8 li img {margin-left:1px;}
+
+.yy_list12 ul{width:100px;border-width: 1px 1px 1px 1px;}
+.yy_list12 li{background:url(../../images/iyclt.com/xuxian2.gif) repeat-x top;}
+.yy_list12 li{line-height:18px;text-align:left;background-position:5px 0px;padding-bottom: 3px;clear:both;border-style: none;overflow:hidden; padding-top:10px;}
+.yy_list12 li a{#004276;}
+.yy_list12 li a:hover{#004276;}
+.yy_list12 li img {margin-left:1px;}
+.yy_list12 p{text-align:right;color:#999; line-height:30px;}
+.yy_list12 .yy_listf12{background:none;}
+
+.yy_tit10{border-style:solid;border-width: 0px 0px 1px 0px;border-color: #EEE;}
+.yy_tit10 h5{font-size:12px;text-align:right;line-height:30px;padding-right:10px;}
+.yy_tit10 h5 span{font-size:12px;font-weight:bold; float:left;text-align:right; padding:0px 10px 10px 10px}
+.yy_tit10 h5 span a{color:#1E50A2;}
+.yy_tit10 h5 span a:hover{color:#1E50A2;}
+
+.yy_left{ height:30px;background:url(../../images/iyclt.com/yyleft.gif) no-repeat;width:330px;}
+.yy_left h2{width:320px; float:left;text-align:right;color:#666;overflow: hidden;}
+.yy_left h2 span{float:left;text-align:left;font-weight:bold;padding:0px 10px 0px 0px;font-size:14px;display:inline;overflow: hidden;}
+.yy_left h2 span a{color:#000;}
+
+.yy_center{height:30px;background:url(../../images/iyclt.com/yycenter.gif) no-repeat;width:380px;}
+.yy_center h2{width:370px; float:left;text-align:right;color:#666;overflow: hidden;}
+.yy_center h2 span{float:left;text-align:left;font-weight:bold;padding:0px 10px 0px 0px;font-size:14px;display:inline;overflow: hidden;}
+.yy_center h2 span a{color:#000;}
+
+
+.yy_friendLink{background: url(../../images/iyclt.com/yqlj.gif) no-repeat;margin: 10px auto;clear: both;overflow: hidden;}
+.yy_friendLink .yy_title{font-weight:bold;text-align: left;line-height: 30px;font-weight: bold;}
+.yy_friendLink ul{ float:left;width:650px;padding:0px 0px 0px 0px}
+.yy_friendLink li {padding:3px 7px;text-align:left;border-style: none; line-height:30px;}
+.yy_friendLink li a{ color:#666;}
+.yy_rtit{float:right;width:325px;}
+.yy_rtit span{font-weight:bold; font-size:14px;}
+.yy_r{float: right;width: 325px;border: #CCC solid 1px;}
+.yy_r p{ line-height:30px; text-align:center;}
+.yy_r p a{ color:#333}
+
+.job{ width:380px; float:right;display:inline;overflow: hidden;  }
+.job .job_title{background:url(../../images/iyclt.com/yycenter.gif) no-repeat;height:30px; width:380px;}
+.job .job_title h1{width:370px;text-align:right; color:#000;font-size:12px; padding:5px 10px 0px 0px ;}
+.job .job_title h1 span{ float:left;text-align:left;font-weight:bold;margin:0px 5px; font-size:14px;display:inline;}
+.job .job_title h1 span a{color:#1E50A2}
+.job .job_title h1 span a honve{color:#1E50A2}
+.job .joblist{width:370px; line-height:30px;float:left;display:inline;}
+.job .joblist ul {list-style-type:none;white-space: nowrap;overflow: hidden;text-align:left;clear:both;}
+.job .joblist li.regionnav{width:67px;float:left; text-align:left;font-weight:bold;display:inline;}
+.job .joblist li.title1nav{width:128px;float:left; text-align:left;font-weight:bold;display:inline;}
+.job .joblist li.salarynav{width:60px;float:left; text-align: left;font-weight:bold;display:inline;}
+.job .joblist li.timenav{width:78px;float: right; text-align:left; font-weight:bold;display:inline;}
+.job .joblist li.region{width:67px;float:left; text-align:left;font-size:14px;}
+.job .joblist li.title1{width:128px;float:left; text-align:left;font-size:14px; color:#06c;}
+.job .joblist li.title1 a{color:#06c;}
+.job .joblist li.title1 a honve{color:#06c;}
+.job .joblist li.salary{width:60px;float:left; text-align:left;font-size:14px;}
+.job .joblist li.time{width:78px;float: right; text-align: left;font-size:14px;}

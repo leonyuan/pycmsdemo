@@ -1,0 +1,220 @@
+<%inherit file="base.html"/>
+<%namespace file="lib/entity.html" import="*"/>
+
+<link href="${static_url}/css/text.css" rel="stylesheet" type="text/css" />
+<%block name="title">${base_entity.title}-${parent.title()}</%block>
+
+
+   <!--文本-->
+   <div class="area content">
+
+  <div class="left">
+  <div class="crumbs">
+      <a href="/">首页</a> <span>&gt;</span>
+      % for cat in category_ancestors:
+      <a href="html/category/${cat[0]}">${cat[1]}</a> &gt;
+      % endfor
+      正文
+  </div>
+
+   <h1>${base_entity.title}</h1>
+    <div class="texttitle">
+     <span>${base_entity.created_time}</span>
+     <span>瑶臣猎头</span>
+     <span>瑶臣万代猎头部</span>
+    </div>
+    <div class="text">
+    ${entity.content}
+    </div>
+     <p class="pageNav">
+          <span class="na">&lt;上一页</span>
+          <strong>1</strong>
+          <a href="http://www.yaochenlietou.com">2</a>
+          <a class="f12" href="http://www.yaochenlietou.com">下一页&gt;</a>
+         </p>
+         <!--sns分享-->
+   <div class="partake">
+    <ul>
+     <li class="partaketext">分享到：</li>
+     <li class="sina">
+     <script type="text/javascript" charset="utf-8">
+(function(){
+  var _w = 16 , _h = 16;
+  var param = {
+    url:location.href,
+    type:'3',
+    count:'', /**是否显示分享数，1显示(可选)*/
+    appkey:'2680788136', /**您申请的应用appkey,显示分享来源(可选)*/
+    title:'', /**分享的文字内容(可选，默认为所在页面的title)*/
+    pic:'', /**分享图片的路径(可选)*/
+    ralateUid:'1596583994', /**关联用户的UID，分享微博会@该用户(可选)*/
+	language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
+    rnd:new Date().valueOf()
+  }
+  var temp = [];
+  for( var p in param ){
+    temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+  }
+  document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
+})()
+</script>
+</li>
+<li class="qq">
+<script type="text/javascript">
+(function(){
+    var p = {
+        url:location.href,
+        showcount:'0',/*是否显示分享总数,显示：'1'，不显示：'0' */
+        desc:'',/*默认分享理由(可选)*/
+        summary:'',/*分享摘要(可选)*/
+        title:'',/*分享标题(可选)*/
+        site:'瑶臣猎头',/*分享来源 如：腾讯网(可选)*/
+        pics:'', /*分享图片的路径(可选)*/
+        style:'203',
+        width:22,
+        height:22
+    };
+    var s = [];
+    for(var i in p){
+        s.push(i + '=' + encodeURIComponent(p[i]||''));
+    }
+    document.write(['<a version="1.0" class="qzOpenerDiv" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?',s.join('&'),'" target="_blank">分享</a>'].join(''));
+})();
+</script>
+<script src="http://qzonestyle.gtimg.cn/qzone/app/qzlike/qzopensl.js#jsdate=20111201" charset="utf-8"></script>
+</li>
+</ul>
+      </div>
+      
+      <div class="blank10"></div>
+     <div class="textline"></div>
+     <div class="textrm">
+      <p>相关内容</p>
+      <ul>
+        <li>
+        <a href="www.yaochenlietou.com" target="_blank">建国初期500位名中医离世 河南中医传承陷危机</a>
+        <span>2012-6-13</span>
+        </li>
+          <li>
+        <a href="www.yaochenlietou.com" target="_blank">建国初期500位名中医离世 河南中医传承陷危机</a>
+        <span>2012-6-13</span>
+        </li>
+          <li>
+        <a href="www.yaochenlietou.com" target="_blank">建国初期500位名中医离世 河南中医传承陷危机</a>
+        <span>2012-6-13</span>
+        </li>
+         <li>
+        <a href="www.yaochenlietou.com" target="_blank">建国初期500位名中医离世 河南中医传承陷危机</a>
+        <span>2012-6-13</span>
+        </li>
+         <li>
+        <a href="www.yaochenlietou.com" target="_blank">建国初期500位名中医离世 河南中医传承陷危机</a>
+        <span>2012-6-13</span>
+        </li>
+        </ul>
+        </div>
+
+    </div>
+    <div class="right">
+      <div class="rightbj">
+       <div class="banner">
+        <a href="www.yaochenlietou.com" target="_blank"><img src="${static_url}/images/326363.jpg" width="310" height="240"></a>
+        </div>
+        </div>
+      <div class="rightbj">
+      <div class="job">
+        <div class="job_title">
+         <h2>
+          <a href="www.yaochenlietou.com" target="_blank">推荐职位</a>   
+          </h2>
+          </div>
+      <div class="joblist">
+<dl>
+<dt>
+    <ul>
+          <li class="regionnav">地    区</li>
+          <li class="title1nav">职    位</li>
+          <li class="salarynav">年    薪</li>
+          <li class="timenav">  截止日期</li>
+</ul>
+
+</dt><dd>
+ <ul>
+  <li class="region">上 海</li>
+  <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">销售总监</a></li>
+  <li class="salary">80万</li>
+  <li class="time">2012.03.12</li>
+  </ul>
+  </dd>
+  
+  <dd>
+ <ul>
+  <li class="region">南 京</li>
+  <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">投资总监</a></li>
+  <li class="salary">60万</li>
+  <li class="time">2012.03.12</li>
+  </ul>
+  </dd>
+  
+  <dd>
+ <ul>
+  <li class="region">天  津</li>
+  <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">地区经理</a></li>
+  <li class="salary">20万</li>
+  <li class="time">2012.03.12</li>
+  </ul>
+  </dd>
+  
+  <dd>
+ <ul>
+  <li class="region">上 海</li>
+  <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">市场总监</a></li>
+  <li class="salary">70万</li>
+  <li class="time">2012.03.12</li>
+  </ul>
+  </dd>
+  
+  <dd>
+ <ul>
+  <li class="region">海 南</li>
+  <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">省区经理</a></li>
+  <li class="salary">30万</li>
+  <li class="time">2012.03.12</li>
+  </ul>
+  </dd>
+  
+  <dd>
+ <ul>
+  <li class="region">北 京</li>
+  <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">市场总监</a></li>
+  <li class="salary">50-150万</li>
+  <li class="time">2012.03.12</li>
+  </ul>
+  </dd>
+  
+  </dt>
+  </dl>
+       </div>
+    </div>
+      </div>
+      <div class="rightbj">
+       <div class="tit7">
+             <span>
+              一周排行
+              </span>
+              </div>
+              <ul class="topr">
+                ${latest_entities2(33, 6)}
+              </ul>
+      </div>
+      <div class="rightbj">
+       <div class="banner">
+        <a href="www.yaochenlietou.com" target="_blank"><img src="${static_url}/images/326363.jpg" width="310" height="240"></a>
+        </div>
+        </div>
+     </div>
+           <div class="blank20"></div>
+      <div class="banner">
+      <a href="www.yaochenlietou.com" target="_blank"><img src="${static_url}/images/guanggao.jpg" width="980" height="108"></a>
+      </div>
+     </div>

@@ -1,0 +1,1215 @@
+<%inherit file="base.html"/>
+<%namespace file="lib/entity.html" import="*"/>
+
+<script type="text/javascript">
+    MagicThumb.options = {backgroundFadingOpacity : 0.8}
+</script>
+<script type="text/javascript"><!--搜索-->
+function drop_mouseover(pos){
+    try{window.clearTimeout(timer);}catch(e){}
+}
+
+function drop_mouseout(pos){
+    var posSel=document.getElementById(pos+"Sel").style.display;
+    if(posSel=="block"){
+        timer = setTimeout("drop_hide('"+pos+"')", 1000);
+    }
+}
+
+function drop_hide(pos){
+    document.getElementById(pos+"Sel").style.display="none";
+}
+
+function search_show(pos,searchType,href){
+    document.getElementById(pos+"SearchType").value=searchType;
+    document.getElementById(pos+"Sel").style.display="none";
+    document.getElementById(pos+"Slected").innerHTML=href.innerHTML;
+    document.getElementById(pos+'q').focus();
+    var sE = document.getElementById("searchytitle");
+    if(sE != undefined  &&  searchType == "ytitle"){
+        sE.style.display="block";
+    }else if(sE != undefined){
+        sE.style.display="none";
+    }
+    var sE = document.getElementById("searchltitle");
+    if(sE != undefined  &&  searchType == "ltitle"){
+        sE.style.display="block";
+    }else if(sE != undefined){
+        sE.style.display="none";
+    }
+    var sE = document.getElementById("searchbelite");
+    if(sE != undefined  &&  searchType == "belite"){
+        sE.style.display="block";
+    }else if(sE != undefined){
+        sE.style.display="none";
+    }
+    var sE = document.getElementById("searchnelite");
+    if(sE != undefined  &&  searchType == "nelite"){
+        sE.style.display="block";
+    }else if(sE != undefined){
+        sE.style.display="none";
+    }
+    try{window.clearTimeout(timer);}catch(e){}
+    return false;
+}
+</script>
+
+<!--焦点图-->
+<div class=" area content">
+    <div id="gallery">
+        <div id="fullsize">
+            <div id="pic1">
+                <img src="${static_url}/images/homegallery/1.png" alt="Winter branches" />
+                <a class="previous" href="#pic10"><img src="${static_url}/images/homegallery/5.5.png" alt="Trees in the mist" /></a><a class="next" href="#pic2"><img src="${static_url}/images/homegallery/2.2.png" alt="Wading birds" /></a>
+                <h3>总经理</h3>
+                <p>管理类专业毕业，全日制本科以上学历；</p>
+                <p>任职总经理工作岗位五年以上，有大规模企业任职经验的优先考虑；<a href="http://www.yaochenlietou.com/job/2012/3/6/1033.html">查看详细</a>.</p>
+            </div>
+            <div id="pic2">
+                <img src="${static_url}/images/homegallery/2.png" alt="Wading birds" />
+                <a class="previous" href="#pic1"><img src="${static_url}/images/homegallery/1.1.png" alt="Winter branches" /></a><a class="next" href="#pic3"><img src="${static_url}/images/homegallery/3.3.png" alt="Bird on a post" /></a>
+                <h3>江苏地区招聘</h3>
+                <p>江苏地区招聘各种中高端岗位<a href="http://http://www.yaochenlietou.com/yylt/list_1.html">查看详细</a>.</p>
+            </div>
+            <div id="pic3">
+                <img src="${static_url}/images/homegallery/3.png" alt="Bird on a post" />
+                <a class="previous" href="#pic2"><img src="${static_url}/images/homegallery/2.2.png" alt="Wading birds" /></a><a class="next" href="#pic4"><img src="${static_url}/images/homegallery/4.4.png" alt="Early bloomers" /></a>
+                <h3>首席财务官（CFO）</h3>
+                <p>首席财务官 <a href="http://www.yaochenlietou.com">查看详细</a>.</p>
+            </div>
+            <div id="pic4">
+                <img src="${static_url}/images/homegallery/4.png" alt="Early bloomers" />
+                <a class="previous" href="#pic3"><img src="${static_url}/images/homegallery/3.3.png" alt="Bird on a post" /></a><a class="next" href="#pic5"><img src="${static_url}/images/homegallery/5.5.png" alt="Green lizard" /></a>
+                <h3>瑶臣猎头招聘</h3>
+                <p>欢迎加入瑶臣猎头 <a href="http://www.yaochenlietou.com/page/joinus.html">查看详细</a>.</p>
+            </div>
+            <div id="pic5">
+                <img src="${static_url}/images/homegallery/5.png" alt="Green lizard" />
+                <a class="previous" href="#pic4"><img src="${static_url}/images/homegallery/1.1.png" alt="Early bloomers" /></a><a class="next" href="#pic6"><img src="${static_url}/images/homegallery/2.2.png" alt="Feeding the birds" /></a>
+                <h3>投资总监</h3>
+                <p>投资总监 <a href="http://www.sharejs.com">查看详细</a>.</p>
+            </div>
+        </div>
+    </div>
+    <div class="blank10"></div>
+    <!--医药猎头-->
+    <div class="ltclmn">
+        <div class="tit3">
+            <div class="imgbj">
+                <a href="www.yaochenlietou.com">
+                    <img src="${static_url}/images/lietoubiaoti.jpg" width="146" height="59"></a>
+            </div>
+            <div class="tit_font">
+                <a href="www.yaochenlietou.com" target="_blank">医药</a> | 
+                <a href="www.yaochenlietou.com" target="_blank">医疗</a> | 
+                <a href="www.yaochenlietou.com" target="_blank">华北</a> | 
+                <a href="www.yaochenlietou.com" target="_blank">华南</a> | 
+                <a href="www.yaochenlietou.com" target="_blank">华东</a> 
+
+            </div>
+        </div>
+        <div class=" blank20"></div>
+        <div class="ltclmnxt">
+            <div class="ltclmnc">
+                <div class="job">
+                    <div class="job_title">
+                        <h1>
+                            <span>
+                                <a href="www.yaochenlietou.com" target="_blank">医药猎头职位</a>   
+                            </span>
+                            <a href="www.yaochenlietou.com" target="_blank">北京</a> | 
+                            <a href="www.yaochenlietou.com" target="_blank">广州</a> | 
+                            <a href="www.yaochenlietou.com" target="_blank">江苏</a> | 
+                            <a href="www.yaochenlietou.com" target="_blank">上海</a>
+                        </h1>
+                    </div>
+                    <div class="joblist">
+                        <dl>
+                            <dt>
+                            <ul>
+                                <li class="regionnav">地    区</li>
+                                <li class="title1nav">职    位</li>
+                                <li class="salarynav">年    薪</li>
+                                <li class="timenav">  截止日期</li>
+                            </ul>
+
+                            </dt><dd>
+                            <ul>
+                                <li class="region">上 海</li>
+                                <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">销售总监</a></li>
+                                <li class="salary">80万</li>
+                                <li class="time">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="region">南 京</li>
+                                <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">投资总监</a></li>
+                                <li class="salary">60万</li>
+                                <li class="time">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="region">天  津</li>
+                                <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">地区经理</a></li>
+                                <li class="salary">20万</li>
+                                <li class="time">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="region">上 海</li>
+                                <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">市场总监</a></li>
+                                <li class="salary">70万</li>
+                                <li class="time">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="region">海 南</li>
+                                <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">省区经理</a></li>
+                                <li class="salary">30万</li>
+                                <li class="time">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="region">北 京</li>
+                                <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">市场总监</a></li>
+                                <li class="salary">50-150万</li>
+                                <li class="time">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            </dt>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="ltclmnr">
+                <div class="talents">
+                    <div class="talents_title">
+                        <h1>
+                            <span>
+                                <a href="www.yaochenlietou.com" target="_blank">北区人才</a>   
+                            </span>
+                            <a href="www.yaochenlietou.com" target="_blank">北京</a> | 
+                            <a href="www.yaochenlietou.com" target="_blank">天津</a> | 
+                            <a href="www.yaochenlietou.com" target="_blank">华北</a> | 
+                            <a href="www.yaochenlietou.com" target="_blank">东北</a>
+                        </h1>
+                    </div>
+
+                    <div class="talentslist">
+                        <dl>
+                            <dt>
+                            <ul>
+                                <li class="tregionnav">行    业</li>
+                                <li class="ttitle1nav">职    位</li>
+                                <li class="tsalarynav">年    薪</li>
+                                <li class="ttimenav">  有效期</li>
+                            </ul>
+
+                            </dt><dd>
+                            <ul>
+                                <li class="tregion">医 药</li>
+                                <li class="ttitle1"><a href="http://www.yaochenlietou.com" target="_parent">销售总监</a></li>
+                                <li class="tsalary">80万</li>
+                                <li class="ttime">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="tregion">医 疗</li>
+                                <li class="ttitle1"><a href="http://www.yaochenlietou.com" target="_parent">投资总监</a></li>
+                                <li class="tsalary">60万</li>
+                                <li class="ttime">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="tregion">医 药</li>
+                                <li class="ttitle1"><a href="http://www.yaochenlietou.com" target="_parent">地区经理</a></li>
+                                <li class="tsalary">20万</li>
+                                <li class="ttime">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="tregion">医 药</li>
+                                <li class="ttitle1"><a href="http://www.yaochenlietou.com" target="_parent">市场总监</a></li>
+                                <li class="tsalary">70万</li>
+                                <li class="ttime">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="tregion">医 疗</li>
+                                <li class="ttitle1"><a href="http://www.yaochenlietou.com" target="_parent">省区经理</a></li>
+                                <li class="tsalary">30万</li>
+                                <li class="ttime">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="tregion">医 院</li>
+                                <li class="ttitle1"><a href="http://www.yaochenlietou.com" target="_parent">市场总监</a></li>
+                                <li class="tsalary">50-150万</li>
+                                <li class="ttime">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            </dt>
+                        </dl>
+
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="blank20"></div>
+        <div class="ltclmnxt">
+            <div class="ltclmnc">
+                <div class="job">
+                    <div class="job_title">
+                        <h1>
+                            <span>
+                                <a href="www.yaochenlietou.com" target="_blank">医药猎头职位</a>   
+                            </span>
+                            <a href="www.yaochenlietou.com" target="_blank">北京</a> | 
+                            <a href="www.yaochenlietou.com" target="_blank">广州</a> | 
+                            <a href="www.yaochenlietou.com" target="_blank">江苏</a> | 
+                            <a href="www.yaochenlietou.com" target="_blank">上海</a>
+                        </h1>
+                    </div>
+                    <div class="joblist">
+                        <dl>
+                            <dt>
+                            <ul>
+                                <li class="regionnav">地    区</li>
+                                <li class="title1nav">职    位</li>
+                                <li class="salarynav">年    薪</li>
+                                <li class="timenav">  截止日期</li>
+                            </ul>
+
+                            </dt><dd>
+                            <ul>
+                                <li class="region">上 海</li>
+                                <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">销售总监</a></li>
+                                <li class="salary">80万</li>
+                                <li class="time">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="region">南 京</li>
+                                <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">投资总监</a></li>
+                                <li class="salary">60万</li>
+                                <li class="time">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="region">天  津</li>
+                                <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">地区经理</a></li>
+                                <li class="salary">20万</li>
+                                <li class="time">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="region">上 海</li>
+                                <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">市场总监</a></li>
+                                <li class="salary">70万</li>
+                                <li class="time">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="region">海 南</li>
+                                <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">省区经理</a></li>
+                                <li class="salary">30万</li>
+                                <li class="time">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="region">北 京</li>
+                                <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">市场总监</a></li>
+                                <li class="salary">50-150万</li>
+                                <li class="time">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            </dt>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="ltclmnr">
+                <div class="talents">
+                    <div class="talents_title">
+                        <h1>
+                            <span>
+                                <a href="www.yaochenlietou.com" target="_blank">北区人才</a>   
+                            </span>
+                            <a href="www.yaochenlietou.com" target="_blank">北京</a> | 
+                            <a href="www.yaochenlietou.com" target="_blank">天津</a> | 
+                            <a href="www.yaochenlietou.com" target="_blank">华北</a> | 
+                            <a href="www.yaochenlietou.com" target="_blank">东北</a>
+                        </h1>
+                    </div>
+
+                    <div class="talentslist">
+                        <dl>
+                            <dt>
+                            <ul>
+                                <li class="tregionnav">行    业</li>
+                                <li class="ttitle1nav">职    位</li>
+                                <li class="tsalarynav">年    薪</li>
+                                <li class="ttimenav">  有效期</li>
+                            </ul>
+
+                            </dt><dd>
+                            <ul>
+                                <li class="tregion">医 药</li>
+                                <li class="ttitle1"><a href="http://www.yaochenlietou.com" target="_parent">销售总监</a></li>
+                                <li class="tsalary">80万</li>
+                                <li class="ttime">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="tregion">医 疗</li>
+                                <li class="ttitle1"><a href="http://www.yaochenlietou.com" target="_parent">投资总监</a></li>
+                                <li class="tsalary">60万</li>
+                                <li class="ttime">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="tregion">医 药</li>
+                                <li class="ttitle1"><a href="http://www.yaochenlietou.com" target="_parent">地区经理</a></li>
+                                <li class="tsalary">20万</li>
+                                <li class="ttime">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="tregion">医 药</li>
+                                <li class="ttitle1"><a href="http://www.yaochenlietou.com" target="_parent">市场总监</a></li>
+                                <li class="tsalary">70万</li>
+                                <li class="ttime">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="tregion">医 疗</li>
+                                <li class="ttitle1"><a href="http://www.yaochenlietou.com" target="_parent">省区经理</a></li>
+                                <li class="tsalary">30万</li>
+                                <li class="ttime">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="tregion">医 院</li>
+                                <li class="ttitle1"><a href="http://www.yaochenlietou.com" target="_parent">市场总监</a></li>
+                                <li class="tsalary">50-150万</li>
+                                <li class="ttime">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            </dt>
+                        </dl>
+
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="blank20"></div>
+        <div class="banner">
+            <a href="www.yaochenlietou.com" target="_blank"><img src="${static_url}/images/guanggao.jpg" width="980" height="108"></a>
+        </div>
+        <div class="blank20"></div>
+
+        <div class="tit3">
+            <div class="imgbj">
+                <a href="www.yaochenlietou.com">
+                    <img src="${static_url}/images/lietoubiaoti1.jpg" width="146" height="59"></a>
+            </div>
+            <div class="tit_font">
+                <a href="www.yaochenlietou.com" target="_blank">医药</a> | 
+                <a href="www.yaochenlietou.com" target="_blank">医疗</a> | 
+                <a href="www.yaochenlietou.com" target="_blank">华北</a> | 
+                <a href="www.yaochenlietou.com" target="_blank">华南</a> | 
+                <a href="www.yaochenlietou.com" target="_blank">华东</a> 
+
+            </div>
+        </div>
+        <div class=" blank20"></div>
+        <!--医疗猎头-->
+        <div class="ltclmnxt">
+            <!--1排-->
+            <div class="ltclmnc">
+                <div class="job">
+                    <div class="job_title">
+                        <h1>
+                            <span>
+                                <a href="www.yaochenlietou.com" target="_blank">医药猎头职位</a>   
+                            </span>
+                            <a href="www.yaochenlietou.com" target="_blank">北京</a> | 
+                            <a href="www.yaochenlietou.com" target="_blank">广州</a> | 
+                            <a href="www.yaochenlietou.com" target="_blank">江苏</a> | 
+                            <a href="www.yaochenlietou.com" target="_blank">上海</a>
+                        </h1>
+                    </div>
+                    <div class="joblist">
+                        <dl>
+                            <dt>
+                            <ul>
+                                <li class="regionnav">地    区</li>
+                                <li class="title1nav">职    位</li>
+                                <li class="salarynav">年    薪</li>
+                                <li class="timenav">  截止日期</li>
+                            </ul>
+
+                            </dt><dd>
+                            <ul>
+                                <li class="region">上 海</li>
+                                <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">销售总监</a></li>
+                                <li class="salary">80万</li>
+                                <li class="time">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="region">南 京</li>
+                                <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">投资总监</a></li>
+                                <li class="salary">60万</li>
+                                <li class="time">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="region">天  津</li>
+                                <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">地区经理</a></li>
+                                <li class="salary">20万</li>
+                                <li class="time">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="region">上 海</li>
+                                <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">市场总监</a></li>
+                                <li class="salary">70万</li>
+                                <li class="time">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="region">海 南</li>
+                                <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">省区经理</a></li>
+                                <li class="salary">30万</li>
+                                <li class="time">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="region">北 京</li>
+                                <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">市场总监</a></li>
+                                <li class="salary">50-150万</li>
+                                <li class="time">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            </dt>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="ltclmnr">
+                <div class="talents">
+                    <div class="talents_title">
+                        <h1>
+                            <span>
+                                <a href="www.yaochenlietou.com" target="_blank">北区人才</a>   
+                            </span>
+                            <a href="www.yaochenlietou.com" target="_blank">北京</a> | 
+                            <a href="www.yaochenlietou.com" target="_blank">天津</a> | 
+                            <a href="www.yaochenlietou.com" target="_blank">华北</a> | 
+                            <a href="www.yaochenlietou.com" target="_blank">东北</a>
+                        </h1>
+                    </div>
+
+                    <div class="talentslist">
+                        <dl>
+                            <dt>
+                            <ul>
+                                <li class="tregionnav">行    业</li>
+                                <li class="ttitle1nav">职    位</li>
+                                <li class="tsalarynav">年    薪</li>
+                                <li class="ttimenav">  有效期</li>
+                            </ul>
+
+                            </dt><dd>
+                            <ul>
+                                <li class="tregion">医 药</li>
+                                <li class="ttitle1"><a href="http://www.yaochenlietou.com" target="_parent">销售总监</a></li>
+                                <li class="tsalary">80万</li>
+                                <li class="ttime">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="tregion">医 疗</li>
+                                <li class="ttitle1"><a href="http://www.yaochenlietou.com" target="_parent">投资总监</a></li>
+                                <li class="tsalary">60万</li>
+                                <li class="ttime">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="tregion">医 药</li>
+                                <li class="ttitle1"><a href="http://www.yaochenlietou.com" target="_parent">地区经理</a></li>
+                                <li class="tsalary">20万</li>
+                                <li class="ttime">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="tregion">医 药</li>
+                                <li class="ttitle1"><a href="http://www.yaochenlietou.com" target="_parent">市场总监</a></li>
+                                <li class="tsalary">70万</li>
+                                <li class="ttime">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="tregion">医 疗</li>
+                                <li class="ttitle1"><a href="http://www.yaochenlietou.com" target="_parent">省区经理</a></li>
+                                <li class="tsalary">30万</li>
+                                <li class="ttime">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="tregion">医 院</li>
+                                <li class="ttitle1"><a href="http://www.yaochenlietou.com" target="_parent">市场总监</a></li>
+                                <li class="tsalary">50-150万</li>
+                                <li class="ttime">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            </dt>
+                        </dl>
+
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="blank20"></div>
+        <div class="ltclmnxt">
+            <!--2排-->
+            <div class="ltclmnc">
+                <div class="job">
+                    <div class="job_title">
+                        <h1>
+                            <span>
+                                <a href="www.yaochenlietou.com" target="_blank">医药猎头职位</a>   
+                            </span>
+                            <a href="www.yaochenlietou.com" target="_blank">北京</a> | 
+                            <a href="www.yaochenlietou.com" target="_blank">广州</a> | 
+                            <a href="www.yaochenlietou.com" target="_blank">江苏</a> | 
+                            <a href="www.yaochenlietou.com" target="_blank">上海</a>
+                        </h1>
+                    </div>
+                    <div class="joblist">
+                        <dl>
+                            <dt>
+                            <ul>
+                                <li class="regionnav">地    区</li>
+                                <li class="title1nav">职    位</li>
+                                <li class="salarynav">年    薪</li>
+                                <li class="timenav">  截止日期</li>
+                            </ul>
+
+                            </dt><dd>
+                            <ul>
+                                <li class="region">上 海</li>
+                                <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">销售总监</a></li>
+                                <li class="salary">80万</li>
+                                <li class="time">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="region">南 京</li>
+                                <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">投资总监</a></li>
+                                <li class="salary">60万</li>
+                                <li class="time">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="region">天  津</li>
+                                <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">地区经理</a></li>
+                                <li class="salary">20万</li>
+                                <li class="time">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="region">上 海</li>
+                                <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">市场总监</a></li>
+                                <li class="salary">70万</li>
+                                <li class="time">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="region">海 南</li>
+                                <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">省区经理</a></li>
+                                <li class="salary">30万</li>
+                                <li class="time">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="region">北 京</li>
+                                <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">市场总监</a></li>
+                                <li class="salary">50-150万</li>
+                                <li class="time">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            </dt>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="ltclmnr">
+                <div class="talents">
+                    <div class="talents_title">
+                        <h1>
+                            <span>
+                                <a href="www.yaochenlietou.com" target="_blank">北区人才</a>   
+                            </span>
+                            <a href="www.yaochenlietou.com" target="_blank">北京</a> | 
+                            <a href="www.yaochenlietou.com" target="_blank">天津</a> | 
+                            <a href="www.yaochenlietou.com" target="_blank">华北</a> | 
+                            <a href="www.yaochenlietou.com" target="_blank">东北</a>
+                        </h1>
+                    </div>
+
+                    <div class="talentslist">
+                        <dl>
+                            <dt>
+                            <ul>
+                                <li class="tregionnav">行    业</li>
+                                <li class="ttitle1nav">职    位</li>
+                                <li class="tsalarynav">年    薪</li>
+                                <li class="ttimenav">  有效期</li>
+                            </ul>
+
+                            </dt><dd>
+                            <ul>
+                                <li class="tregion">医 药</li>
+                                <li class="ttitle1"><a href="http://www.yaochenlietou.com" target="_parent">销售总监</a></li>
+                                <li class="tsalary">80万</li>
+                                <li class="ttime">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="tregion">医 疗</li>
+                                <li class="ttitle1"><a href="http://www.yaochenlietou.com" target="_parent">投资总监</a></li>
+                                <li class="tsalary">60万</li>
+                                <li class="ttime">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="tregion">医 药</li>
+                                <li class="ttitle1"><a href="http://www.yaochenlietou.com" target="_parent">地区经理</a></li>
+                                <li class="tsalary">20万</li>
+                                <li class="ttime">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="tregion">医 药</li>
+                                <li class="ttitle1"><a href="http://www.yaochenlietou.com" target="_parent">市场总监</a></li>
+                                <li class="tsalary">70万</li>
+                                <li class="ttime">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="tregion">医 疗</li>
+                                <li class="ttitle1"><a href="http://www.yaochenlietou.com" target="_parent">省区经理</a></li>
+                                <li class="tsalary">30万</li>
+                                <li class="ttime">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            <dd>
+                            <ul>
+                                <li class="tregion">医 院</li>
+                                <li class="ttitle1"><a href="http://www.yaochenlietou.com" target="_parent">市场总监</a></li>
+                                <li class="tsalary">50-150万</li>
+                                <li class="ttime">2012.03.12</li>
+                            </ul>
+                            </dd>
+
+                            </dt>
+                        </dl>
+
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="blank20"></div>
+        <div class="banner">
+            <a href="www.yaochenlietou.com" target="_blank"><img src="${static_url}/images/guanggao.jpg" width="980" height="108"></a>
+        </div>
+        <div class="blank20"></div>
+        <!--人力资源-->
+        <div class="tit3">
+            <div class="imgbj">
+                <a href="www.yaochenlietou.com">
+                    <img src="${static_url}/images/hrbiaoti2.jpg" width="146" height="59"></a>
+            </div>
+            <div class="tit_font">
+                <a href="www.yaochenlietou.com" target="_blank">医药</a> | 
+                <a href="www.yaochenlietou.com" target="_blank">医疗</a> | 
+                <a href="www.yaochenlietou.com" target="_blank">华北</a> | 
+                <a href="www.yaochenlietou.com" target="_blank">华南</a> | 
+                <a href="www.yaochenlietou.com" target="_blank">华东</a> 
+            </div>
+        </div>
+        <div class="blank15"></div>
+        <!--左-->
+        <div class="ltclmnc">
+            <div class="hrtitle">
+                <h2>
+                    <a href="www.yaochenlietou.com" target="_blank">战略规划</a>
+                </h2>
+            </div>
+            <div class="text_c">
+                <h4>
+                    <a href="www.yaochenlietou.com" target="_blank">民营医院管理者成功激励四部曲</a>
+                </h4>
+            </div>
+            <div class="blank10"></div>
+            <div class="fPic">
+                <a href="www.yaochenlietou.com" target="_blank"><img src="${static_url}/images/hrgg.jpg"></a>
+            </div>
+            <ul class="list4">
+                <li>
+                <a href="www.yaochenlietou.com" target="_blank">战术才是企业发展的核心</a>
+                </li>
+                <li>
+                <a href="www.yaochenlietou.com" target="_blank">战术才是企业发展的核心</a>
+                </li>
+                <li>
+                <a href="www.yaochenlietou.com" target="_blank">战术才是企业发展的核心</a>
+                </li>
+            </ul>
+            <div class="blank10"></div>
+            <ul class="list10">
+                <li>
+                <a href="www.yaochenlietou.com" target="_blank">战略实现：流程原则的提炼与应用</a>
+                </li>
+                <li>
+                <a href="www.yaochenlietou.com" target="_blank">战略实现：流程原则的提炼与应用</a>
+                </li>
+                <li>
+                <a href="www.yaochenlietou.com" target="_blank">战略实现：流程原则的提炼与应用</a>
+                </li>
+                <li>
+                <a href="www.yaochenlietou.com" target="_blank">战略实现：流程原则的提炼与应用</a>
+                </li>
+            </ul>
+        </div>
+        <!--右-->
+        <div class="ltclmnr">
+            <div class="hrtitle">
+                <h2>
+                    <a href="www.yaochenlietou.com" target="_blank">战略规划</a>
+                </h2>
+            </div>
+            <div class="text_c">
+                <h4>
+                    <a href="www.yaochenlietou.com" target="_blank">民营医院管理者成功激励四部曲</a>
+                </h4>
+            </div>
+            <div class="blank10"></div>
+            <div class="fPic">
+                <a href="www.yaochenlietou.com" target="_blank"><img src="${static_url}/images/hrgg.jpg"></a>
+            </div>
+            <ul class="list4">
+                <li>
+                <a href="www.yaochenlietou.com" target="_blank">战术才是企业发展的核心</a>
+                </li>
+                <li>
+                <a href="www.yaochenlietou.com" target="_blank">战术才是企业发展的核心</a>
+                </li>
+                <li>
+                <a href="www.yaochenlietou.com" target="_blank">战术才是企业发展的核心</a>
+                </li>
+            </ul>
+            <div class="blank10"></div>
+            <ul class="list10">
+                <li>
+                <a href="www.yaochenlietou.com" target="_blank">战略实现：流程原则的提炼与应用</a>
+                </li>
+                <li>
+                <a href="www.yaochenlietou.com" target="_blank">战略实现：流程原则的提炼与应用</a>
+                </li>
+                <li>
+                <a href="www.yaochenlietou.com" target="_blank">战略实现：流程原则的提炼与应用</a>
+                </li>
+                <li>
+                <a href="www.yaochenlietou.com" target="_blank">战略实现：流程原则的提炼与应用</a>
+                </li>
+            </ul>
+        </div>
+        <div class="blank15"></div>
+        <!--瑶臣猎头-->
+        <div class="tit3">
+            <div class="imgbj">
+                <a href="www.yaochenlietou.com">
+                    <img src="${static_url}/images/yaochenbiaoti3.jpg" width="146" height="59"></a>
+            </div>
+            <div class="tit_font">
+                <a href="www.yaochenlietou.com" target="_blank">医药</a> | 
+                <a href="www.yaochenlietou.com" target="_blank">医疗</a> | 
+                <a href="www.yaochenlietou.com" target="_blank">华北</a> | 
+                <a href="www.yaochenlietou.com" target="_blank">华南</a> | 
+                <a href="www.yaochenlietou.com" target="_blank">华东</a> 
+
+            </div>
+        </div>
+        <div class="blank15"></div>
+        <div class="ltclmnc">
+            <div class="hrtitle">
+                <h2>
+                    <a href="www.yaochenlietou.com" target="_blank">猎头简介</a>
+                </h2>
+            </div>
+            <div class="ychd">
+                <img src="${static_url}/images/32.jpg"></div>
+            <div class="ychdlist">
+                <ul>
+                    <p>瑶臣万代是一家专注医药医疗行业猎头服务、医药企业咨询、企业培训、人事外包服务的综合性管理公司。 [<a href="www.yaochenlietou.com" target="_blank">详细</a>]</p>
+                </ul>
+            </div>
+            <div class="blank25"></div>
+            <div class="hrtitle">
+                <h2>
+                    <a href="www.yaochenlietou.com" target="_blank">团队优势</a>
+                </h2>
+            </div>
+            <div class="ychd">
+                <img src="${static_url}/images/123.jpg"></div>
+            <div class="ychdlist">
+                <ul>
+                    <p>猎头部共12人其中资深顾问为10人，3人拥有双硕士学位（临床医学、人力资源），2人拥有双学士学位（人力资源、工商管理），公司顾问全都来自于国内500强医药行业 [<a href="www.yaochenlietou.com" target="_blank">详细</a>]</p>
+                </ul>
+            </div>
+
+        </div>
+        <div class=" ltclmnr">
+            <div class="hrtitle">
+                <h2>
+                    <a href="www.yaochenlietou.com" target="_blank">服务流程</a>
+                </h2>
+            </div>
+            <div class="ychd">
+                <img src="${static_url}/images/321.jpg"></div>
+            <div class="ychdlist">
+                <ul>
+                    <li class="ychdlistf">1、客户提供职位说明书</li>
+                    <li>2、分析职位说明书</li>
+                    <li>3、签订猎聘合同</li>
+                    <li>4、推荐候选人</li>
+                    <li>5、客户录用候选人 [<a href="www.yaochenlietou.com" target="_parent">详情</a>]</li>
+                    <div class="ychdlistxx"></div>
+                </ul>
+            </div>
+
+
+            <div class="blank20"></div>
+            <div class="hrtitle">
+                <h2>
+                    <a href="www.yaochenlietou.com" target="_blank">服务资费</a>
+                </h2>
+            </div>
+            <div class="ychd">
+                <img src="${static_url}/images/2311.jpg"></div>
+            <div class="ychdlist">
+                <ul>
+                    <p>猎头服务费按照年薪的22%-30%收取，具体比例根据岗位猎取的难易程度和岗位人选的多少有所浮动。最低收费为25000人民币签订合同时收取部分费用作为委托寻访金
+                    [<a href="www.yaochenlietou.com" target="_blank">详细</a>]
+                    </p>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="right">
+        <div class="rightbj">
+            <div class="banner">
+                <a href="www.yaochenlietou.com" target="_blank"><img src="${static_url}/images/326363.jpg" width="189" height="317"></a>
+            </div>
+        </div>
+
+        <div class="rightbj">
+            <div class="tit1">
+                <h2>
+                    <span><a href="www.yaochenlieotu.com" target="_blank">企业动态</a></span>
+                    <a href="www.yaochenlietou.com" target="_blank">更多</a>
+                </h2>
+            </div>
+            <ul class="list6">
+                <li class="list6f">
+                <a href="www.yaochenlietou.com" target="_blank">外交部：中亚涉及中国核心利益绝不允许动乱</a>
+                </li>
+                <li>
+                <a href="www.yaochenlietou.com" target="_blank">外交部：中亚涉及中国核心利益绝不允许动乱</a>
+                </li>
+                <li>
+                <a href="www.yaochenlietou.com" target="_blank">外交部：中亚涉及中国核心利益绝不允许动乱</a>
+                </li>
+                <li>
+                <a href="www.yaochenlietou.com" target="_blank">外交部：中亚涉及中国核心利益绝不允许动乱</a>
+                </li>
+            </ul>
+        </div>
+        <div class="rightbj">
+            <div class=" righttxt">
+                <div class="tit1">
+                    <h2>
+                        <span>
+                            <a href="www.yaochenlietou.com" target="_blank">评论</a>
+                        </span>
+
+                        <a href="www.yaochenlietou.com" target="_blank">更多</a>
+
+                    </h2>
+                </div>
+                <div class="blank5"></div>
+                <div class="righttxt">
+                    <h4>
+                        <a href="www.yaochenlietou.com" target="_blank">医药猎头是什么东西</a>
+                    </h4>
+                    <ul class="list8">
+                        <a href="www.yaochenlietou.com" target="_blank"><img src="${static_url}/images/1111.jpg" width="100" height="100"></a>
+
+                        <p>
+                        你垃圾堆放辣椒啊了身段减肥了氨基酸劳动纠纷拉丝机的发链接啊算间<a href="www.yaochenlietou.com">[详细]</a></p></ul>
+                </div>
+                <ul class="list8">
+                    <li>
+                    <a href="www.yaochenlietou.com" target="_blank">要让抽烟者形成一种自卑心态</a>
+                    </li>
+                    <li>
+                    <a href="www.yaochenlietou.com" target="_blank">要让抽烟者形成一种自卑心态</a>
+                    </li>
+                    <li>
+                    <a href="www.yaochenlietou.com" target="_blank">要让抽烟者形成一种自卑心态</a>
+                    </li>
+                    <li>
+                    <a href="www.yaochenlietou.com" target="_blank">要让抽烟者形成一种自卑心态</a>
+                    </li>
+                </ul>
+                <div class="blank5"></div>
+            </div>
+        </div>
+
+        <div class="rightbj">
+            <div class="banner">
+                <a href="www.yaochenlietou.com" target="_blank"><img src="${static_url}/images/326363.jpg" width="189" height="317"></a>
+            </div>
+        </div>
+
+        <div class="rightbj">
+            <div class="tit7">
+                <span>
+                    一周排行
+                </span>
+            </div>
+            <ul class="topr">
+                <li class="toprf" >
+                <span class="front">1</span>
+                <a href="www.yaochenlietou.com" target="_blank">外交部：中亚涉及中国核心利益绝不允许动乱</a>
+                </li>
+                <li>
+                <span class="front">2</span>
+                <a href="www.yaochenlietou.com" target="_blank">外交部：中亚涉及中国核心利益绝不允许动乱</a>
+                </li>
+                <li>
+                <span class="front">3</span>
+                <a href="www.yaochenlietou.com" target="_blank">外交部：中亚涉及中国核心利益绝不允许动乱</a>
+                </li>
+                <li>
+                <span class="frontf">4</span>
+                <a href="www.yaochenlietou.com" target="_blank">外交部：中亚涉及中国核心利益绝不允许动乱</a>
+                </li>
+                <li>
+                <span class="frontf">5</span>
+                <a href="www.yaochenlietou.com" target="_blank">外交部：中亚涉及中国核心利益绝不允许动乱</a>
+                </li>
+                <li>
+                <span class="frontf">6</span>
+                <a href="www.yaochenlietou.com" target="_blank">外交部：中亚涉及中国核心利益绝不允许动乱</a>
+                </li>
+                <li>
+                <span class="frontf">7</span>
+                <a href="www.yaochenlietou.com" target="_blank">外交部：中亚涉及中国核心利益绝不允许动乱</a>
+                </li>
+                <li>
+                <span class="frontf">8</span>
+                <a href="www.yaochenlietou.com" target="_blank">外交部：中亚涉及中国核心利益绝不允许动乱</a>
+                </li>
+                <li>
+                <span class="frontf">9</span>
+                <a href="www.yaochenlietou.com" target="_blank">外交部：中亚涉及中国核心利益绝不允许动乱</a>
+                </li>
+                <li>
+                <span class="frontf">10</span>
+                <a href="www.yaochenlietou.com" target="_blank">外交部：中亚涉及中国核心利益绝不允许动乱</a>
+                </li>
+            </ul>
+        </div>
+        <div class="rightbj">
+            <div class="banner">
+                <a href="www.yaochenlietou.com" target="_blank"><img src="${static_url}/images/326363.jpg" width="189" height="317"></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="blank20"></div>
+    <!--js-->
+    <div class=" client">
+        <div class="clienttit">
+            <h2> <span>服务企业</span>
+                (排名不分先后)
+            </h2>
+        </div>
+
+    <table width="100%"><tbody><tr>
+          <td height="80" align="center"><a class="MagicThumb" href="${static_url}/images/service/kehu1.1.png"><img alt="" src="${static_url}/images/service/kehu1.png" style="visibility: visible;">
+              <span>&nbsp;&nbsp;先声药业成立于1995年3月28日，至今，已发展成为集生产、研发、销售为一体，拥有6家通过GMP认证的现代化药品生产企业，2家全国性的药品营销企业、1家药物研究院，拥有员工近3000人的新型药业集团。<p>&nbsp;&nbsp;2005年，联想控股公司下属的弘毅投资出资2.1亿元，持有先声药业31%的股份。</p><p>&nbsp;&nbsp;2007年4月20日，先声药业成功登陆纽约证券交易所，募集资金2.61亿美元，股票代码SCR，成为中国内地第1家在纽交所上市的化学生物药公司。</p> <br><br><b style="float: right;">瑶臣猎头整理__联系电话：010-64735736</b></span>
+          </a></td>
+
+          <td align="center"><a class="MagicThumb" href="${static_url}/images/service/kehu2.2.png"><img alt="" src="${static_url}/images/service/kehu2.png" style="visibility: visible;">
+              <span>&nbsp;&nbsp;华北制药股份有限公司是由原华北制药厂投入其全部生产经营性资产，并经募股于1992年组建的股份制企业。1994年，华药股票在上海证券交易所挂牌上市，目前公司国家股权比例为59.87%，由河北省政府授权华北制药集团有限责任公司持有。现有7家分公司、13家子公司。 制剂以及VC、VB12。
+                <br><br><b style="float: right;">瑶臣猎头整理___联系电话：010-64735736</b></span>
+          </a></td>
+
+          <td align="center"><a class="MagicThumb" href="${static_url}/images/service/kehu5.5.png"><img alt="" src="${static_url}/images/service/kehu5.png">
+              <span>&nbsp;&nbsp;杭州民生药业集团有限公司是在杭州民生药业集团公司（杭州民生药厂）基础上进行整体改制后组建的有限责任公司，是国家大型骨干制药工业企业。她创建于1926年，是中国最早的四大西药厂之一,为全国医药50强之一。<p>&nbsp;&nbsp;公司以原料药为基础、制剂药为重点，开发高科技、高附加值的产品，常年生产多种医药原料和四大类药物制剂，即抗心血管类、抗肿瘤类、消化道类、多维元素类。其中，多种微量元素补给剂"21金维他"， 青霉素皮试剂及噻嘧啶等产品均为国内独家生产。公司拥有对外贸易进出口自主权，产品远销到世界38个国家和地区，年出口创汇1000余万美元</p><br><br><b style="float: right;">瑶臣猎头整理__联系电话：010-64735736</b></span>
+          </a></td>
+
+          <td align="center"><a class="MagicThumb" href="${static_url}/images/service/kehu6.6.png"><img alt="" src="${static_url}/images/service/kehu6.png">
+              <span>&nbsp;&nbsp;辉瑞制药成立于1849年;<p>&nbsp;&nbsp; 1980年进入中国，2004年在上海成立中区总部和辉瑞投资有限公司，2005年在上海成立辉瑞中国研发中心;</p><p>&nbsp;&nbsp; 2009年辉瑞并购惠氏，成为世界最大药企;</p><p>&nbsp;&nbsp; 2010年在武汉成立研发中心;</p><p>&nbsp;&nbsp; 2010年销售额为585.2亿美元</p><br><br><b style="float: right;">瑶臣猎头整理__联系电话：010-64735736</b></span>
+          </a></td>
+
+          <td align="center"><a class="MagicThumb" href="${static_url}/images/service/kehu7.7.png"><img alt="" src="${static_url}/images/service/kehu7.png">
+              <span>&nbsp;&nbsp;中国医药集团总公司成立于1998年11月26日，是由中央管理的以医药科研、生产和服务贸易为主业的我国最大的医药企业集团，旗下拥有十家全资或控股子公司及国药股份、深圳一致两家上市公司。2007年销售收入373亿元，进出口额7.7亿美元。<p>&nbsp;&nbsp;在2006年国家统计局公布的中国大企业排名中，中国医药集团位列第99位，在151家中央企业中，中国医药集团销售收入位列第55位，利润位列71位。</p>
+                <br><br><b style="float: right;">瑶臣猎头整理___联系电话：010-64735736</b></span>
+          </a></td>
+    </tr>
+        <tr>
+          <td align="center" height="80"><a class="MagicThumb" href="${static_url}/images/service/kehu8.8.png"><img alt="" src="${static_url}/images/service/kehu8.png" style="visibility: visible;">
+              <span>&nbsp;&nbsp;康缘药业与2002年在上海证券交易所上市。其康缘现代中药研究院，拥有一支包括6名博士后、12名博士、80余名硕士在内的180多名科研人员组成的研究队伍；<p>&nbsp;&nbsp;康缘药业拥有国内最大的智能化中药材提取生产线，具有年处理生药材10000吨的能力；拥有通过国家GMP验证的制剂车间，配套完善的备料中心、质量检测中心、动力中心、智能管理中心，设有硬胶囊、软胶囊、小容量注射剂、冻干粉针剂等十三条最先进的生产线，具备年生产硬胶囊12亿粒、软胶囊3.4亿粒、口服液1亿支、小容量注射剂3500万支、冻干粉针剂600万支、片剂15亿片、颗粒剂1000吨的能力。 </p><br><br><b style="float: right;">瑶臣猎头整理__联系电话：010-64735736</b></span>
+          </a></td>
+
+          <td align="center"><a class="MagicThumb" href="${static_url}/images/service/kehu9.9.png"><img alt="" src="${static_url}/images/service/kehu9.png">
+              <span>&nbsp;&nbsp;康芝药业是海南首家创业板上市的制药企业，也是海南省近年来发展最快、效益
+                最好、规模最大的医药企业之一。<p>目前，公司拥有5条国际最先进的颗粒剂自动化生产线，年产20亿袋，是亚洲产能最大、自动化程度最高的颗粒剂生产线。</p>
+                <br><br><b style="float: right;">瑶臣猎头整理__联系电话010-64735736</b></span>
+          </a></td>
+
+          <td align="center"><a class="MagicThumb" href="${static_url}/images/service/kehu10.10.png"><img alt="" src="${static_url}/images/service/kehu10.png">
+              <span>&nbsp;&nbsp;石药集团有限公司始建于1938年5月现有资产总额170亿元，员工2万余人，是全国医药行业首家以强强联合方式组建的特大型制药企业，也是河北省大型支柱型企业集团之一。
+                <p>&nbsp;&nbsp;石药集团主要从事医药产品的开发、生产和销售。产品主要包括抗生素、维生素、心脑血管、解热镇痛、消化系统用药、呼吸系统用药和中成药等七大系列近千个品种。石药集团制剂产品的年生产能力为粉针剂30亿支、片剂200亿片、胶囊80亿粒、软胶囊10亿粒。目前石药集团有30个产品单品种销售过亿元，产品销售遍及全国和世界六十多个国家和地区。
+                </p><br><br><b style="float: right;">瑶臣猎头整理__联系电话：010-64735736</b></span>
+            </a></td>
+            <td align="center"><a class="MagicThumb" href="${static_url}/images/service/kehu11.11.png"><img alt="" src="${static_url}/images/service/kehu11.png" style="visibility: visible;">
+                <span> &nbsp;&nbsp;百多安是专业从事医疗器械产品的研发、生产和销售的公司。目前旗下有中美合资山东百多安医疗器械有限公司，北京市百多安科技有限责任公司，上海百多安生物医药有限公司。公司创立于1996年。<p>&nbsp;&nbsp;百多安旗下的中美合资山东百多安医疗器械有限公司目前在医用高分子材料的领域尤其是医用硅橡胶的研发和制造技术上达到国际先进水平，在医用等离子技术的进展顺利，等离子灭菌器和等离子手术电刀系统已开始进行产品申报。</p><br><br><b style="float: right;">瑶臣猎头整理__联系电话：010-64735736</b></span>
+            </a></td>
+            <td align="center"><a class="MagicThumb" href="${static_url}/images/service/kehu12.12.png"><img alt="" src="${static_url}/images/service/kehu12.png" style="visibility: visible;">
+                <span>&nbsp;&nbsp;史塞克公司成立于1964年，史塞克（中国）有限公司成立于1994。1997年在纽约证券交易所挂牌上市。Stryker是一个有广泛医疗基础、成果卓著的医疗技术领域的全球领导者。是拥有在356亿美元的全球最大的整形外科市场的成员之一，stryker的产品帮助医疗专业人员在120多个国家改善病人的生命。
+                  <br><br><b style="float: right;">瑶臣猎头整理__联系电话：010-64735736</b></span>
+            </a></td>
+      </tr>
+    <tr>
+            <td align="center" width="200" height="80"><a class="MagicThumb" href="${static_url}/images/service/kehu3.3.png"><img alt="" src="${static_url}/images/service/kehu3.png" style="visibility: visible;">
+                <span>&nbsp;&nbsp;山东东阿阿胶股份有限公司前身为山东东阿阿胶厂，1952年建厂，1993年由国有企业改制为股份制企业。1996年成为上市公司，同年7月29日“东阿阿胶”A股股票在深交所挂牌上市，系国内最大的阿胶及系列产品生产企业。<br><br><b style="float: right;">瑶臣猎头整理___联系电话：010-64735736</b></span>
+            </a></td>
+            <td align="center"><a class="MagicThumb" href="${static_url}/images/service/kehu4.4.png"><img alt="" src="${static_url}/images/service/kehu4.png" style="visibility: visible;">
+                <span>&nbsp;&nbsp;红日药业于2009年10月30日在深圳证券交易所创业板挂牌上市。拥有专利 12 项（其中发明专利9项，实用新型专利2项，外观设计专利1项），已受理发明专利30项。公司经营范围为小容量注射剂、硬胶囊剂、颗粒剂、片剂、原料药生产；中药提取；生物工程药品、基因工程药品、植化药品的研究、开发、咨询、服务；普通货运。<br><br><b style="float: right;">瑶臣猎头整理__联系电话010-64735736</b></span>
+            </a></td>
+        </tr>
+</tbody></table>
+        </div>
+    </div>

@@ -1,0 +1,167 @@
+
+<%def name="latest_entities(catid, count)">
+  <%
+    entities = get_latest_entities(catid, count)
+    amount = len(entities)
+    entities.extend(['0' for i in range(count-amount)])
+  %>
+  % for i,entity in enumerate(entities):
+  %   if entity == '0':
+  <li>&nbsp;</li>
+  %   else:
+  <li ${'class="list6f"' if i == 0 else ''} >
+  <a href="${homedomain}/${entity.model.name}/${entity.created_time.year}/${entity.created_time.month}/${entity.created_time.day}/${entity.id}.html" target="_blank">${entity.title}</a>
+  </li>
+  %   endif
+  % endfor
+</%def>
+
+<%def name="latest_entities2(catid, count)">
+  <%
+    entities = get_latest_entities(catid, count)
+    amount = len(entities)
+    entities.extend(['0' for i in range(count-amount)])
+  %>
+  % for i,entity in enumerate(entities):
+  %   if entity == '0':
+  <li>&nbsp;</li>
+  %   else:
+  <li${' class="toprf"' if i == 0 else ''}>
+  <span class="front${'f' if i > 2 else ''}">${i+1}</span>
+  <a href="${homedomain}/${entity.model.name}/${entity.created_time.year}/${entity.created_time.month}/${entity.created_time.day}/${entity.id}.html" target="_blank">${entity.title}</a>
+  </li>
+  %   endif
+  % endfor
+</%def>
+
+<%def name="latest_entities3(catid, count)">
+  <%
+    entities = get_latest_entities(catid, count)
+    amount = len(entities)
+    entities.extend(['0' for i in range(count-amount)])
+  %>
+  % for i,entity in enumerate(entities):
+  %   if entity == '0':
+  <li>&nbsp;</li>
+  %   else:
+  <li>
+  <a href="${homedomain}/${entity.model.name}/${entity.created_time.year}/${entity.created_time.month}/${entity.created_time.day}/${entity.id}.html" target="_blank">${entity.title}</a>
+  </li>
+  %   endif
+  % endfor
+</%def>
+
+<%def name="latest_job(catid, count)">
+  <%
+    entities = get_latest_entities(catid, count)
+    amount = len(entities)
+    entities.extend(['0' for i in range(count-amount)])
+  %>
+  % for entity in entities:
+  %   if entity == '0':
+  <dd>&nbsp;</dd>
+  %   else:
+  <dd>
+  <ul>
+      <li class="region">${entity.job.location}</li>
+      <li class="title1"><a href="${homedomain}/${entity.model.name}/${entity.created_time.year}/${entity.created_time.month}/${entity.created_time.day}/${entity.id}.html" target="_parent">${entity.title}</a></li>
+      <li class="salary">${entity.job.payment}</li>
+      <li class="time">${entity.job.endate}</li>
+  </ul>
+  </dd>
+  %   endif
+  % endfor
+</%def>
+
+<%def name="latest_job2(catid, count)">
+  <%
+    entities = get_latest_entities(catid, count)
+    amount = len(entities)
+    entities.extend(['0' for i in range(count-amount)])
+  %>
+  % for entity in entities:
+  %   if entity == '0':
+  <dd>&nbsp;</dd>
+  %   else:
+  <dd>
+  <ul>
+      <li class="yregion">${entity.job.location}</li>
+      <li class="ytitle1"><a href="${homedomain}/${entity.model.name}/${entity.created_time.year}/${entity.created_time.month}/${entity.created_time.day}/${entity.id}.html" target="_parent">${entity.title}</a></li>
+      <li class="ysalary">${entity.job.payment}</li>
+      <li class="ytime">${entity.job.endate}</li>
+  </ul>
+  </dd>
+  %   endif
+  % endfor
+</%def>
+
+<%def name="_latest_job(catid, count)">
+  <%
+    entities = get_latest_entities(catid, count)
+    amount = len(entities)
+    entities.extend(['0' for i in range(count-amount)])
+  %>
+  % for entity in entities:
+  %   if entity == '0':
+  <li>&nbsp;</li>
+  %   else:
+  <li>
+  <ul class="panel">
+      <li class="pos">${entity.job.location}</li>
+      <li class="title"><a title="${entity.job.location} ${entity.title} ${entity.job.payment} ${entity.job.endate}" target="_blank" href="${homedomain}/${entity.model.name}/${entity.created_time.year}/${entity.created_time.month}/${entity.created_time.day}/${entity.id}.html">${entity.title}</a></li>
+      <li class="salary">${entity.job.payment}</li>
+      <li class="endate">${entity.job.endate}</li>
+  </ul>
+  </li>
+  %   endif
+  % endfor
+</%def>
+
+<%def name="latest_elite(catid, count)">
+  <%
+    entities = get_latest_entities(catid, count)
+    amount = len(entities)
+    entities.extend(['0' for i in range(count-amount)])
+  %>
+  % for entity in entities:
+  %   if entity == '0':
+  <dd>&nbsp;</dd>
+  %   else:
+  <dd>
+  <ul>
+      <li class="tregion">${entity.elite.address}</li>
+      <li class="ttitle1"><a target="_blank" href="${homedomain}/${entity.model.name}/${entity.created_time.year}/${entity.created_time.month}/${entity.created_time.day}/${entity.id}.html">${entity.title}</a></li>
+      <li class="tsalary">80万</li>
+      <li class="ttime">2012.03.12</li>
+  </ul>
+  </dd>
+  %   endif
+  % endfor
+</%def>
+
+<%def name="latest_elite2(catid, count)">
+  <%
+    entities = get_latest_entities(catid, count)
+    amount = len(entities)
+    entities.extend(['0' for i in range(count-amount)])
+  %>
+  % for entity in entities:
+  %   if entity == '0':
+  <dd>&nbsp;</dd>
+  %   else:
+  <dd>
+  <ul>
+      <li class="ytregion">${entity.elite.address}</li>
+      <li class="yttitle1"><a target="_blank" href="${homedomain}/${entity.model.name}/${entity.created_time.year}/${entity.created_time.month}/${entity.created_time.day}/${entity.id}.html">${entity.title}</a></li>
+      <li class="ytsalary">80万</li>
+      <li class="yttime">2012.03.12</li>
+  </ul>
+  </dd>
+  %   endif
+  % endfor
+</%def>
+
+<%def name="news_content_summary(eid)">
+    ${get_entity(eid).news.summary[:80]}
+</%def>
+

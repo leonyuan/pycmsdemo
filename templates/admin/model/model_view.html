@@ -1,0 +1,69 @@
+<%inherit file="na_base.html"/>
+
+<div class="content-box">
+    <div class="content-box-header">
+        <h4>模型基本信息</h4>
+        <div class="clear"></div>
+    </div>
+    <div class="content-box-content">
+        <div class="tab-content default-tab">
+        <table width="100%" class="table_form ">
+          <tbody>
+            % for input in form.inputs:
+            <tr>
+              <th width="80">${input.description}</th>
+              <td>
+                  % if input.name == 'template_id':
+                    ${model.template.name if model.template else u'无'}
+                  % else:
+                    ${_s(input.get_value())}
+                  % endif
+              </td>
+            </tr>
+            % endfor
+          </tbody>
+        </table>
+        </div>
+    </div>
+</div>
+
+<div class="content-box">
+    <div class="content-box-header">
+        <h4>属性信息</h4>
+        <div class="clear"></div>
+    </div>
+    <div class="content-box-content">
+        <div class="tab-content default-tab">
+        <form method="post" action="" id="myform" name="myform">
+        <table width="100%" class="table_form ">
+            <thead>
+                <tr>
+                <th>属性名称</th>
+                <th>属性代码</th>
+                <th>属性类型</th>
+                <th>属性长度</th>
+                <th>是否必需</th>
+                <th>查看</th>
+                </tr>
+            </thead>
+
+            <tbody>
+            % for field in fields:
+              <tr>
+                 <td>${field.title}</td>
+                 <td>${field.name}</td>
+                 <td>${_typetext(field.type)}</td>
+                 <td>${_s(field.length)}</td>
+                 <td>${_yn(field.required)}</td>
+                 <td align='center' >
+                    <a href="${admin_url}/field/${field.id}/view?mid=${field.model_id}" title="查看"><img src="${static_url}/images/icons/view.png" alt="查看" /></a>
+                 </td>
+              </tr>
+            % endfor
+            </tbody>
+        </table>
+        </form>
+
+        </div>
+    </div>
+</div>

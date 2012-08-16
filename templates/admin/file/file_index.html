@@ -1,0 +1,56 @@
+<%inherit file="na_base.html"/>
+<%
+import os
+%>
+<ul class="admintools">
+  <li><a href="../template/add"><img src="${static_url}/images/admin_img/icon_addlink.gif" border="0"/>
+    &nbsp;<span>添加模板</span></a></li>
+</ul>
+
+<div class="clear"></div>
+
+<div class="content-box">
+<form name="myform" action="?m=admin&c=category&a=listorder" method="post">
+    <table width="100%" cellspacing="0" >
+        <thead>
+            <tr>
+            <th>文件名称</th>
+       		<th>管理操作</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="6">
+                    <div class="bulk-actions align-left">
+                        <select name="dropdown">
+                            <option value="option1">选择一个操作...</option>
+                            <option value="option3">删除</option>
+                        </select>
+                        <a class="button" href="#">执行</a>
+                    </div>
+                    <div class="clear"></div>
+                </td>
+            </tr>
+        </tfoot>
+        <tbody>
+        % for file in files:
+          <tr>
+              <td><a href="open?fn=${os.path.join(file[0], file[1])}">
+                  % if file[2]:
+                  <img src="${static_url}/images/admin_img/file.gif" />
+                  % else:
+                  <img src="${static_url}/images/admin_img/folder.gif" />
+                  % endif
+                  ${file[1]}
+             </td></a>
+             <td align='center' > 
+                <a href="edit" title="修改"><img src="${static_url}/images/icons/pencil.png" alt="修改" /></a>
+                <a href="javascript:confirmurl('delete?1=1','确认要删除${file}吗？')" title="删除"><img src="${static_url}/images/icons/cross.png" alt="删除" /></a> 
+             </td>
+          </tr>
+        % endfor
+	    </tbody>
+    </table>
+
+</form>
+</div>

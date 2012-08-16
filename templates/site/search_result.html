@@ -1,0 +1,198 @@
+<%namespace file="lib/util.html" import="*"/>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>瑶臣搜索</title>
+<link type="text/css" rel="stylesheet" href="${static_url}/css/style_search.css">
+<link type="text/css" rel="stylesheet" href="${static_url}/css/search.css">
+</head>
+<script>
+function drop_mouseover(pos){
+ try{window.clearTimeout(timer);}catch(e){}
+}
+function drop_mouseout(pos){
+ var posSel=document.getElementById(pos+"Sel").style.display;
+ if(posSel=="block"){
+  timer = setTimeout("drop_hide('"+pos+"')", 1000);
+ }
+}
+function drop_hide(pos){
+ document.getElementById(pos+"Sel").style.display="none";
+}
+function search_show(pos,searchType,href){
+    document.getElementById(pos+"SearchType").value=searchType;
+    document.getElementById(pos+"Sel").style.display="none";
+    document.getElementById(pos+"Slected").innerHTML=href.innerHTML;
+    document.getElementById(pos+'q').focus();
+    var sE = document.getElementById("searchytitle");
+    if(sE != undefined  &&  searchType == "ytitle"){
+     sE.style.display="block";
+    }else if(sE != undefined){
+     sE.style.display="none";
+    }
+	  var sE = document.getElementById("searchltitle");
+    if(sE != undefined  &&  searchType == "ltitle"){
+     sE.style.display="block";
+    }else if(sE != undefined){
+     sE.style.display="none";
+    }
+		  var sE = document.getElementById("searchbelite");
+    if(sE != undefined  &&  searchType == "belite"){
+     sE.style.display="block";
+    }else if(sE != undefined){
+     sE.style.display="none";
+    }
+			  var sE = document.getElementById("searchnelite");
+    if(sE != undefined  &&  searchType == "nelite"){
+     sE.style.display="block";
+    }else if(sE != undefined){
+     sE.style.display="none";
+    }
+ try{window.clearTimeout(timer);}catch(e){}
+ return false;
+}
+</script>
+<body>
+
+<div id="header" class="minnav">
+<ul>
+  <li>
+  <a href="www.yaochenlietou.com" target="_blank"> 新闻</a> 丨 </li>
+
+  <li>
+  <a href="www.yaochenlietou.com" target="_blank"> 猎头</a> 丨 </li>
+
+        <li>
+  <a href="www.yaochenlietou.com" target="_blank"> 人力</a> 丨 </li>
+  
+    <li>
+  <a href="www.yaochenlietou.com" target="_blank"> 管理</a> 丨 </li>
+  
+    <li>
+  <a href="www.yaochenlietou.com" target="_blank"> 培训</a> 丨 </li>
+  
+    <li>
+  <a href="www.yaochenlietou.com" target="_blank"> 营销</a> 丨 </li>
+  
+    <li>
+  <a href="www.yaochenlietou.com" target="_blank"> 社保</a> 丨 </li>
+
+
+    <li>
+  <a href="www.yaochenlietou.com" target="_blank"> 医患</a> 丨 </li>
+  
+    <li>
+  <a href="www.yaochenlietou.com" target="_blank"> 文化</a> 丨 </li>
+      <li>
+  <a href="www.yaochenlietou.com" target="_blank"> 中医药</a> 丨 </li>
+  
+     <li>
+  <a href="www.yaochenlietou.com" target="_blank"> 医药猎头</a> 丨 </li>
+
+  <li>
+  <a href="www.yaochenlietou.com" target="_blank"> 医疗猎头</a> 丨 </li>
+  
+    <li>
+  <a href="www.yaochenlietou.com" target="_blank"> 医药人才</a> 丨 </li>
+  
+      <li>
+  <a href="www.yaochenlietou.com" target="_blank"> 医疗人才</a> </li>
+ </ul>
+</div>
+
+<div id="logososuo" class="area">
+<!--搜索-->
+<div class="lefto">
+ <a href="www.yaochenlietou.com" target="_blank"><img src="${static_url}/images/ycwdlogo.jpg"></a>
+ </div>
+          <div class="searchTool">
+ 
+    
+     <form method="get" action="http://www.yaochenlietou.com" name="headSearchForm" id="headSearchForm" onSubmit="return dosearch(this);">
+       <input name="searchdomain" type="hidden" value="http://www.yaochenlietou.com">
+     <input id="headSearchType" name="searchType" type="hidden" value="xinwen"> <input class="txtSearch" id="headq" name="q" type="text" value="请输入你要搜索的关键词"  onfocus="if (value =='请输入你要搜索的关键词'){value =''}" onBlur="if (value ==''){value='请输入你要搜索的关键词'}">
+      <div class="selSearch">
+    <div class="nowSearch" id="headSlected" onClick="if(document.getElementById('headSel').style.display=='none'){document.getElementById('headSel').style.display='block';}else {document.getElementById('headSel').style.display='none';};return false;" onMouseOut="drop_mouseout('head');">新闻搜索</div>
+    <div class="btnSel"><a href="#" onClick="if(document.getElementById('headSel').style.display=='none'){document.getElementById('headSel').style.display='block';}else {document.getElementById('headSel').style.display='none';};return false;" onMouseOut="drop_mouseout('head');"></a></div>
+    <div class="clear"></div>
+   	<ul class="selOption" id="headSel" style="display:none;">
+					<li><a href="#" onClick="return search_show('head','xinwen',this)" onMouseOver="drop_mouseover('head');" onMouseOut="drop_mouseout('head');">新闻搜索</a></li>
+					<li><a href="#" onClick="return search_show('head','ytitle',this)" onMouseOver="drop_mouseover('head');" onMouseOut="drop_mouseout('head');">医药职位</a></li>
+					<li><a href="#" onClick="return search_show('head','ltitle',this)" onMouseOver="drop_mouseover('head');" onMouseOut="drop_mouseout('head');">医疗职位</a></li>
+					<li><a href="#" onClick="return search_show('head','belite',this)" onMouseOver="drop_mouseover('head');" onMouseOut="drop_mouseout('head');">北区人才</a></li>
+					<li><a href="#" onClick="return search_show('head','nelite',this)" onMouseOver="drop_mouseover('head');" onMouseOut="drop_mouseout('head');">南区人才</a></li>
+			 </ul>
+    </div>
+     <div class="btnSearch">
+     
+    <a href="#" onClick="javascript:return dosearch(document.getElementById('headSearchForm'));"><span class="lbl">搜索</span></a>
+     </div>
+     
+          <div class="searchytitle" id="searchytitle" name="searchytitle" style="display:none">
+           <input type="radio" class="radio" name="sbt" value="post" onClick="csbt(this,this.form.sbts);">按地区搜<input type="radio" name="sbt" value="user" onClick="csbt(this,this.form.sbts);" class="radio">按职位搜<input type="radio" class="radio" name="sbt" value="post" onClick="csbt(this,this.form.sbts);">按年薪搜<input type="radio" name="sbt" value="user" onClick="csbt(this,this.form.sbts);" class="radio">按时间搜<input type="hidden" name="sbts" value="ytitle">
+     </div>
+     
+       <div class="searchltitle" id="searchltitle" name="searchltitle" style="display:none">
+           <input type="radio" class="radio" name="sbt" value="post" onClick="csbt(this,this.form.sbts);">按地区搜<input type="radio" name="sbt" value="user" onClick="csbt(this,this.form.sbts);" class="radio">按职位搜<input type="radio" class="radio" name="sbt" value="post" onClick="csbt(this,this.form.sbts);">按年薪搜<input type="radio" name="sbt" value="user" onClick="csbt(this,this.form.sbts);" class="radio">按时间搜<input type="hidden" name="sbts" value="ltitle">
+     </div>
+     
+            <div class="searchbelite" id="searchbelite" name="searchbelite" style="display:none">
+          <input type="radio" class="radio" name="sbt" value="post" onClick="csbt(this,this.form.sbts);">按地区搜<input type="radio" name="sbt" value="user" onClick="csbt(this,this.form.sbts);" class="radio">按职位搜<input type="radio" class="radio" name="sbt" value="post" onClick="csbt(this,this.form.sbts);">按年薪搜<input type="radio" name="sbt" value="user" onClick="csbt(this,this.form.sbts);" class="radio">按时间搜<input type="hidden" name="sbts" value="belite">
+     </div>
+     <div class="searchnelite" id="searchnelite" name="searchnelite" style="display:none">
+
+          <input type="radio" class="radio" name="sbt" value="post" onClick="csbt(this,this.form.sbts);">按地区搜<input type="radio" name="sbt" value="user" onClick="csbt(this,this.form.sbts);" class="radio">按职位搜<input type="radio" class="radio" name="sbt" value="post" onClick="csbt(this,this.form.sbts);">按年薪搜<input type="radio" name="sbt" value="user" onClick="csbt(this,this.form.sbts);" class="radio">按时间搜<input type="hidden" name="sbts" value="nelite">
+     </div>
+     
+          <div class="clear"></div>
+     </form>
+     
+       </div>
+
+       </div>
+ 
+ <div class="minarea">
+  <div class="mincot">
+    % for entity in entities:
+   <div class="minleft">
+       <p class="tit1"><a href="${homedomain}/${entity.model.name}/${entity.created_time.year}/${entity.created_time.month}/${entity.created_time.day}/${entity.id}.html" target="_blank">${entity.title}</a></p>
+       <p class="line24"></p>
+       <p class="sctime"><a href="www.yaochenlietou.com" target="_blank">医药猎头频道</a>  2112-12-30</p>
+   </div>
+   % endfor
+  </div>
+   <div class="minrt">
+    <div class="minrighr">
+     <div class="banner">
+     <a href="www.yaochenlietou.com" target="_blank"> <img src="${static_url}/images/2.png" width="220" /></a>
+     </div>
+    </div>
+</div>
+
+<div class="pageNav">
+${paging(pagination)}
+</div> 
+</div>
+        
+  <div id="footer" class="area">
+<div class="blank10"></div>
+ <ul>
+ <li><a href="http://www.yaochenlietou.com" target="_blank">瑶臣猎头简介</a> &nbsp; |   &nbsp;
+ <a href="http://www.yaochenlietou.com" target="_blank">合作客户</a> &nbsp;  |   &nbsp;
+<a href="http://www.yaochenlietou.com" target="_blank">加入瑶臣</a> &nbsp;  |   &nbsp;
+<a href="http://www.yaochenlietou.com" target="_blank">联系方式</a>&nbsp;   |   &nbsp;
+<a href="http://www.yaochenlietou.com" target="_blank">候选人平台</a>&nbsp;   |    &nbsp;
+<a href="http://www.yaochenlietou.com" target="_blank">意见反馈</a></li>  
+<div class="blank10"></div>
+<p class="end">Copyright &copy; 2008 - 2012 YaoChenWanDai. All Rights Reserved</p>
+ </ul>
+ </div>
+ 
+
+
+ 
+ 
+</body>
+</html>

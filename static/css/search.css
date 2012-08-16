@@ -1,0 +1,99 @@
+/*全局*/
+body{font-family:"宋体","Arial", ;background:#FFF;margin:0;padding:0; border:0;font-size:12px;color:#333;}
+h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,pre,form,fieldset,legend,button,input,textarea,th,td,nav,span,p,div,ul,li{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{font-size:12px;font-weight:normal;}
+ul,ol,li{list-style:none;}
+a img{border:0;}
+
+/*CSS空白*/
+.blank1{margin:0 auto;height:1px;font-size:1px;clear:both;}
+.blank2{margin:0 auto;height:2px;font-size:1px;clear:both;}
+.blank3{margin:0 auto;height:3px;font-size:1px;clear:both;}
+.blank5{margin:0 auto;height:5px;font-size:1px;clear:both;}
+.blank8{margin:0 auto;height:8px;font-size:1px;clear:both;}
+.blank10{margin:0 auto;height:10px;font-size:1px;clear:both;}
+.blank15{margin:0 auto;height:15px;font-size:1px;clear:both;}
+.blank20{margin:0 auto;height:20px;font-size:1px;clear:both;}
+.blank25{margin:0 auto;height:25px;font-size:1px;clear:both;}
+
+
+.banner{margin:0px auto;}
+
+/*顶部*/
+#header{margin:0px auto;height:26px;background-color:#EEE;}
+
+#logososuo{height:70px; margin:15px auto;}
+#logososuo .lefto{padding:0px 10px; float:left;}
+
+.minnav{margin:0px auto; height:30px; }
+.minnav ul{float:left;padding:5px 0px 0px 10px;}
+.minnav li{float:left; text-align:left; margin-right:6px;}
+.minnav li a{ color:#000}
+.minnav a:link {text-decoration:none;color:#000;}
+.minnav li a:hover{text-decoration:none; color:#BA2636}
+
+/*搜索*/
+.searchTool{ float:left;width:600px; padding:30px 0px 0px 50px;}
+.searchytitle{float:left;margin:-55px 10px 10px;}
+.searchTool .searchltitle{float:left;margin:-55px 10px 10px;}
+.searchTool .searchbelite{float:left;margin:-55px 10px 10px;}
+.searchTool .searchnelite{float:left;margin:-55px 10px 10px;}
+.searchTool .radio{vertical-align:middle; margin:0px 4px 5px;margin-right:2px;}
+.searchTool .txtSearch{float:left;width:358px;padding:2px 2px 0 2px;height:27px;line-height:20px;vertical-align:bottom; margin-left: 10px; border:1px solid #3e99d4;color:#999}
+.searchTool .selSearch{margin:0px 2px;float:left;width:90px;background:#fff;height:29px;line-height:22px;border:1px solid #3e99d4;}
+.searchTool .nowSearch{float:left;width:60px;height:20px;line-height:22px;overflow:hidden;padding:5px 6px 0; }
+.searchTool .btnSel{float:right;border-left:1px solid #3e99d4;width:14px;height:29px;}
+.searchTool .btnSel a{background:url(../images/sousuo_three.gif) no-repeat center center;display:block;width:14px;height:33px;}
+.searchTool .btnSel a:hover{background:url(../images/sousuo_one.gif) no-repeat center center;border:1px solid #fff;width:12px;height:32px;}
+.searchTool .selOption{z-index:9999;position:absolute;margin-left:-1px;width:90px;background:#fff;border:1px solid #3e99d4;}
+.searchTool .selOption a{display:block;height:29px;padding-left:5px;line-height:21px;color:#000;text-decoration:none; }
+.searchTool .selOption a:hover{color:#fff;background:#95d5f1;}
+.searchTool .btnSearch{float:left;margin-left:10px;width:60px;height:29px;line-height:22px;border:1px solid #3e99d4;overflow:hidden;}
+.searchTool .btnSearch a{background:url(../images/sousuo_five.gif) repeat-x center -6px;display:block;text-decoration:none;height:29px;line-height:22px;overflow:hidden;}
+.searchTool .btnSearch a:hover{background: url(../images/sousuo_two.gif) repeat-x center center;border:1px solid #fff;height:29px;line-height:20px;}
+.searchTool .btnSearch .lbl{cursor:pointer;display:block;width:40px;padding:5px 0 0 5px;letter-spacing:5px;text-align:center;height:18px;margin:0 auto;filter:progid:DXImageTransform.Microsoft.DropShadow(color=#daeefa,offX=1,offY=1,positives=true);color:#000;}
+
+.minarea{ margin:0 auto; border-top:1px #E7E7E7 solid; padding-left:20px ;}
+.minleft{ width:650px; float:left; line-height:20px;}
+.sorry{ width:650px; float:left; line-height:20px; font-size:16px; padding-left:20px}
+.tit1 {word-break: break-all; padding-top:20px;line-height: 18px; font-size:16px;}
+.tit1 a{color:#1011CB; line-height:15px;}
+.line24{ line-height:16px; padding-top:10px;}
+em{font-style: normal;color: #C00;}
+a em {text-decoration: underline;}
+.sctime{ color:#1A7B2E;}
+.sctime a:link {text-decoration:none;color:#69C;}
+.mincot { width:700px; float:left;}
+.minrt{float:left; width:300px; border-left: 1px #E7E7E7 solid; padding:20px 20px 20px 20px}
+.minrighr{ float:left;}
+
+.pageNav{clear:both; height:22px;padding-top:20px;padding-left:100px;text-align:center;font-family:Arial, Helvetica, sans-serif; font-size:14px}
+.pageNav a,.pageNav strong,.pageNav span{ display:block; float:left; padding:0 8px; overflow:hidden; margin-right:5px; background:#fff}
+.pageNav a,.pageNav span{ height:20px; line-height:22px; border:1px solid #CCDBE4}
+.pageNav a.f12,.pageNav strong.f12,.pageNav span{ font-size:12px}
+
+.pageNav a:link {text-decoration:none;color:#000;}
+.pageNav a:visited{text-decoration:none; color:#000}
+.pageNav a:hover{text-decoration:none;color:#BA2636;}
+
+
+.pageNav strong{ height:22px; line-height:24px}
+.pageNav .mor{border:0;padding:0;height:21px;line-height:21px}
+.pageNav .na{color:#DBE1E6}
+
+#footer{
+border-style:solid;
+border-width: 1px 0px 0px 0px;
+border-color: #EEE; 
+margin:20px auto;
+line-height:30px;
+color:#CCC;
+}
+#footer a{ color:#000}
+#footer a:link {text-decoration:none;color:#000;}
+#footer a:hover {text-decoration:underline;color:#BA2636;}
+#footer li{text-align:center;}
+#footer p{ text-align:center;}
+#footer .end{ font-family: Arial, Helvetica, sans-serif;}
+
+

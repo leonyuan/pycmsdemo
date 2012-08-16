@@ -1,0 +1,149 @@
+<%inherit file="base.html"/>
+<%namespace file="lib/entity.html" import="*"/>
+<%namespace file="lib/util.html" import="*"/>
+
+<link href="${static_url}/css/lblist.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="${static_url}/js/accordion.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+   $(".listnav").accordion({ 
+        speed: 500, 
+        closedSign: '[+]', 
+        openedSign: '[-]' 
+    }); 
+});
+</script>
+
+<%block name="title">${thecat.name}-${parent.title()}</%block>
+
+<!--文本-->
+<div class="area content">
+
+<div class="listleft">
+  <div class="listjob"><h2>精英人才</h2></div>
+  <div class="listtitle"></div>
+  <ul class="listnav">
+      % for entity in entities:
+      <li class="title2">
+      <a target="_blank" href="${homedomain}/${entity.model.name}/${entity.created_time.year}/${entity.created_time.month}/${entity.created_time.day}/${entity.id}.html">${entity.title}</a>
+      </li>
+         <li class="time"><p>${entity.created_time}</p></li>
+         <li><a href="#"></a>
+              <ul class="listtxt">
+                  <li class="region">地 点:</li>
+                  <li class="regiontxt">${entity.elite.address}</li>
+                  <li class="salary">年 薪:</li>
+                  <li class="salarytxt">80万</li>
+                  <li class="listtext">
+                      <span>顾问评价</span>
+                      ${entity.elite.guwenpingjia}
+                  </li>       
+              </ul>
+         </li>
+         <div class="blank1"></div>
+    % endfor
+
+      </ul>
+        <div class="pageNav">
+          ${paging(pagination)}
+        </div>
+      </div>
+
+    <div class="right">
+      <div class="rightbj">
+      <div class="job">
+        <div class="job_title">
+         <h2>
+          <a href="www.yaochenlietou.com" target="_blank">推荐职位</a>   
+          </h2>
+          </div>
+      <div class="joblist">
+<dl>
+<dt>
+    <ul>
+          <li class="regionnav">地    区</li>
+          <li class="title1nav">职    位</li>
+          <li class="salarynav">年    薪</li>
+          <li class="timenav">  截止日期</li>
+</ul>
+
+</dt><dd>
+ <ul>
+  <li class="region">上 海</li>
+  <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">销售总监</a></li>
+  <li class="salary">80万</li>
+  <li class="time">2012.03.12</li>
+  </ul>
+  </dd>
+  
+  <dd>
+ <ul>
+  <li class="region">南 京</li>
+  <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">投资总监</a></li>
+  <li class="salary">60万</li>
+  <li class="time">2012.03.12</li>
+  </ul>
+  </dd>
+  
+  <dd>
+ <ul>
+  <li class="region">天  津</li>
+  <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">地区经理</a></li>
+  <li class="salary">20万</li>
+  <li class="time">2012.03.12</li>
+  </ul>
+  </dd>
+  
+  <dd>
+ <ul>
+  <li class="region">上 海</li>
+  <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">市场总监</a></li>
+  <li class="salary">70万</li>
+  <li class="time">2012.03.12</li>
+  </ul>
+  </dd>
+  
+  <dd>
+ <ul>
+  <li class="region">海 南</li>
+  <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">省区经理</a></li>
+  <li class="salary">30万</li>
+  <li class="time">2012.03.12</li>
+  </ul>
+  </dd>
+  
+  <dd>
+ <ul>
+  <li class="region">北 京</li>
+  <li class="title1"><a href="http://www.yaochenlietou.com" target="_parent">市场总监</a></li>
+  <li class="salary">50-150万</li>
+  <li class="time">2012.03.12</li>
+  </ul>
+  </dd>
+  
+  </dt>
+  </dl>
+       </div>
+    </div>
+      </div>
+      <div class="rightbj">
+       <div class="tit7">
+             <span>
+              一周排行
+              </span>
+              </div>
+              <ul class="topr">
+                ${latest_entities2(33, 6)}
+              </ul>
+      </div>
+      <div class="rightbj">
+       <div class="banner">
+        <a href="www.yaochenlietou.com" target="_blank"><img src="${static_url}/images/326363.jpg" width="310" height="240"></a>
+        </div>
+        </div>
+     </div>
+           <div class="blank20"></div>
+      <div class="banner">
+      <a href="www.yaochenlietou.com" target="_blank"><img src="${static_url}/images/guanggao.jpg" width="980" height="108"></a>
+      </div>
+     </div>

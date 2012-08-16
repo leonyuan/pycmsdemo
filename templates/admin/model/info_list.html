@@ -1,0 +1,84 @@
+<%inherit file="na_base.html"/>
+<%namespace file="lib/util.html" import="*"/>
+
+<script>
+  function oncatchanged(selobj) {
+    alert(selobj.value);
+  }
+</script>
+
+<div class="crumbs">
+  <a href="../info/index">信息管理</a> <span>&gt;</span> ${model.title}
+</div>
+
+
+<div class="clear"></div>
+<form id="id_myform" name="myform" action="" method="get">
+<div class="search">
+  <input type="text" id="t" name="t" class="text" size="30" value="${t}">
+  <input name="submit" type="image" value="search" alt="搜索" title="搜索" src="${static_url}/images/admin_img/selector-search.gif" />
+<ul class="admintools">
+  <li><a href="../${model.name}/add"><img src="${static_url}/images/admin_img/icon_addlink.gif" border="0"/>
+    &nbsp;<span>添加${model.title}</span></a></li>
+</ul>
+</div>
+
+<div class="clear"></div>
+<div class="content-box">
+    <table width="100%" cellspacing="0" >
+        <thead>
+            <tr>
+            <th width="15"><input class="check-all" type="checkbox" /></th>
+            <th width="30">id</th>
+            <th>标题</th>
+            <th>缩写</th>
+            <th>创建用户</th>
+            <th>创建时间</th>
+            <th>
+              <select name="c" class="intable" onchange="$('#id_myform').submit()">
+                <option value="">==全部栏目==</option>
+                % for cat,entnum in curcats:
+                <option value="${cat.id}" ${'selected="selected"' if c == str(cat.id) else ''}>${cat.name}(${entnum})</option>
+                % endfor
+              </select>
+            </th>
+            <th>状态</th>
+          	<th>管理操作</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="7">
+                    <div class="bulk-actions align-left">
+                        <select name="dropdown">
+                            <option value="option1">选择一个操作...</option>
+                            <option value="option3">删除</option>
+                        </select>
+                        <a class="button" href="#">执行</a>
+                    </div>
+                    ${paging(pagination)}
+                    <div class="clear"></div>
+                </td>
+            </tr>
+        </tfoot>
+        <tbody>
+            % for row in entities:
+            <tr>
+                <td><input type="checkbox" /></td>
+                <td>${row[0].id}</td>
+                <td><a href="${row[0].id}/edit" title="${row[0].title}">${row[0].title}</a></td>
+                <td>${row[0].slug or ''}</td>
+                <td>${row[1]}</td>
+                <td>${row[0].created_time}</td>
+                <td>${'，'.join(row[2])}</td>
+                <td>${row[0].status}</td>
+                <td>
+                    <a href="${row[0].id}/edit" title="修改"><img src="${static_url}/images/icons/pencil.png" alt="修改" /></a>
+                    <a href="javascript:confirmurl('${row[0].id}/delete?1=1','确认要删除${row[0].title}吗？')" title="删除"><img src="${static_url}/images/icons/cross.png" alt="删除" /></a> 
+                </td>
+		    </tr>
+            % endfor
+		</tbody>
+    </table>
+</div>
+</form>

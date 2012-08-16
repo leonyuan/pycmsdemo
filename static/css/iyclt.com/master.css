@@ -1,0 +1,257 @@
+/* 全局 */
+body{font-family:"宋体","Arial";text-align:center;background:#FFF;margin:0;padding:0; border:0;font-size:12px;color:#333;}
+h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,pre,form,fieldset,legend,button,input,textarea,th,td,nav,span,p,div,ul,li{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{font-size:12px;font-weight:normal;}
+ul,ol,li{list-style:none;}
+a img{border:0;}
+
+
+/*主导航*/
+.mainnav{height:70px; width:980px; margin: 0 auto;}
+.mainnav .ycwdlogo{ width:143px; height:70px; margin:0px auto; float:left;}
+.mainnav .navlist {float:right;height:70px; }
+.mainnav .navxiantiao{float:left;width:1px;height:20px;border-left:1px solid #C3D4E7;}
+.mainnav .navlist ul{height:35px;}
+.mainnav .navlist li{float:left;padding:10px 8px 0px 5px;font-size:14px;}
+.mainnav .navlist li .a{color:#000;}
+.mainnav .navlist li .red a{color:#09F;}
+/*列表属性*/
+.list8 UL{width:100%;}
+.list8 li{background:url(../../images/iyclt.com/dian.gif) no-repeat;}
+.list8 li,.list8 p{line-height:25px;font-size:14px;height:20px;text-align:left;padding:0px 10px 10px 20px;background-position:1px 0px;border-style: none;}
+.list8 li img {margin-left:1px;}
+
+.list6 {width:198px;
+background:url(../../images/iyclt.com/youtitlebj2.png);
+border-style:solid; 
+border-color: #B1C8D7;
+border-width: 1px 1px 1px 1px; 
+margin:5px 4px;
+float:left;
+display:inline;
+overflow:hidden; 
+height:150px;
+}
+
+.list6 li{background:url(../../images/iyclt.com/dian.gif) no-repeat; }
+.list6 li,.list6 p{line-height:30px;overflow: hidden;height:20px;text-align:left;padding: 0px 0px 5px 18px;background-position:1px 3px;border-style: none; }
+.list6 li img {margin-left:1px;}
+
+.list12 UL{width:100%; border-width: 1px 1px 1px 1px; margin:10px -35px;}
+.list12 li{background:url(../../images/iyclt.com/dian_hei.gif) no-repeat;}
+.list12 li,.list6 p{line-height:20px;text-align:left;height:20px;font-size:14px;padding: 0px 2px 11px 20px; background-position:15px 8px;border-style: none;}
+.list12 li img {margin-left:1px;}
+
+
+.list4 UL{width:100%; border-width: 1px 1px 1px 1px;}
+.list4 li{background:url(../../images/iyclt.com/dian_hei.gif) no-repeat;}
+.list4 li,.list4 p{line-height:20px;text-align:left; font-size:14px;height:20px;padding: 2px 2px 10px 20px; background-position:15px 8px;border-style: none;}
+.list4 li img {margin-left:1px;}
+
+.list14{border-style: solid;border-width: 1px 1px 1px 1px;border-color: #B1C8D7; margin:0px auto;}
+.list14 UL{width:100%; border-width: 1px 1px 1px 1px;}
+.list14 li{background:url(../../images/iyclt.com/dian_hei.gif) no-repeat;}
+.list14 li{line-height:20px;text-align:left; height:20px;font-size:14px;padding: 2px 2px 10px 20px; background-position:5px 10px;border-style: none;}
+.list14 li span{color:#F35B00;}
+
+
+/*广告*/
+.banner{width:760px; overflow:hidden; display:inline;height:100px; margin:10px auto; float:left;border-style:solid;border-width: 1px 1px 1px 1px;border-color:#B1C8D7}
+.bannerr{width:200px;overflow:hidden;display:inline; height:260px; float:left; margin:0px 5px;border-style:solid;border-width: 1px 1px 1px 1px;border-color:#B1C8D7}
+.bannero{width:200px;overflow:hidden; display:inline;height:100px; float:left; margin:10px 5px;border-style:solid;border-width: 1px 1px 1px 1px;border-color:#B1C8D7}
+.banneru{width:200px;overflow:hidden; display:inline;height:136px; float:left; margin:15px 5px;border-style:solid;border-width: 1px 1px 1px 1px;border-color:#B1C8D7}
+
+/*首页图片轮换*/
+.turn 
+{ 
+height: 212px; 
+float: left; 
+overflow: hidden; 
+position: relative; 
+} 
+.turn #adpica 
+{ 
+width: 350px; 
+height: 210px; 
+overflow: hidden; 
+} 
+.turn #adpica img 
+{ 
+width: 350px; 
+height: 210px; 
+float: left; 
+overflow: hidden; 
+} 
+.turn #adtipa 
+{ 
+height: 16px; 
+position: absolute; 
+right: 8px; 
+bottom: 8px; 
+} 
+.turn #adtipa ul li 
+{ 
+width: 19px; 
+height: 19px; 
+line-height: 19px; 
+float: left; 
+text-align: center; 
+display: inline; 
+margin: 0 1px; 
+cursor: pointer; 
+color: #fff; 
+background: #000; 
+} 
+.turn #adtipa ul li.current 
+{ 
+color: #fff; 
+background: #cc0000; 
+} 
+.turn .hidden 
+{ 
+display: none; 
+} 
+.turn .show 
+{ 
+display: block !important; 
+} 
+#adpica span 
+{ 
+position: absolute; 
+bottom: 0; 
+left: 0; 
+color: #fff; 
+font-size: 14px; 
+height: 33px; 
+width: 350px; 
+filter: alpha(opacity=70); 
+opacity: 0.7; 
+background: #000; 
+text-indent: -9999em; 
+} 
+#adpica p 
+{ 
+position: absolute; 
+bottom: 0; 
+left: 0; 
+color: #fff; 
+font-size: 14px; 
+height: 33px; 
+line-height: 33px; 
+width: 285px; 
+padding-left: 5px; 
+font-weight: bold; 
+} 
+
+
+
+/*新闻*/
+.newso{text-align:center;margin:1px auto 5px}
+.newso h4{font:18px/26px "黑体"}
+.newso h4 a{color:#C60}
+.newso h4 a:hover {text-decoration:underline;color: #C60;}
+.newso p{font:14px/24px "\5B8B\4F53"}
+
+.newst{text-align:center;margin:1px auto 5px;border-style:solid;border-width: 0px 0px 1px 0px;border-color: #EEE;}
+.newst h2{font:18px/26px "黑体"}
+.newst h2 a{color:#C60}
+.newst h2 a:hover {text-decoration:underline;color: #C60;}
+.newst p{font:14px/24px "\5B8B\4F53"}
+
+/*通用h4*/
+.tongyong{text-align:center;margin:10px auto 14px;}
+.tongyong h4{font:16px/22px "黑体"}
+.tongyong h4 a{color:#004276}
+/*webpic*/
+.fPic{float:left;width:123px;height:86px;position:relative;overflow:hidden;margin:0px 10px 1px 10px;}
+.textbj{position:absolute;width:123px;height:19px;top:67px;left:0;background:#000;filter:alpha(opacity=60);-moz-opacity:0.6;opacity:0.6}
+.text{position:absolute;width:123px;height:19px;line-height:19px;text-align:center;top:67px;left:0}
+.text a{color:#fff; height:20px;}
+.text a:hover{color:#FFF;}
+.text a:link{color:#fff;}
+
+.fpicc{float:left;width:123px;height:86px;position:relative;overflow:hidden;margin:0px 10px 1px 10px;}
+.textbjc{position:absolute;width:123px;height:19px;top:67px;left:0;background:#000;filter:alpha(opacity=60);-moz-opacity:0.6;opacity:0.6}
+.textc{position:absolute;width:123px;height:19px;line-height:19px;text-align:left;top:67px;left:0}
+.textc a{color:#fff; height:20px;}
+.textc a:hover {color:#FFF;}
+.textc a:link {color:#fff;}
+
+/*中*/
+.cnew{width:400px;float:right;border-style:solid;border-width: 0px 1px 1px 1px;border-color: #EEE;display:inline;overflow: hidden;}
+.cnew .new_title{width:400px;float:left; height:30px; border-style:solid;border-width: 0px 0px 1px 0px;border-color: #EEE; background:#09C}
+.cnew .new_title span{float:left;margin:5px 7px 5px 6px;}
+.cnew .new_title h2{float:left;color:#333;font-size:14px;font-weight:bold;}
+.cnew .new_title h2 a{color:#fff;}
+.cnew .new_title h2 a honve{color:#333;}
+
+/*右*/
+.tit{height:30px;width:123px;float:left;background-image:url(../../images/iyclt.com/youtitlebj1.png)}
+.tit span{padding:6px 0px 0px 25px;font-size:14px; float:left;font-weight:bold;display:inline; }
+.tit li{color:#000;font-size:14px;}
+.tit li a{color:#000;}
+.tit li a honve{color:#000;}
+/*人力资源*/
+
+/*营销*/
+.title3{ background-image:url(../../images/iyclt.com/title1.png)}
+.title3 h2{font-size:12px;text-align:right;line-height:30px; padding:0px 10px}
+.title3 h2 span{font-size:14px;font-weight:bold;text-align:right;padding:1px 10px;float:left;}
+.title3 h2 span a{color:#1E50A2;}
+.title3 h2 span a:hover{color:#1E50A2;}
+/*医院管理*/
+
+
+/*招聘*/
+
+.job{ width:400px; float:right;display:inline;overflow: hidden; border-style:solid;border-width: 1px 1px 1px 1px;border-color: #EEE; }
+.job .job_title{background:url(../../images/iyclt.com/zhaopin.png) no-repeat;height:30px; width:400px;}
+.job .job_title h1{width:395px;text-align:right; color:#1E50A2;font-size:12px; padding:5px 10px 0px 0px ;}
+.job .job_title h1 span{ float:left;text-align:left;font-weight:bold;margin:0px 5px; font-size:14px;}
+.job .job_title h1 span a{color:#1E50A2}
+.job .job_title h1 span a honve{color:#1E50A2}
+.job .joblist{width:390px; line-height:30px;float:left;display:inline; padding:0px 15px ;}
+.job .joblist ul {list-style-type:none;white-space: nowrap;overflow: hidden;text-align:left;clear:both;margin:0;padding:0;}
+.job .joblist li.regionnav{width:50px;float:left; text-align:left; padding:0px 10px;font-weight:bold;display:inline;}
+.job .joblist li.title1nav{width:125px;float:left; text-align:left; padding:0px 0px 0px 0px; font-weight:bold;display:inline;}
+.job .joblist li.salarynav{width:50px;float:left; text-align:left;padding:0px 0px;font-weight:bold;display:inline;}
+.job .joblist li.timenav{width:105px;float:left; text-align:center;padding:0px 20px; font-weight:bold;display:inline;}
+.job .joblist li.region{width:50px;float:left; text-align:left;padding: 0px 10px; font-size:14px;}
+.job .joblist li.title1{width:125px;float:left; text-align:left;padding:0px 0px 0px 0px; font-size:14px; color:#06c;}
+.job .joblist li.title1 a{color:#06c;}
+.job .joblist li.title1 a honve{color:#06c;}
+.job .joblist li.salary{width:70px;float:left; text-align:left;padding:0px 0px 0px 0px; font-size:14px;}
+.job .joblist li.time{width:105px; float:left; text-align:center;padding:0px 10px; font-size:14px;}
+
+
+/*医疗招聘*/
+.jobyl { width:400px; float: right;border-style:solid;border-width: 1px 1px 1px 1px;border-color: #EEE; }
+.jobyl .job_titleyl{background:url(../../images/iyclt.com/zhaopin.png) no-repeat;height:30px; width:400px;}
+.jobyl .job_titleyl h1{width:395px;text-align:right; color:#333;font-size:12px; padding:5px 10px 0px 0px ;}
+.jobyl .job_titleyl h1 span{ float:left;text-align:left;font-weight:bold;margin:0px 5px; font-size:14px;}
+.jobyl .job_titleyl h1 span a{color:#1E50A2}
+.jobyl .job_titleyl h1 span a honve{color:#1E50A2}
+.jobyl .joblistyl{width:390px; line-height:30px;float:left;display:inline; padding:0px 15px ;}
+.jobyl .joblistyl ul {list-style-type:none;white-space: nowrap;overflow: hidden;text-align:left;clear:both;margin:0;padding:0;}
+.jobyl .joblistyl li.regionnavyl{width:50px;float:left; text-align:left; padding:0px 10px;font-weight:bold;display:inline;}
+.jobyl .joblistyl li.title1navyl{width:125px;float:left; text-align:left; padding:0px 0px 0px 0px; font-weight:bold;display:inline;}
+.jobyl .joblistyl li.salarynavyl{width:50px;float:left; text-align:left;padding:0px 0px;font-weight:bold;display:inline;}
+.jobyl .joblistyl li.timenavyl{width:105px;float:left; text-align:center;padding:0px 20px; font-weight:bold;display:inline;}
+.jobyl .joblistyl li.regionyl{width:50px;float:left; text-align:left;padding: 0px 10px; font-size:14px;}
+.jobyl .joblistyl li.title1yl{width:125px;float:left; text-align:left;padding:0px 0px 0px 0px; font-size:14px; color:#06c;}
+.jobyl .joblistyl li.title1yl a{color:#06c;}
+.jobyl .joblistyl li.title1yl a honve{color:#06c;}
+.jobyl .joblistyl li.salaryyl{width:70px;float:left; text-align:left;padding:0px 0px 0px 0px; font-size:14px;}
+.jobyl .joblistyl li.timeyl{width:105px; float:left; text-align:center;padding:0px 10px; font-size:14px;}
+
+/*页脚*/
+#footer{
+border-style:solid;
+border-width: 1px 0px 0px 0px;
+border-color: #EEE; 
+margin:20px auto;
+line-height:30px;
+color:#CCC;
+float: left;
+}
+#footer .end{ font-family: Arial, Helvetica, sans-serif;}

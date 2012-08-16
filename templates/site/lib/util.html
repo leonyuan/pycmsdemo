@@ -1,0 +1,22 @@
+
+<%def name="paging(pgobj)">
+    <div class="pagination">
+    % if pgobj.pno != 1:
+        <a href="list_1.html" title="首页">&laquo;首页</a>
+        <a href="list_${pgobj.pno-1}.html" title="上一页">&laquo;上一页</a>
+    % endif
+
+    % for p in pgobj.paginations:
+        % if p == 0:
+        <span class="number">...</span>
+        % else:
+        <a href="list_${p}.html" class="number${p == pgobj.pno and ' current' or ''}" title="${p}">${p}</a>
+        % endif
+    % endfor
+
+    % if pgobj.pno != pgobj.pnum:
+        <a href="list_${pgobj.pno+1}.html" title="下一页">下一页&raquo;</a>
+        <a href="list_${pgobj.pnum}.html" title="末页">末页&raquo;</a>
+    % endif
+    </div> <!-- End .pagination -->
+</%def>

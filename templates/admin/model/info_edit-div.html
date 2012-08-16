@@ -1,0 +1,112 @@
+<%inherit file="../na_base.html"/>
+
+<div class="content-box">
+<link href="${static_url}/css/admin/forms.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="${static_url}/js/content_addtop.js"></script>
+<script language="javascript" type="text/javascript" src="${static_url}/js/colorpicker.js"></script>
+<script language="javascript" type="text/javascript" src="${static_url}/js/hotkeys.js"></script>
+<script language="javascript" type="text/javascript" src="${static_url}/js/cookie.js"></script>
+<script language="javascript" type="text/javascript" src="${static_url}/js/ckeditor/ckeditor.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#add_cate_btn").click(function(){
+            template = $("#cidblk_0");
+            newcidblk = template.clone();
+            newcidblk.append("<a href=\"javascript:void(0)\" title=\"删除栏目\"><img src=\"${static_url}/images/admin_img/icon_deletelink.gif\"></a>&nbsp;&nbsp;&nbsp;");
+            rmbtn = newcidblk.find("a")
+            rmbtn.click(function(obj){
+                return function() {
+                    obj.remove();
+                }
+            }(newcidblk));
+            newcidblk.insertBefore($(this));
+        });
+    });
+</script>
+
+<h5>编辑${mtitle}信息</h5>
+<form name="myform" id="myform" action="" method="post" enctype="multipart/form-data">
+<div>
+    <fieldset class="module aligned ">
+    % for input in eform.inputs:
+      <div class="form-row">
+        <div>
+          <label for="id_${input.name}">${'<font color="red">*</font>' if input.required else ''}${input.description}</label>
+          % if input.name == 'cids':
+              % if input.get_value():
+                  % for i, cid in enumerate(input.get_value()):
+                    <span id="cidblk_${i}">
+                    <select id="cid${i}" name="cids">
+                      <option value="">≡ 选择栏目≡</option>
+                      % for cate in categories:
+                      <option value="${cate.id}" ${'selected="selected"' if str(cid) == str(cate.id) else ''}>${cate.prefix+cate.name}</option>
+                      % endfor
+                    </select>
+                    % if i != 0:
+                    <a href="javascript:void(0)" title="删除栏目" onclick="javascript:$(this).parent().remove()" ><img src="${static_url}/images/admin_img/icon_deletelink.gif"></a>&nbsp;
+                    % endif
+                    </span>
+                  % endfor
+                    &nbsp;&nbsp;<a id="add_cate_btn" href="javascript:void(0)" title="添加另一个栏目"><img src="${static_url}/images/admin_img/icon_addlink.gif"></a>
+              % else:
+                <span id="cidblk_0">
+                <select id="cid0" name="cids">
+                    <option value="">≡ 选择栏目 ≡</option>
+                    % for cate in categories:
+                    <option value="${cate.id}" >${cate.prefix+cate.name}</option>
+                    % endfor
+                </select>
+                </span>
+                &nbsp;&nbsp;<a id="add_cate_btn" href="javascript:void(0)" title="添加另一个栏目"><img src="${static_url}/images/admin_img/icon_addlink.gif"></a>
+              % endif
+              % if input.note:
+                <div class="input-notification error png_bg">${input.note}</div>
+              % endif
+
+          % else:
+            ${input.render()}
+          % endif
+        </div>
+      </div>
+    % endfor
+
+    % for input in form.inputs:
+      <div class="form-row">
+        <div>
+          <label for="id_${input.name}">${'<font color="red">*</font>' if input.required else ''}${input.description}</label>
+          ${input.render()}
+        </div>
+      </div>
+    % endfor
+    </fieldset>
+    % for formname,subform in formset.items():
+    <div class="inline-group" id="${formname}-group">
+        <h5>${subform['title']}</h5>
+        % for sform in subform['forms']:
+        <div class="inline-related last-related" id="${formname}">
+          <h6><b>${subform['title']}:</b>&nbsp;<span class="inline_label">#1</span></h6>
+          <fieldset class="module aligned ">
+            % for input in sform.inputs:
+            <div class="form-row">
+              <div>
+              <label for="id_${input.name}">${'<font color="red">*</font>' if input.required else ''}${input.description}</label>
+              ${input.render()}
+              </div>
+            </div>
+            % endfor
+          </fieldset>
+        </div>
+        % endfor
+    </div>
+    % endfor
+
+    <div class="submit-row" >
+        <input type="submit" value="保存" class="button" name="_save" />
+        <input type="submit" value="保存并增加另一个" class="button" name="_addanother"  />
+        <input type="submit" value="保存并继续编辑" class="button" name="_continue" />
+    </div>
+
+</div>
+
+</form>
+</div>

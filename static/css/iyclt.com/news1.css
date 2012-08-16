@@ -1,0 +1,37 @@
+/*¿Õ°×*/
+.blank1{margin:0 auto;height:1px;font-size:1px;clear:both;}
+.blank2{margin:0 auto;height:2px;font-size:1px;clear:both;}
+.blank3{margin:0 auto;height:3px;font-size:1px;clear:both;}
+.blank5{margin:0 auto;height:5px;font-size:1px;clear:both;}
+.blank8{margin:0 auto;height:8px;font-size:1px;clear:both;}
+.blank10{margin:0 auto;height:10px;font-size:1px;clear:both;}
+.blank15{margin:0 auto;height:15px;font-size:1px;clear:both;}
+.blank20{margin:0 auto;height:15px;font-size:1px;clear:both;}
+.blank25{margin:0 auto;height:15px;font-size:1px;clear:both;}
+/*Á´½Ó*/
+a:link {text-decoration:none;color:#000;}
+a:visited{text-decoration:none;color:#000;}
+a:hover {text-decoration:underline;color:#BA2636;}
+/*¸¡¶¯ÊôÐÔ*/
+.left,.center,.right,.r{display:inline;float:left; background:url(../../images/iyclt.com/leftbj.gif)}
+/*ËÑË÷*/
+.searchTool{ float:right;width:400px; padding:30px 0px 0px 100px;}
+.searchytitle{float:left;margin:-45px 10px 10px;}
+.searchTool .searchltitle{float:left;margin:-45px 10px 10px;}
+.searchTool .searchbelite{float:left;margin:-45px 10px 10px;}
+.searchTool .searchnelite{float:left;margin:-45px 10px 10px;}
+.searchTool .radio{vertical-align:middle; margin:0px 4px 5px;margin-right:2px;}
+.searchTool .txtSearch{float:left;width:232px;padding:2px 2px 0 2px;height:20px;line-height:20px;vertical-align:bottom; margin-left: 10px; border:1px solid #3e99d4;}
+.searchTool .selSearch{margin:0px 2px;float:left;width:70px;background:#fff;height:22px;line-height:22px;border:1px solid #3e99d4;}
+.searchTool .nowSearch{float:left;width:50px;height:20px;line-height:22px;overflow:hidden;padding-left:4px;}
+.searchTool .btnSel{float:right;border-left:1px solid #3e99d4;width:14px;height:22px;}
+.searchTool .btnSel a{background:url(../../images/iyclt.com/sousuo_three.gif) no-repeat center center;display:block;width:14px;height:22px;}
+.searchTool .btnSel a:hover{background:url(../../images/iyclt.com/sousuo_one.gif) no-repeat center center;border:1px solid #fff;width:12px;height:20px;}
+.searchTool .selOption{z-index:9999;position:absolute;margin-left:-1px;width:60px;background:#fff;border:1px solid #3e99d4;}
+.searchTool .selOption a{display:block;height:21px;padding-left:5px;line-height:21px;color:#000;text-decoration:none;}
+.searchTool .selOption a:hover{color:#fff;background:#95d5f1;}
+.searchTool .btnSearch{float:left;margin-left:10px;width:58px;height:22px;line-height:22px;border:1px solid #3e99d4;overflow:hidden;}
+.searchTool .btnSearch a{background:url(../../images/iyclt.com/sousuo_five.gif) repeat-x center -6px;display:block;text-decoration:none;height:22px;line-height:22px;overflow:hidden;}
+.searchTool .btnSearch a:hover{background:url(../../images/iyclt.com/sousuo_two.gif) repeat-x center center;border:1px solid #fff;height:20px;line-height:20px;}
+.searchTool .btnSearch .lbl{cursor:pointer;display:block;width:40px;padding-left:5px;letter-spacing:5px;text-align:center;height:18px;padding-top:1px;margin:0 auto;filter:progid:DXImageTransform.Microsoft.DropShadow(color=#daeefa,offX=1,offY=1,positives=true);}
+.searchTool .btnSearch a:hover .lbl{padding-top:0px;}

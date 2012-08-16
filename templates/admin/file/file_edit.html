@@ -1,0 +1,33 @@
+<%inherit file="na_base.html"/>
+
+<script language="javascript" type="text/javascript" src="${static_url}/js/ckeditor/ckeditor.js"></script>
+
+<div class="content-box">
+<form method="post" action="?m=admin&amp;c=category&amp;a=add" id="myform" name="myform">
+<table width="100%" class="table_form ">
+  <thead>
+      <tr><th colspan="2">编辑文件</th></tr>
+  </thead>
+  <tfoot>
+      <tr>
+          <td colspan="2">
+            <input type="submit" class="button" value="提交" name="dosubmit">
+          </td>
+      </tr>
+  </tfoot>
+
+  <tbody>
+    % for input in form.inputs:
+    <tr>
+      <th>${'<font color="red">*</font>' if input.required else ''}${input.description}</th>
+      <td>
+          <span id="normal_add">
+              ${input.render()}
+          </span>
+      </td>
+    </tr>
+    % endfor
+  </tbody>
+</table>
+</form>
+</div>

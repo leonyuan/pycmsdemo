@@ -1,0 +1,13 @@
+<%inherit file="base.html"/>
+
+<%block name="title">${base_entity.title}-${parent.title()}</%block>
+
+  <div class="wrap-line">
+    <div id="Article">
+      <h1>${base_entity.title}</h1>
+      <div class="content">
+          ${entity.content} 
+      </div>
+    </div>
+  </div>
+
